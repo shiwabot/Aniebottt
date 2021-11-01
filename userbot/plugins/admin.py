@@ -31,7 +31,7 @@ from telethon.tl.types import (
 
 from userbot import *
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
-from AuraXBot.utils import *
+from Aniebot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 # =================== CONSTANT ===================
@@ -139,17 +139,17 @@ async def promote(promt):
         delete_messages=True,
         pin_messages=True,
     )
-    AuraXevent = await edit_or_reply(promt, "Promoting...")
+    Anieevent = await edit_or_reply(promt, "Promoting...")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "AURAX"
+        rank = "Aniebot"
     if not user:
         return
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await AuraXevent.edit("𝙋𝙍𝙊𝙈𝙊𝙏𝙀𝘿 𝙎𝙐𝘾𝘾𝙀𝙎𝙎𝙁𝙐𝙇𝙇𝙔..!!")
+        await AniXevent.edit("𝙋𝙍𝙊𝙈𝙊𝙏𝙀𝘿 𝙎𝙐𝘾𝘾𝙀𝙎𝙎𝙁𝙐𝙇𝙇𝙔..!!")
     except BadRequestError:
-        await AuraXevent.edit(NO_PERM)
+        await Aniexevent.edit(NO_PERM)
         return
     if BOTLOG:
         await promt.client.send_message(
@@ -172,7 +172,7 @@ async def demote(dmod):
     if not admin and not creator:
         await edit_or_reply(dmod, NO_ADMIN)
         return
-    AuraXevent = await edit_or_reply(dmod, "Demoting...")
+    AnieXevent = await edit_or_reply(dmod, "Demoting...")
     rank = "??????"
     user = await get_user_from_event(dmod)
     user = user[0]
@@ -189,9 +189,9 @@ async def demote(dmod):
     try:
         await dmod.client(EditAdminRequest(dmod.chat_id, user.id, newrights, rank))
     except BadRequestError:
-        await AuraXevent.edit(NO_PERM)
+        await AnieXevent.edit(NO_PERM)
         return
-    await AuraXevent.edit("𝘿𝙀𝙈𝙊𝙏𝙀𝘿 𝙎𝙐𝘾𝘾𝙀𝙎𝙎𝙁𝙐𝙇𝙇𝙔..!!")
+    await AnieXevent.edit("𝘿𝙀𝙈𝙊𝙏𝙀𝘿 𝙎𝙐𝘾𝘾𝙀𝙎𝙎𝙁𝙐𝙇𝙇𝙔..!!")
     if BOTLOG:
         await dmod.client.send_message(
             BOTLOG_CHATID,
