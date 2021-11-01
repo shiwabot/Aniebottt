@@ -1,4 +1,4 @@
-<h1 align="center">⚡ 𝐀 𝐔 𝐑 𝐀 𝐗 𝐔 𝐒 𝐄 𝐑 𝐁 𝐎 𝐓 ⚡</h1>
+<h1 align="center">⚡ 𝐀NIE USERBOT ⚡</h1>
 
 
 [![Anie)](https://t.me/Aniebotsupports)
@@ -19,9 +19,9 @@
     - Install git package
            `pkg install git`
     - Clone this repository.
-           `git clone https://github.com/iisgaurav/AuraXBot.git`
+           `git clone https://github.com/Anieteam/Anie-userbot.git`
     - Then Do
-           `cd AuraXBot`
+           `cd Anie`
     - Run String Generator By
            `bash string.sh`
     - Then Fill The Required Details.
@@ -53,7 +53,7 @@
 
 <h4> DEPLOY TO HEROKU </h4>
 
-<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAuraXNetwork%2FAuraXBot&template=https%3A%2F%2Fgithub.com%2FAuraXNetwork%2FAuraXBot" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.svg" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
+<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebot&template=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebot" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.svg" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
 </a>
 
 
@@ -97,7 +97,7 @@ notifications in Update Channel.
 
 ![](https://www.gnu.org/graphics/gplv3-or-later.png)
 
-Copyright (C) 2021 AuraXNetwork
+Copyright (C) 2021 AnieXNetwork
 
 Poject [AnieXBot](https://github.com/anieteam/Anie-userbot) is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
