@@ -1,5 +1,5 @@
 #!/bin/bash
-#   Copyright (C) 2021 AuraXNetwork
+#   Copyright (C) 2021 denvil 
 #
 #   Poject VΛDΣЯ is free software: 
 #   you can redistribute it and/or modify it under the terms of the GNU General Public License 
@@ -16,15 +16,9 @@
 
 
 echo """
-┏━━━┓          ┏┓    ┏┓
-┃┏━┓┃          ┃┃   ┏┛┗┓
-┃┃ ┃┣┓┏┳━┳━━┳┓┏┫┗━┳━┻┓┏┛
-┃┗━┛┃┃┃┃┏┫┏┓┣╋╋┫┏┓┃┏┓┃┃
-┃┏━┓┃┗┛┃┃┃┏┓┣╋╋┫┗┛┃┗┛┃┗┓
-┗┛ ┗┻━━┻┛┗┛┗┻┛┗┻━━┻━━┻━┛
               
-Legendary AuraXBot!!
-@AuraXUserbot
+Legendary Anie-userbot!!
+@Aniebots
 """
 
 python3 -m userbot
