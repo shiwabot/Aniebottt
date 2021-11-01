@@ -138,7 +138,7 @@ async def promote(promt):
     hellevent = await edit_or_reply(promt, "`Promoting...`")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "ǟɖʍɨռ"
+        rank = "Anie"
     if not user:
         return
     try:
