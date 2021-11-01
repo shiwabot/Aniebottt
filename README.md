@@ -1,7 +1,7 @@
 <h1 align="center">⚡ 𝐀 𝐔 𝐑 𝐀 𝐗 𝐔 𝐒 𝐄 𝐑 𝐁 𝐎 𝐓 ⚡</h1>
 
 
-[![AuraX logo](https://telegra.ph/file/62b6e6a1bb6ed711401ce.jpg)](https://t.me/AuraXSupport)
+[![Anie)](https://t.me/Aniebotsupports)
 
 
 <h2 align="center">The owner would not be responsible for any kind of bans due to the bot.</h2>
@@ -79,16 +79,16 @@
 
 ```
 Get help regarding setting up 
-your AuraXBot in our official 
+your Anie in our official 
 support Group and get updates
 notifications in Update Channel.
 ```
 
-<a href="https://t.me/AuraXUserbot"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/Aniebotsupports"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
 
-<a href="https://t.me/AuraXSupport"><img src="https://img.shields.io/badge/Join-Support%20Group-red.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/Aniebotsupports"><img src="https://img.shields.io/badge/Join-Support%20Group-red.svg?style=for-the-badge&logo=Telegram"></a>
 
-[![Contact Me](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/IisGaurav)
+[![Contact Me](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/d3nvil)
 
 </details>
 
@@ -99,7 +99,7 @@ notifications in Update Channel.
 
 Copyright (C) 2021 AuraXNetwork
 
-Poject [AuraXBot](https://github.com/iisgaurav/AuraXBot) is free software: you can redistribute it and/or modify
+Poject [AnieXBot](https://github.com/anieteam/Anie-userbot) is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
