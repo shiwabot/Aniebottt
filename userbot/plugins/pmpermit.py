@@ -1,4 +1,4 @@
-# pmpermit for AuraXBot.....
+# pmpermit for AnieXBot.....
 
 import asyncio
 import io
@@ -20,7 +20,7 @@ PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 AuraXPIC = (
     PMPERMIT_PIC
     if PMPERMIT_PIC
-    else "https://telegra.ph/file/62b6e6a1bb6ed711401ce.jpg"
+    else "https://telegra.ph/file/7944090b9aca51ef8f562.jpg"
 )
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
@@ -30,10 +30,10 @@ aura = (
     if CUSTOM_PMPERMIT
     else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
 )
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "AuraX User"
-USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's AuraXBot.**\n__Now GTFO, i'm busy__"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
+USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's AnieBot.**\n__Now GTFO, i'm busy__"
 USER_BOT_NO_WARN = (
-    "Hello, This is **AuraXBot Ultra Private Security Protocol⚠️**.\n"
+    "Hello, This is **AnirBot Ultra Private Security Protocol⚠️**.\n"
     f"This is my master {DEFAULTUSER}'s Inbox\n"
     f"\n**{aura}**\n\n"
     "To start a valid conversation\n🔱Register Your Request!🔱\nSend `/start` To Register Your Request\nHopefully u will get a reply🔥"
