@@ -1,23 +1,5 @@
-#    Copyright (C) @SupRemE_AnanD 2021-2022
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
-#
-#    This Inline Helper Code is solely owned by @SupRemE_AnanD
-#    You Should Not Copy This Code Without Proper Permission.
-
 from math import ceil
 from re import compile
-import asyncio
 
 from telethon.events import InlineQuery, callbackquery
 from telethon.sync import custom
@@ -25,16 +7,13 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from userbot import *
 from userbot.cmdhelp import *
-from Anie.utils import *
-from userbot.Config import Config
+from userbot.utils import *
 
-Anie_row = Config.BUTTONS_IN_HELP
-Anie_emoji = Config.EMOJI_IN_HELP
 # thats how a lazy guy imports
-# Aniebotsupports 
+# devilbot
 
 def button(page, modules):
-    Row = AuraX_row
+    Row = 7
     Column = 3
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
@@ -47,7 +26,7 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"{Anie_emoji} " + pair  + f" {Anie_emoji}", data=f"Information[{page}]({pair})")
+                custom.Button.inline("🔸 " + pair, data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
@@ -55,18 +34,18 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"{Anie_emoji} 𝐁𝐀𝐂𝐊 {Anie_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+                "◀️ ᏰᎯᏣᏦ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"•{Anie_emoji} ❌ {Anie_emoji}•", data="close"
+              "• ❌ •", data="close"
             ),
             custom.Button.inline(
-               f"{Anie_emoji} 𝐍𝐄𝐗𝐓 {Anie_emoji}", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+                "ᏁᏋﾒᎿ ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
     return [max_pages, buttons]
-    # Changing this line may give error in bot as i added some special cmds in AuraXUserbot channel to get this module work...
+    # Changing this line may give error in bot as i added some special cmds in devilbot channel to get this module work...
 
     modules = CMD_HELP
 if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
@@ -75,12 +54,12 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "@Aniebots":
+        if event.query.user_id == bot.uid and query == "@DevilUserBot":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             result = await builder.article(
                 f"Hey! Only use .help please",
-                text=f"**Running Aniebot**\n\n__Number of plugins installed__ :`{len(CMD_HELP)}`\n**page:** 1/{veriler[0]}",
+                text=f"**Running DevilUserBot**\n\n__Number of plugins installed__ :`{len(CMD_HELP)}`\n**page:** 1/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False,
             )
@@ -94,18 +73,22 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             )
         else:
             result = builder.article(
-                "@Aniebots",
-                text="""**Hey! This is [Aniebot.](https://t.me/Aniebotsupports) \nYou can know more about me from the links given below 👇**""",
+                "@DevilUserBot",
+                text="""**Hey! This is [Dévílẞø†.](https://t.me/DevilUserBot) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Aniebots"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/DevilUserBot"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/Aniebotsupports"
+                            "⚡ GROUP ⚡", "https://t.me/DevilUserBot"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/Anieteam/Anie-userbot"),
+                            "✨ REPO ✨", "https://github.com/lucifeermorningstar/Devil-User-Bot"),
+                        custom.Button.url
+                    (
+                            "🔰 TUTORIAL 🔰", "https://t.me/DevilUserBot"
+                    )
                     ],
                 ],
                 link_preview=False,
@@ -116,14 +99,14 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def page(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN Aniebot AND USE (C)Anie-userbot ",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Dèvílẞø† ™",
                 cache_time=0,
                 alert=True,
             )
         page = int(event.data_match.group(1).decode("UTF-8"))
         veriler = button(page, CMD_HELP)
         await event.edit(
-            f"**Legenday** [Anie](https://t.me/Aniebotsupports) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
+            f"**Legenday AF** [Dèvílẞøt](https://t.me/DevilUserBot) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
             buttons=veriler[1],
             link_preview=False,
         )
@@ -131,12 +114,9 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
-            await delete_AuraX(event,
-              "**AnieUserbot Help Menu**\n\n         **[(C)AnieUserbot](t.me/Aniebots)**", 5, link_preview=False
+            await event.edit(
+                "⚜️Dèvílẞø† Menu Provider Is now Closed⚜️\n\n      © Dèvílẞø† ™"
             )
-        else:
-            Anie_alert = "Ho gya aapka? Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. (C)Aniebots"
-            await event.answer(Anie_alert, cache_time=0, alert=True)
           
     @tgbot.on(
         callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)"))
@@ -144,7 +124,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def Information(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN Aniebot AND USE (C)AnieUserbot ",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Dèvílẞø† ™",
                 cache_time=0,
                 alert=True,
             )
@@ -154,7 +134,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         try:
             buttons = [
                 custom.Button.inline(
-                    "✘ " + cmd[0] + " ✘", data=f"commands[{commands}[{page}]]({cmd[0]})"
+                    "🔹 " + cmd[0], data=f"commands[{commands}[{page}]]({cmd[0]})"
                 )
                 for cmd in CMD_HELP_BOT[commands]["commands"].items()
             ]
@@ -164,9 +144,9 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             )
 
         buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
-        buttons.append([custom.Button.inline(f"{Anie_emoji} 𝐁𝐀𝐂𝐊 {Anie_emoji}", data=f"page({page})")])
+        buttons.append([custom.Button.inline("◀️ ᏰᎯᏣᏦ", data=f"page({page})")])
         await event.edit(
-            f"**🗂 Module:** `{commands}`\n**No. of commands :** `{len(CMD_HELP_BOT[commands]['commands'])}`",
+            f"**📗 File:** `{commands}`\n**🔢 Number of commands :** `{len(CMD_HELP_BOT[commands]['commands'])}`",
             buttons=buttons,
             link_preview=False,
         )
@@ -177,7 +157,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def commands(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN AnieUserbot AND USE (C)AnieUserbot ",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Dèvílẞø† ™",
                 cache_time=0,
                 alert=True,
             )
@@ -186,7 +166,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         page = int(event.data_match.group(2).decode("UTF-8"))
         commands = event.data_match.group(3).decode("UTF-8")
 
-        result = f"**🗂 Modules:** `{cmd}`\n"
+        result = f"**📗 File:** `{cmd}`\n"
         if CMD_HELP_BOT[cmd]["info"]["info"] == "":
             if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
                 result += f"**⬇️ Official:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
@@ -201,9 +181,9 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 
         command = CMD_HELP_BOT[cmd]["commands"][commands]
         if command["params"] is None:
-            result += f"**🛠 Commands:** `{COMMAND_HAND_LER[:1]}{command['command']}`\n"
+            result += f"**🛠 commands:** `{COMMAND_HAND_LER[:1]}{command['command']}`\n"
         else:
-            result += f"**🛠 Commands:** `{COMMAND_HAND_LER[:1]}{command['command']} {command['params']}`\n"
+            result += f"**🛠 commands:** `{COMMAND_HAND_LER[:1]}{command['command']} {command['params']}`\n"
 
         if command["example"] is None:
             result += f"**💬 Explanation:** `{command['usage']}`\n\n"
@@ -214,11 +194,10 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         await event.edit(
             result,
             buttons=[
-                custom.Button.inline(f"{Anie_emoji} 𝐁𝐀𝐂𝐊 {Anie_emoji}", data=f"Information[{page}]({cmd})")
+                custom.Button.inline("◀️ ᏰᎯᏣᏦ", data=f"Information[{page}]({cmd})")
             ],
             link_preview=False,
         )
 
 
 # Ask owner before using it in your codes
-# Kangers like LB stay away...
