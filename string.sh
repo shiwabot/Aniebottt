@@ -23,8 +23,8 @@ echo """
 ┃┏━┓┃┗┛┃┃┃┏┓┣╋╋┫┗┛┃┗┛┃┗┓
 ┗┛ ┗┻━━┻┛┗┛┗┻┛┗┻━━┻━━┻━┛
 
-Legendary AuraXBot
-@AuraXSupport
+Legendary Aniebot
+@Aniebotsupports 
 """
 
 python3 string_session.py
