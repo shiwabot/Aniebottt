@@ -1,4 +1,4 @@
 echo """
-    FIREBOT
+    Anieuserbot
 """
-python3 -m firebot
+python3 -m Aniebot
