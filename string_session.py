@@ -13,16 +13,11 @@ aura = """
 ╚═══╩═══╩═══╩═══╩╝─╚═╩═══╩╝─╚╩╝╚═╝─╚╝   
 """
 logo = """
-┏━━━┓          ┏┓    ┏┓
-┃┏━┓┃          ┃┃   ┏┛┗┓
-┃┃ ┃┣┓┏┳━┳━━┳┓┏┫┗━┳━┻┓┏┛
-┃┗━┛┃┃┃┃┏┫┏┓┣╋╋┫┏┓┃┏┓┃┃
-┃┏━┓┃┗┛┃┃┃┏┓┣╋╋┫┗┛┃┗┛┃┗┓
-┗┛ ┗┻━━┻┛┗┛┗┻┛┗┻━━┻━━┻━┛
+Anie
 """
 baap_bolte = """
-#Legendary AuraXBot          
-Made With Love By Team AuraXBot
+#Legendary Aniebot         
+Made With Love By Team Aniebot
 """
                                                                                                             
 print("")
@@ -32,7 +27,7 @@ print(Style.BRIGHT + Fore.BLUE + logo)
 print(Style.RESET_ALL)
 print(Style.BRIGHT + Fore.CYAN + Back.BLUE + baap_bolte)
 print(Style.RESET_ALL)
-print("""Welcome To AuraXBot String Generator By @IisGaurav""")
+print("""Welcome To Aniebot String Generator By @d3nvil""")
 print("""Kindly Enter Your Details To Continue ! """)
 
 API_KEY = input("API_KEY: ")
@@ -46,11 +41,11 @@ while True:
             session = client.session.save()
             client.send_message(
                 "me",
-                f"Here is your TELEGRAM STRING SESSION\n(Tap to copy it)👇 \n\n `{session}` \n\n And Visit @AuraXUserbot For Any Help !",
+                f"Here is your TELEGRAM STRING SESSION\n(Tap to copy it)👇 \n\n `{session}` \n\n And Visit @Aniebots For Any Help !",
             )
 
             print(
-                "Thanks for Choosing AuraXBot Have A Good Time....Note That When You Terminate the Old Session ComeBack And Genrate A New String Session Old One Wont Work"
+                "Thanks for Choosing Aniebot Have A Good Time....Note That When You Terminate the Old Session ComeBack And Genrate A New String Session Old One Wont Work"
             )
     except:
         print("")
