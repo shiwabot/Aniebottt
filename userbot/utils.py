@@ -61,12 +61,12 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.AuraXBot = bot
+        mod.Aniebot = bot
         mod.edit_or_reply = edit_or_reply
         mod.delete_AuraX = delete_AuraX
-        # support for AuraXBot originals
-        sys.modules["AuraXBot.utils"] = userbot.utils
-        sys.modules["AuraXBot"] = userbot
+        # support for Aniebot originals
+        sys.modules["Aniebot.utils"] = userbot.utils
+        sys.modules["Aniebot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
