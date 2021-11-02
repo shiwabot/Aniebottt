@@ -1,7 +1,7 @@
-FROM Devil/DevilBot:latest
+FROM Anie/AnieBot:latest
 
 #clonning repo 
-RUN git clone https://github.com/lucifeermorningstar/deviluserbot.git/root/userbot
+RUN git clone https://github.com/Anieteam/Anie-userbot.git/root/userbot
 #working directory 
 WORKDIR /root/userbot
 
