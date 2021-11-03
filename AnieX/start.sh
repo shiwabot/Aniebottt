@@ -21,4 +21,4 @@ Legendary Anie-userbot!!
 @Aniebots
 """
 
-python3 -m userbot
+python3 -m Anie-Userbot 
