@@ -5,7 +5,7 @@ import sys
 import git
 
 from userbot.Config import Config
-from AuraXBot.utils import admin_cmd, sudo_cmd
+from Aniebots.utils import admin_cmd, sudo_cmd
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
@@ -19,7 +19,7 @@ BOT_IS_UP_TO_DATE = "**The AnieBot** is up-to-date sur."
 NEW_BOT_UP_DATE_FOUND = (
     "new update found for {branch_name}\n"
     "changelog: \n\n{changelog}\n"
-    "updating your AnirBot ..."
+    "updating your AnieBot ..."
 )
 NEW_UP_DATE_FOUND = "New update found for {branch_name}\n" "`updating your AnieBot...`"
 REPO_REMOTE_NAME = "temponame"
