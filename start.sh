@@ -1,4 +1,4 @@
 echo """
     Anieuserbot
 """
-python3 -m Aniebot
+python3 -m Anie-Userbot 
