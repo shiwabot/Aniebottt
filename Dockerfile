@@ -63,8 +63,8 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
 RUN wget https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip
 RUN wget -O opencv.zip https://github.com/opencv/opencv/archive/master.zip && unzip opencv.zip && mv -f opencv-master /usr/bin/ && rm opencv.zip
 RUN git clone https://github.com/Anieteam/Anie-userbot /root/Aniebot
-RUN mkdir /root/userbot/bin/
-WORKDIR /root/userbot/
+RUN mkdir /root/Aniebot/bin/
+WORKDIR /root/Aniebot/
 RUN chmod +x /usr/local/bin/*
 RUN pip3 install -r requirements.txt
 CMD ["bash","./Aniebot/start.sh"]
