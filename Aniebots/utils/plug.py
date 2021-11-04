@@ -4,10 +4,10 @@ import os
 import sys
 from pathlib import Path
 
-from Meowbot import *
-from Meowbot.config import *
-from Meowbot.helpers import *
-from Meowbot.utils import *
+from Aniebots import *
+from Aniebots.config import *
+from Aniebots.helpers import *
+from Aniebots.utils import *
 
 # ENV
 ENV = bool(os.environ.get("ENV", False))
@@ -26,15 +26,15 @@ def load_module(shortname):
         import Meowbot.utils
 
         path = Path(f"Meowbot/plugins/{shortname}.py")
-        name = "Meowbot.plugins.{}".format(shortname)
+        name = "Aniehots.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("MeowBot - Successfully imported " + shortname)
+        LOGS.info("Aniebots - Successfully imported " + shortname)
     else:
-        import Meowbot.utils
+        import Aniebots.utils
 
-        path = Path(f"Meowbot/plugins/{shortname}.py")
+        path = Path(f"Aniebots/plugins/{shortname}.py")
         name = "Meowbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
@@ -43,7 +43,7 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = Meowbot.utils
+        sys.modules["uniborg.util"] = Aniebots.utils
         mod.Config = Config
         mod.borg = bot
         mod.Meowbot = bot
@@ -54,14 +54,14 @@ def load_module(shortname):
         mod.Var = Config
         mod.admin_cmd = mew_cmd
         # support for other userbots
-        sys.modules["userbot.utils"] = Meowbot.utils
-        sys.modules["userbot"] = Meowbot
+        sys.modules["userbot.utils"] = Aniebots.utils
+        sys.modules["userbot"] = Aniebots 
         # support for paperplaneextended
         sys.modules["userbot.events"] = Meowbot
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["Meowbot.plugins." + shortname] = mod
-        LOGS.info("⚡ ℳêøաɮøƚ ⚡ - Successfully Imported " + shortname)
+        sys.modules["Aniebots.plugins." + shortname] = mod
+        LOGS.info("⚡ 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 ⚡ - Successfully Imported " + shortname)
 
 
 # remove plugins
@@ -73,7 +73,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except BaseException:
-            name = f"Meowbot.plugins.{shortname}"
+            name = f"Aniebots.plugins.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -83,4 +83,4 @@ def remove_plugin(shortname):
         raise ValueError
 
 
-# Meowbot
+# Aniebot
