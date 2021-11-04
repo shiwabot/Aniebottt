@@ -55,7 +55,7 @@ async def lg1(mewevent):
     draw.text(
         (w_, h_), text, font=font, fill="white", stroke_width=strik, stroke_fill="black"
     )
-    file_name = "MeowBot.png"
+    file_name = "Aniebots.png"
     img.save(file_name, "png")
     await bot.send_file(
         mewevent.chat_id,
