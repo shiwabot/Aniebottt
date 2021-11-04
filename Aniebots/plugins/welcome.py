@@ -1,6 +1,6 @@
 from telethon import events
 
-from Meowbot.sql.welcome_sql import (
+from Aniebots.sql.welcome_sql import (
     add_welcome,
     get_current_welcome,
     rm_welcome,
