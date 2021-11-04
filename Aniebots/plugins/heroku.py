@@ -57,7 +57,7 @@ async def down(Meow):
     event = await eor(Meow, "`Turing Off Heroku Dynos...`")
     await asyncio.sleep(2)
     await event.edit(
-        "**[ ⚠️ ]** \n**ℳêøաɮøƚ Dynos is now turned off. Manually turn it on to start again.**"
+        "**[ ⚠️ ]** \n**🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 Dynos is now turned off. Manually turn it on to start again.**"
     )
     if HEROKU_APP is not None:
         HEROKU_APP.process_formation()["worker"].scale(0)
