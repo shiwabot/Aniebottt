@@ -5,7 +5,7 @@ import time
 from Aniebots import *
 from Aniebots.config import Config
 from Aniebots.helpers import *
-from .utils import *
+from Aniebots.utils import *
 
 
 async def reply_id(event):
