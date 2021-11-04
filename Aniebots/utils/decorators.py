@@ -4,9 +4,9 @@ from pathlib import Path
 
 from telethon import events
 
-from Meowbot import *
-from Meowbot.config import Config
-from Meowbot.helpers import *
+from Aniebots import *
+from Aniebots.config import Config
+from Aniebots.helpers import *
 
 
 # admin cmd or normal user cmd
@@ -286,4 +286,4 @@ def command(**args):
     return decorator
 
 
-# Meowbot
+# Aniebot
