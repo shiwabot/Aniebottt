@@ -20,9 +20,9 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from Meowbot.sql.mute_sql import is_muted, mute, unmute
+from Aniebots.sql.mute_sql import is_muted, mute, unmute
 
-from . import *
+from Aniebots. import *
 
 lg_id = Config.LOGGER_ID
 PP_TOO_SMOL = "🥴 The image is too small. Just like your crush's feelings"
