@@ -1,6 +1,6 @@
 import functools
 
-from Meowbot import bot
+from Aniebots import bot
 
 
 # forward check
@@ -86,4 +86,4 @@ def no_grp():
     return decorator
 
 
-# Meowbot
+# Aniebot
