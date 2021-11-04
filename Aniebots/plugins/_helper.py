@@ -4,10 +4,10 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from . import *
 
 msg = f"""
-**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ʍɛօաɮօȶ ⚡**
+**⚡  🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥  ⚡**
 
-  •        [📑 Repo 📑](https://github.com/kaal0408/MeowBot)
-  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fkaal0408%2FMeowBot&template=https%3A%2F%2Fgithub.com%2Fkaal0408%2Fmewbot)
+  •        [📑 Repo 📑](https://github.com/Anieteam/Aniebots)
+  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots&template=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots)
 
   •  ©️ {mew_channel} ™
 """
