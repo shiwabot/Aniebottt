@@ -57,7 +57,7 @@ def load_module(shortname):
         sys.modules["userbot.utils"] = Aniebots.utils
         sys.modules["userbot"] = Aniebots 
         # support for paperplaneextended
-        sys.modules["userbot.events"] = Meowbot
+        sys.modules["userbot.events"] = Aniebots 
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Aniebots.plugins." + shortname] = mod
