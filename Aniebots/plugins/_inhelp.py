@@ -14,7 +14,7 @@ from . import *
 
 mew_row = Config.BUTTONS_IN_HELP
 mew_emoji = Config.EMOJI_IN_HELP
-mew_pic = Config.PMPERMIT_PIC or "https://telegra.ph/file/d9ed9caf60dd8acee435d.jpg"
+mew_pic = Config.PMPERMIT_PIC or "https://telegra.ph/file/5d7a1a5d027e6c27d6de5.jpg"
 cstm_pmp = Config.CUSTOM_PMPERMIT
 ALV_PIC = Config.ALIVE_PIC
 
@@ -38,18 +38,18 @@ USER_BOT_WARN_ZERO = (
 )
 
 MEOW_FIRST = (
-    "**🔥Ⱨҽყ ƚɦιʂ ιʂ ℳêøաɮøƚ P͆M̾ Sêçürïty 🔥**\n\nThis is to inform you that "
+    "**🔥Ⱨҽყ ƚɦιʂ ιʂ  🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥  P͆M̾ Sêçürïty 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**Please Choose Why You Are Here!!**".format(mew_mention, mssge)
 )
 
 alive_txt = """
-**🔥 мєσωвσт ιѕ σиℓιиє 🔥**
+**🔥 🇦 🇳 🇮 🇪 ιѕ σиℓιиє 🔥**
 {}
-**⚡ мєσω 𝚂𝚝𝚊𝚝𝚞𝚜 ⚡**
+**⚡ 𝕒𝕟𝕚𝕖 𝚂𝚝𝚊𝚝𝚞𝚜 ⚡**
 
 **тєℓєтнσи :**  `{}`
-**мєσω     :**  **{}**
+**🄰🄽🄸🄴     :**  **{}**
 **υρтιмє   :**  `{}`
 **αвυѕє    :**  **{}**
 **ѕυ∂σ     :**  **{}**
@@ -118,8 +118,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query.startswith("fsub"):
             hunter = event.pattern_match.group(1)
             Meow = hunter.split("+")
-            user = await bot.get_entity(int(Meow[0]))
-            channel = await bot.get_entity(int(Meow[1]))
+            user = await bot.get_entity(int(Anie[0]))
+            channel = await bot.get_entity(int(Anie[1]))
             msg = f"**👋 Welcome** [{user.first_name}](tg://user?id={user.id}), \n\n**📍 You need to Join** {channel.title} **to chat in this group.**"
             if not channel.username:
                 link = (await bot(ExportChatInviteRequest(channel))).link
@@ -158,14 +158,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     ALV_PIC,
                     text=me_ow,
-                    title="MeowBot Alive",
+                    title="Aniebot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
                     text=me_ow,
-                    title="MeowBot Alive",
+                    title="Anie Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
@@ -188,13 +188,13 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**✨ ʟɛɢɛռ∂ѕ σf мєσω ✨**",
+                text=f"**✨ ʟɛɢɛռ∂ѕ σf 🇦 🇳 🇮 🇪 ✨**",
                 buttons=[
-                    [Button.url("📑 Repo 📑", "https://github.com/kaal0408/Meowuserbot")],
+                    [Button.url("📑 Repo 📑", "https://github.com/shiwabot/Aniebot")],
                     [
                         Button.url(
                             "🚀 Deploy 🚀",
-                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fkaal0408%2FMeowBot&template=https%3A%2F%2Fgithub.com%2Fkaal0408%2Fmewbot",
+                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots&template=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots",
                         )
                     ],
                 ],
@@ -212,18 +212,18 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@Meow_userbot",
-                text="""**Hey! This is [ℳêøաɮøƚ](https://t.me/Meow_userbot) \nYou can know more about me from the links given below 👇**""",
+                text="""**Hey! This is [ 🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥 ](https://t.me/Aniebots) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🌺 CHANNEL 🌺", "https://t.me/LuciferXupdates"),
-                        custom.Button.url("⚡ GROUP ⚡", "https://t.me/Meow_userbot"),
+                        custom.Button.url("🌺 CHANNEL 🌺", "https://t.me/Aniebots"),
+                        custom.Button.url("⚡ GROUP ⚡", "https://t.me/Aniebotsupports"),
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/kaal0408/MeowBot"
+                            "✨ REPO ✨", "https://github.com/Anieteam/Aniebots"
                         ),
                         custom.Button.url(
-                            "🖍️ TUTORIAL 🖍️", "https://youtu.be/M2FQJq_sHp4"
+                            "🖍️ TUTORIAL 🖍️", "https://t.me/Aniebotsupports"
                         ),
                     ],
                 ],
@@ -238,7 +238,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"🌹 This is ℳҽøω ρɱ Security for {mew_mention} to keep away unwanted retards from spamming PM..."
+                f"🌹 This is 🇦 🇳 🇮 🇪 ρɱ Security for {mew_mention} to keep away unwanted retards from spamming PM..."
             )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
@@ -299,16 +299,16 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     async def on_pm_click(event):
         hunter = (event.data_match.group(1)).decode("UTF-8")
         Meow = hunter.split("+")
-        if not event.sender_id == int(Meow[0]):
+        if not event.sender_id == int(Anie[0]):
             return await event.answer("This Ain't For You!!", alert=True)
         try:
-            await bot(GetParticipantRequest(int(Meow[1]), int(Meow[0])))
+            await bot(GetParticipantRequest(int(Anie[1]), int(Anie[0])))
         except UserNotParticipantError:
             return await event.answer("You need to join the channel first.", alert=True)
         await bot.edit_permissions(
-            event.chat_id, int(Meow[0]), send_message=True, until_date=None
+            event.chat_id, int(Anie[0]), send_message=True, until_date=None
         )
-        await event.edit("Yay! You can meow meow now !!")
+        await event.edit("Yay! You can 🇦 🇳 🇮 🇪 now !!")
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"reopen")))
     async def reopn(event):
@@ -336,12 +336,12 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 f"{mew_emoji} Re-Open Menu {mew_emoji}", data="reopen"
             )
             await event.edit(
-                f"**🌹 ℳêøաɮøƚ Mêñû Prõvîdêr ìs ñôw Çlösëd 🌹**\n\n**Bot Of :**  {mew_mention}\n\n        [©️ ℳêøաɮøƚ ™️]({chnl_link})",
+                f"**🌹  🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥  Mêñû Prõvîdêr ìs ñôw Çlösëd 🌹**\n\n**Bot Of :**  {mew_mention}\n\n        [©️ ℳêøաɮøƚ ™️]({chnl_link})",
                 buttons=veriler,
                 link_preview=False,
             )
         else:
-            reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © ℳêøաɮøƚ ™"
+            reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. ©  🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥  ™"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\((.+?)\)")))
@@ -360,7 +360,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Hoo gya aapka. Kabse Meow Meow dabae jaa rhe ho. Khudka Meow bnalo na agr chaiye to. © ℳêøաɮøƚ ™",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe ho. Khudka Meow bnalo na agr chaiye to. ©  🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥  ™",
                 cache_time=0,
                 alert=True,
             )
@@ -399,7 +399,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © ℳêøաɮøƚ ™",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Aniebot ™",
                 cache_time=0,
                 alert=True,
             )
@@ -444,10 +444,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Hoo gya aapka. Kabse Meow Meow dabae jaa rhe h. Khudka Meow bnalo na agr chaiye to. © ℳêøաɮøƚ ™",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka Meow bnalo na agr chaiye to. © Aniebot ™",
                 cache_time=0,
                 alert=True,
             )
 
 
-# Meowbot
+# Aniebot
