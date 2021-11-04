@@ -39,7 +39,7 @@ except Exception:
     HEROKU_APP = None
 
 
-if Config.MEOWBOT_SESSION:
+if Config.ANIEBOTS_SESSION:
     session_name = str(Config.ANIEBOTS_SESSION)
     try:
         if session_name.endswith("="):
