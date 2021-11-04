@@ -5,16 +5,16 @@ from . import *
 
 # -------------------------------------------------------------------------------
 
-mew_pic = Config.ALIVE_PIC or "https://telegra.ph/file/3c2932815330a143fa1a8.png"
-alive_c = f"__**😺😺ʍɛօա ɨs օռʟɨռɛ😺😺**__\n\n"
+mew_pic = Config.ALIVE_PIC or "https://telegra.ph/file/5d7a1a5d027e6c27d6de5.jpg"
+alive_c = f"__**😺😺🇦 🇳 🇮 🇪 ɨs օռʟɨռɛ😺😺**__\n\n"
 alive_c += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
 alive_c += f"╠⟪Øωηєя⟫╣  ⊱ 【 {mew_mention} 】\n\n"
 alive_c += f"┏━━━━━━━━━━━━━━━━━━━\n"
 alive_c += f"┣⧼• тεℓεтнση  ⊱  `[version](1.0)\n"
-alive_c += f"┣⧼• мεσω        ⊱  __**{mew_ver}**__\n"
+alive_c += f"┣⧼• 🄰🄽🄸🄴        ⊱  __**{mew_ver}**__\n"
 alive_c += f"┣⧼• sυ∂σ           ⊱ `{is_sudo}`\n"
 alive_c += f"┣⧼• cнαηηεℓ     ⊱  {mew_channel}\n"
-alive_c += f"┣⧼• ℓιcεηsε     ⊱ (Meow)[GitHub.com/TeamMew]\n"
+alive_c += f"┣⧼• ℓιcεηsε     ⊱ (Anie)[GitHub.com/Anieteam]\n"
 alive_c += f"┣⧼• υρтιмε      ⊱ `{uptime}`\n"
 alive_c += f"┗━━━━━━━━━━━━━━━━━━━\n"
 # -------------------------------------------------------------------------------
@@ -27,16 +27,16 @@ async def up(Meow):
         return
     await Meow.get_chat()
     await Meow.delete()
-    await bot.send_file(Meow.chat_id, mew_pic, caption=alive_c)
+    await bot.send_file(Anie.chat_id, mew_pic, caption=alive_c)
     await Meow.delete()
 
 
 msg = f"""
-**✨ ʍɛօա ιѕ σиℓιиє ✨**
+**✨ 🄰🄽🄸🄴 ιѕ σиℓιиє ✨**
 {Config.ALIVE_MSG}
-**🌹 Meow 𝚂𝚝𝚊𝚝𝚞𝚜 🌹**
+**🌹 🄰🄽🄸🄴 𝚂𝚝𝚊𝚝𝚞𝚜 🌹**
 **тєℓєтнσи:**  `{version}`
-**ℳêøա    :**  **{mew_ver}**
+**🄰🄽🄸🄴    :**  **{mew_ver}**
 **υρтιмє    :**  `{uptime}`
 **αвυѕє     :**  **{abuse_m}**
 **ѕυ∂σ        :**  **{is_sudo}**
@@ -44,8 +44,8 @@ msg = f"""
 botname = Config.BOT_USERNAME
 
 
-@bot.on(mew_cmd(pattern="meow$"))
-@bot.on(sudo_cmd(pattern="meow$", allow_sudo=True))
+@bot.on(mew_cmd(pattern="Anie$"))
+@bot.on(sudo_cmd(pattern="Anie$", allow_sudo=True))
 async def mew_a(event):
     try:
         Meow = await bot.inline_query(botname, "alive")
