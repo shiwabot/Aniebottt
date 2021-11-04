@@ -135,7 +135,7 @@ async def promote(promt):
     mewevent = await eor(promt, "`Promoting User...`")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "ǟɖʍɨռ"
+        rank = "🇦 🇳 🇮 🇪"
     if not user:
         return
     try:
