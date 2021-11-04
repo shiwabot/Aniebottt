@@ -139,4 +139,4 @@ async def phcomment(text1, text2, text3):
     return "temp.jpg"
 
 
-# Meowbot
+# Aniebot
