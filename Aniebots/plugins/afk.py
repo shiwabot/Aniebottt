@@ -32,7 +32,7 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if "#" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        Meowbot = await event.client.send_message(
+        Aniebots = await event.client.send_message(
             event.chat_id,
             "__**Back to Virtual World!**__\nNo Longer AFK.\n⏱️ Was afk for: `"
             + total_afk_time
@@ -57,7 +57,7 @@ async def set_not_afk(event):
                 silent=True,
             )
         await asyncio.sleep(5)
-        await Meowbot.delete()
+        await Aniebots.delete()
         USER_AFK = {}  # pylint:disable=E0602
         afk_time = None  # pylint:disable=E0602
 
