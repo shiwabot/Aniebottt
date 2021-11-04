@@ -1,4 +1,4 @@
-# IF YOU ARE HOSTING MEOWBOT ON OTHER VPS OR LOCALLY RATHER THAN HEROKU
+# IF YOU ARE HOSTING Aniebot ON OTHER VPS OR LOCALLY RATHER THAN HEROKU
 # THEN DON'T EDIT THIS FILE.
 # GO AND EDIT ex_config.py AND RENAME IT TO config.py
 # AND FILL THE REQUIRED VARS THERE.
@@ -13,9 +13,9 @@ from telethon.tl.types import ChatBannedRights
 class Config:
     LOGGER = True
     ABUSE = os.environ.get("ABUSE", None)
-    ALIVE_MSG = os.environ.get("ALIVE_MSG", "⚡ ʟɛɢɛռɖaʀʏ ᴀғ ʍɛօաɮօȶ ⚡")
+    ALIVE_MSG = os.environ.get("ALIVE_MSG", "⚡ 🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥 ⚡")
     ALIVE_PIC = os.environ.get(
-        "ALIVE_PIC", "https://telegra.ph/file/f62e50245639f24fd955b.jpg"
+        "ALIVE_PIC", "https://telegra.ph/file/5d7a1a5d027e6c27d6de5.jpg"
     )
     ANTI_FLOOD_WARN_MODE = ChatBannedRights(
         until_date=None, view_messages=None, send_messages=True
@@ -28,7 +28,7 @@ class Config:
         t_file = open(TMP_DOWNLOAD_DIRECTORY + "auth_token.txt", "w")
         t_file.write(AUTH_TOKEN_DATA)
         t_file.close()
-    BIO_MSG = os.environ.get("BIO_MSG", "ʟɛɢɛռɖaʀʏ ᴀғ ʍɛօաɮօȶ")
+    BIO_MSG = os.environ.get("BIO_MSG", " 🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥 ")
     BL_CHAT = set(int(x) for x in os.environ.get("BL_CHAT", "").split())
     BOT_HANDLER = os.environ.get("BOT_HANDLER", "\/")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
@@ -90,7 +90,7 @@ class Config:
         PM_LOG_ID = int(PM_LOG_ID)
     PM_PERMIT = os.environ.get("PM_PERMIT", "ENABLE")
     PMPERMIT_PIC = os.environ.get(
-        "PMPERMIT_PIC", "https://telegra.ph/file/73e95f4325159336766c0.jpg"
+        "PMPERMIT_PIC", "https://telegra.ph/file/5d7a1a5d027e6c27d6de5.jpg"
     )
     REMOVE_BG_API = os.environ.get("REMOVE_BG_API", None)
     SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", None)
@@ -106,7 +106,7 @@ class Config:
     TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
     TZ = os.environ.get("TZ", "Asia/Kolkata")
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/TeamMew/MeowBot"
+        "UPSTREAM_REPO", "https://github.com/Anieteam/Aniebots"
     )
     WEATHER_API = os.environ.get("WEATHER_API", None)
     YOUR_NAME = os.environ.get("YOUR_NAME", None)
@@ -121,4 +121,4 @@ class Development(Config):
     LOGGER = True
 
 
-# Meowbot
+# Aniebot
