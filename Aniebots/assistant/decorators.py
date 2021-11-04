@@ -2,7 +2,7 @@ import functools
 
 from telethon import events
 
-from Meowbot import *
+from Aniebot import *
 
 bothandler = Config.BOT_HANDLER
 
@@ -31,8 +31,8 @@ def is_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            Meowbot = bot.tgbot
-            perms = await Meowbot.get_permissions(event.chat_id, event.sender_id)
+            Aniebot = bot.tgbot
+            perms = await Aniebot.get_permissions(event.chat_id, event.sender_id)
             user = event.sender_id
             ForGo10 = bot.uid
             if perms.is_admin:
@@ -53,9 +53,9 @@ def is_bot_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            Meowbot = bot.tgbot
-            boat = await Meowbot.get_me()
-            perms = await Meowbot.get_permissions(event.chat_id, boat)
+            Aniebot = bot.tgbot
+            boat = await Aniebot.get_me()
+            perms = await Aniebot.get_permissions(event.chat_id, boat)
             if perms.is_admin:
                 await func(event)
             else:
