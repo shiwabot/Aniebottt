@@ -2,8 +2,8 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from Meowbot import *
-from Meowbot.helpers import *
+from Aniebots import *
+from Aniebots.helpers import *
 
 
 # just a small shit for big works
@@ -30,4 +30,4 @@ async def is_admin(client, chat_id, user_id):
         return False
 
 
-# Meowbot
+# Aniebot
