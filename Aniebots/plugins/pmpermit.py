@@ -4,7 +4,7 @@ import io
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
-from Meowbot.sql import pmpermit_sql as pm_sql
+from Aniebots.sql import pmpermit_sql as pm_sql
 
 from . import *
 
@@ -18,7 +18,7 @@ CSTM_PMP = (
 )
 MEOW_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
 MEOW_FIRST = (
-    "**🔥 ℳêøաɮøƚ Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
+    "**🔥 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**Please Choose Why You Are Here!!**".format(mew_mention, CSTM_PMP)
 )
