@@ -12,7 +12,7 @@ from Aniebots.utils import *
 # ENV
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from Meowbot.config import Config
+    from Aniebots.config import Config
 else:
     if os.path.exists("Config.py"):
         from Config import Development as Config
@@ -46,7 +46,7 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = Aniebots.utils
         mod.Config = Config
         mod.borg = bot
-        mod.Meowbot = bot
+        mod.Aniebots = bot
         mod.edit_or_reply = edit_or_reply
         mod.eor = edit_or_reply
         mod.delete_mew = delete_mew
