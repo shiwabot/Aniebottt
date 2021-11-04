@@ -2,9 +2,9 @@ import asyncio
 import os
 import re
 
-from Meowbot import *
-from Meowbot.config import Config
-from Meowbot.helpers import *
+from Aniebots import *
+from Aniebots.config import Config
+from Aniebots.helpers import *
 
 
 # either edit or reply that msg
