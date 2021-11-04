@@ -4,4 +4,4 @@ class CancelProcess(Exception):
     """
 
 
-# Meowbot
+# Aniebot
