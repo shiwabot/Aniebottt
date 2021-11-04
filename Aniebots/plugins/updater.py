@@ -7,7 +7,7 @@ import urllib3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from Meowbot.helpers import runner
+from Aniebots.helpers import runner
 
 from . import *
 
@@ -93,9 +93,9 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "✅ Successfully updated ℳêøաɮøƚ!\n\nBot is restarting please wait for a minute."
+        "✅ Successfully updated Aniebots!\n\nBot is restarting please wait for a minute."
     )
-    args = [sys.executable, "-m", "Meowbot"]
+    args = [sys.executable, "-m", "Aniebots"]
     os.execle(sys.executable, *args, os.environ)
     return
 
@@ -151,7 +151,7 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     if changelog == "" and not force_update:
         await event.edit(
-            "\n**😎 ℳêøաɮøƚ is UP-TO-DATE.**"
+            "\n**😎  🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥  is UP-TO-DATE.**"
             f"\n\n**Version :**  {mew_ver}"
             f"\n**Owner :**  {mew_mention}"
             f"\n**Git Branch :**  {UPSTREAM_REPO_BRANCH}\n"
@@ -161,11 +161,11 @@ async def upstream(event):
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
         return await event.respond(
-            f"🌚 Do `{hl}update build` to update your **ℳêøաɮøƚ** !!"
+            f"🌚 Do `{hl}update build` to update your **** !!"
         )
 
     if force_update:
-        await event.edit("`Force-Updating ℳêøաɮøƚ. Please wait...`")
+        await event.edit("`Force-Updating 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃. Please wait...`")
     if conf == "now":
         await event.edit("`Update In Progress! Please Wait....`")
         await update(event, repo, ups_rem, ac_br)
@@ -210,7 +210,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         await event.edit(
-            f"**Your ℳêøաɮøƚ Is UpToDate**\n\n**Version :**  __{mew_ver}__\n**Oɯɳҽɾ :**  {mew_mention}"
+            f"**Your 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 Is UpToDate**\n\n**Version :**  __{mew_ver}__\n**Oɯɳҽɾ :**  {mew_mention}"
         )
     else:
         await event.edit(
@@ -226,7 +226,7 @@ async def upstream(event):
         event,
         "`Hard-Update In Progress... \nPlease wait until docker build is finished...`",
     )
-    off_repo = "https://github.com/TeamMew/MeowBot"
+    off_repo = "https://github.com/Anieteam/Aniebots"
     os.chdir("/app")
     git_mew = f"rm -rf .git"
     try:
@@ -267,13 +267,13 @@ CmdHelp("update").add_command(
 ).add_command(
     "update now",
     None,
-    "Soft-Update Your ℳêøաɮøƚ. Basically if you restart dyno it will go back to previous deploy.",
+    "Soft-Update Your 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃. Basically if you restart dyno it will go back to previous deploy.",
 ).add_command(
     "update build",
     None,
-    "Hard-Update Your ℳêøաɮøƚ. This won't take you back to your previous deploy. This will be triggered even if there is no changelog.",
+    "Hard-Update Your 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃. This won't take you back to your previous deploy. This will be triggered even if there is no changelog.",
 ).add_info(
-    "ℳêøաɮøƚ Updater."
+    "🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 Updater."
 ).add_warning(
     "✅ Harmless Module."
 ).add()
