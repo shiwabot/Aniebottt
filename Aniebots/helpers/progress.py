@@ -2,10 +2,10 @@ import math
 import re
 import time
 
-from Meowbot import *
-from Meowbot.config import Config
-from Meowbot.helpers import *
-from Meowbot.utils import *
+from Aniebots import *
+from Aniebots.config import Config
+from Aniebots.helpers import *
+from .utils import *
 
 
 async def reply_id(event):
