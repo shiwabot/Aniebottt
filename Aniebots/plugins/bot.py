@@ -10,7 +10,7 @@ from . import *
 @bot.on(mew_cmd("kickme", outgoing=True))
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("😪 **KThnxBye** See u all in Meow!!")
+        await e.edit("😪 **KThnxBye** See u all in Aniebot!!")
         time.sleep(1)
         if "-" in str(e.chat_id):
             await bot(LeaveChannelRequest(e.chat_id))
