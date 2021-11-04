@@ -7,9 +7,9 @@ from telethon.tl.types import ChatBannedRights
 class Config(object):
     LOGGER = True
     ABUSE = os.environ.get("ABUSE", None)
-    ALIVE_MSG = os.environ.get("ALIVE_MSG", "⚡ ʟɛɢɛռɖaʀʏ ᴀғ ʍɛօաɮօȶ ⚡")
+    ALIVE_MSG = os.environ.get("ALIVE_MSG", "⚡ 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 ⚡")
     ALIVE_PIC = os.environ.get(
-        "ALIVE_PIC", "https://telegra.ph/file/3c2932815330a143fa1a8.png"
+        "ALIVE_PIC", "https://telegra.ph/file/5d7a1a5d027e6c27d6de5.jpg"
     )
     ANTI_FLOOD_WARN_MODE = ChatBannedRights(
         until_date=None, view_messages=None, send_messages=True
@@ -22,7 +22,7 @@ class Config(object):
         t_file = open(TMP_DOWNLOAD_DIRECTORY + "auth_token.txt", "w")
         t_file.write(AUTH_TOKEN_DATA)
         t_file.close()
-    BIO_MSG = os.environ.get("BIO_MSG", "ʟɛɢɛռɖaʀʏ ᴀғ ʍɛօաɮօȶ")
+    BIO_MSG = os.environ.get("BIO_MSG", "🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃")
     BL_CHAT = set(int(x) for x in os.environ.get("BL_CHAT", "").split())
     BOT_HANDLER = os.environ.get("BOT_HANDLER", "\/")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
@@ -84,7 +84,7 @@ class Config(object):
         PM_LOG_ID = int(PM_LOG_ID)
     PM_PERMIT = os.environ.get("PM_PERMIT", "ENABLE")
     PMPERMIT_PIC = os.environ.get(
-        "PMPERMIT_PIC", "https://telegra.ph/file/3c2932815330a143fa1a8.png"
+        "PMPERMIT_PIC", "https://telegra.ph/file/5d7a1a5d027e6c27d6de5.jpg"
     )
     REMOVE_BG_API = os.environ.get("REMOVE_BG_API", None)
     SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", None)
@@ -100,7 +100,7 @@ class Config(object):
     TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
     TZ = os.environ.get("TZ", "Asia/Kolkata")
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/kaal0408/MeowBot"
+        "UPSTREAM_REPO", "https://github.com/Anieteam/Aniebots"
     )
     WEATHER_API = os.environ.get("WEATHER_API", None)
     YOUR_NAME = os.environ.get("YOUR_NAME", None)
