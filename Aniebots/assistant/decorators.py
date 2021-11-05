@@ -9,7 +9,7 @@ bothandler = Config.BOT_HANDLER
 
 def mew_cmd(add_cmd, is_args=False):
     def cmd(func):
-        Meowbot = bot.tgbot
+        Aniebots = bot.tgbot
         if is_args:
             pattern = bothandler + add_cmd + "(?: |$)(.*)"
         elif is_args == "simp":
