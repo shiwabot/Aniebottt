@@ -11,7 +11,7 @@ from Aniebots.sql.filter_sql import (
     remove_filter,
 )
 
-from Aniebots. import *
+from Aniebots import *
 
 DELETE_TIMEOUT = 0
 TYPE_TEXT = 0
