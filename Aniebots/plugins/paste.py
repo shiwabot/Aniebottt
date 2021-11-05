@@ -7,7 +7,7 @@ import requests
 from requests import exceptions, get
 from telethon.utils import get_extension
 
-from Aniebots. import *
+from Aniebots import *
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
