@@ -7,7 +7,7 @@ from telethon.tl import functions
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest
 
-from . import *
+from Aniebots. import *
 
 
 async def get_chatinfo(event):
