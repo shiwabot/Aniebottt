@@ -1,6 +1,6 @@
 import requests
 
-from Aniebots. import *
+from Aniebots import *
 
 
 async def download_file_from_google_drive(id):
