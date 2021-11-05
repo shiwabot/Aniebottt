@@ -1,6 +1,6 @@
 import asyncio
 
-from . import *
+from Aniebots. import *
 
 SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID
