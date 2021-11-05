@@ -3,7 +3,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+# DoNe :/
 from Aniebots.helpers import *
 
 
