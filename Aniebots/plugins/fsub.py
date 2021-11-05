@@ -3,7 +3,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 
 from Aniebots.sql.fsub_sql import *
 
-from Aniebots. import *
+from Aniebots import *
 
 """
 @tgbot.on(InlineQuery)
