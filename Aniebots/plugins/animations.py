@@ -1,7 +1,7 @@
 import asyncio
 from collections import deque
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd(pattern=r"boxs$", outgoing=True))
