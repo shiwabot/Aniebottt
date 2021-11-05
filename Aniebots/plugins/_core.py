@@ -3,7 +3,7 @@ import io
 import os
 from pathlib import Path
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd(pattern=r"cmds"))
