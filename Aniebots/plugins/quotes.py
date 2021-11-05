@@ -2,7 +2,7 @@ import random
 
 import requests
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern=f"love$", outgoing=True))
