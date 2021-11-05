@@ -4,10 +4,10 @@ import cv2
 import numpy as np
 from vcam import meshGen, vcam
 
-from . import *
+from Aniebots. import *
 
-if not os.path.isdir("./Meowbot/"):
-    os.makedirs("./Meowbot/")
+if not os.path.isdir("./Aniebots/"):
+    os.makedirs("./Aniebots/")
 
 
 @bot.on(mew_cmd(pattern=r"feye$"))
