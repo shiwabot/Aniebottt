@@ -5,7 +5,7 @@ import sys
 import time
 import traceback
 
-from Aniebots. import *
+from Aniebots import *
 
 lg_id = Config.LOGGER_ID
 
