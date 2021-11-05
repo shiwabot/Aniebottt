@@ -3,7 +3,7 @@ import asyncio
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from . import *
+from Aniebots. import *
 
 logs_id = Config.FBAN_LOG_GROUP
 fbot = "@MissRose_bot"
