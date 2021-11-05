@@ -3,7 +3,7 @@ import re
 import time
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+# DoNe :/
 from Aniebots.config import Config
 from Aniebots.helpers import *
 from Aniebots.utils import *
