@@ -1,7 +1,7 @@
 import asyncio
 import random
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd(pattern="type (.*)"))
