@@ -4,7 +4,7 @@ import time
 from telethon import functions
 from telethon.tl.functions.channels import LeaveChannelRequest
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd("kickme", outgoing=True))
