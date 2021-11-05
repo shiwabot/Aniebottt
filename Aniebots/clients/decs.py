@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 from telethon import events
 
-from .session import H2, H3, H4, H5,
+from .session import H2, H3, H4, H5
 from Aniebots import CMD_LIST, LOAD_PLUG, bot
 from Aniebots.config import Config
 
