@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="fext (.*)"))
