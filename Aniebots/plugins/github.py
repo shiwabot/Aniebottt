@@ -4,7 +4,7 @@ from datetime import datetime
 
 from github import Github
 
-from Aniebots. import *
+from Aniebots import *
 
 GIT_TEMP_DIR = "./userbot/temp/"
 
