@@ -4,9 +4,9 @@ import os
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-from . import *
+from Aniebots. import *
 
-MEOW_NAME = Config.YOUR_NAME or "ℳêøաɮøƚ"
+MEOW_NAME = Config.YOUR_NAME or "🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃"
 lg_id = Config.LOGGER_ID
 
 telegraph = Telegraph()
