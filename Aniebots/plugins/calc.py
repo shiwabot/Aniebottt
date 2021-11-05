@@ -2,7 +2,7 @@ import io
 import sys
 import traceback
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="calc (.*)"))
