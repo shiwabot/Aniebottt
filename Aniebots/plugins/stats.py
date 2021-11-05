@@ -4,7 +4,7 @@ from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from telethon.tl.types import Channel, Chat, User
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="stats$"))
