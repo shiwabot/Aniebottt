@@ -10,7 +10,7 @@ from telethon.errors import PhotoInvalidDimensionsError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import SendMediaRequest
 
-from Aniebots. import *
+from Aniebots import *
 
 if not os.path.isdir("./temp"):
     os.makedirs("./temp")
