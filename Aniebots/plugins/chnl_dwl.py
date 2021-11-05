@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd(pattern=r"getc"))
