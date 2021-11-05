@@ -15,7 +15,7 @@ from telethon.tl.types import (
     UserStatusRecently,
 )
 
-from Aniebots. import *
+from Aniebots import *
 
 BANNED_RIGHTS = ChatBannedRights(
     until_date=None,
