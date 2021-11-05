@@ -13,7 +13,7 @@ from PIL import Image, ImageColor
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="scan ?(.*)"))
