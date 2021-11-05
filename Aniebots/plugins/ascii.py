@@ -1,6 +1,6 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd(pattern="ascii (.*)"))
