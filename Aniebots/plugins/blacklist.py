@@ -4,7 +4,7 @@ from telethon import events
 
 from Aniebots.sql import blacklist_sql as sq
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(events.NewMessage(incoming=True))
