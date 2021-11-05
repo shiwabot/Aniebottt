@@ -3,7 +3,7 @@ import re
 
 import requests
 
-from . import *
+from Aniebots. import *
 
 
 async def callAPI(search_str):
