@@ -6,7 +6,7 @@ from urllib.parse import quote_plus
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from Aniebots. import *
+from Aniebots import *
 
 CARBONLANG = "auto"
 LANG = "en"
