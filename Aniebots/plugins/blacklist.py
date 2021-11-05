@@ -2,9 +2,9 @@ import re
 
 from telethon import events
 
-from Meowbot.sql import blacklist_sql as sq
+from Aniebots.sql import blacklist_sql as sq
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(events.NewMessage(incoming=True))
