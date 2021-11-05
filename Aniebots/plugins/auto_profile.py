@@ -5,7 +5,7 @@ from telethon.errors import FloodWaitError
 from telethon.tl import functions
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 
-from Aniebots. import *
+from Aniebots import *
 
 DEFAULTUSERBIO = Config.BIO_MSG
 DEL_TIME_OUT = 60
