@@ -3,7 +3,7 @@ import shutil
 
 import cv2
 
-from Aniebots. import *
+from Aniebots import *
 
 path = "./mewmify/"
 if not os.path.isdir(path):
