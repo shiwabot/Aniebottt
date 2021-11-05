@@ -7,7 +7,7 @@ import emoji
 from googletrans import Translator
 from gtts import gTTS
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd(pattern="trt ?(.*)"))
