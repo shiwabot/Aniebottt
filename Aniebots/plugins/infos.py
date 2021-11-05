@@ -25,7 +25,7 @@ from telethon.tl.types import (
 )
 from telethon.utils import get_input_location, pack_bot_file_id
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="recognize ?(.*)", outgoing=True))
@@ -120,7 +120,7 @@ async def _(event):
 <b>🤖 BOT</b>: {}
 <b>👥 Groups in Common</b>: {}
 
-<b>⚡ <a href='https://t.me/Its_Meowbot'>From DataBase of MeowBot</a> ⚡ </b>
+<b>⚡ <a href='https://t.me/Aniebots'>From DataBase of Aniebot</a> ⚡ </b>
 """.format(
         user_id,
         user_id,
