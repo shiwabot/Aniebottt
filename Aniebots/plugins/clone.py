@@ -4,7 +4,7 @@ from telethon.tl import functions
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from Aniebots. import *
+from Aniebots import *
 
 DEFAULTUSERBIO = Config.BIO_MSG
 BOTLOG_CHATID = Config.LOGGER_ID
