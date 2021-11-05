@@ -1,6 +1,6 @@
 import asyncurban
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="ud (.*)"))
