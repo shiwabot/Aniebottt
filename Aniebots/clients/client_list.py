@@ -1,10 +1,10 @@
 import telethon.utils
 
-from .session import Hell, H2, H3, H4, H5
-from hellbot.config import Config
+from .session import mew
+from Aniebots.config import Config
 
 
-async def clients_list(Config, Hell, H2, H3, H4, H5):
+async def clients_list(Config, mew,):
     user_ids = list(Config.SUDO_USERS) or []
     main_id = await Hell.get_me()
     user_ids.append(main_id.id)
@@ -43,7 +43,7 @@ async def clients_list(Config, Hell, H2, H3, H4, H5):
 async def client_id(event):
     client = await event.client.get_me()
     uid = telethon.utils.get_peer_id(client)
-    ForGo10God = uid
-    HELL_USER = client.first_name
-    hell_mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
-    return ForGo10God, HELL_USER, hell_mention
+    D3NVIL = uid
+    mew_USER = client.first_name
+    mew_mention = f"[{Anie_USER}](tg://user?id={d3nvil})"
+    return d3nvil, Anie_USER, Anie_mention
