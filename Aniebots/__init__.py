@@ -11,7 +11,7 @@ from requests import get
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
-from Meowbot.Config import Config
+from Aniebots.Config import Config
 StartTime = datetime.datetime.now()
 
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -39,8 +39,8 @@ except Exception:
     HEROKU_APP = None
 
 
-if Config.MEOWBOT_SESSION:
-    session_name = str(Config.MEOWBOT_SESSION)
+if Config.ANIEBOTS_SESSION:
+    session_name = str(Config.ANIEBOTS_SESSION)
     try:
         if session_name.endswith("="):
             bot = TelegramClient(
@@ -49,7 +49,7 @@ if Config.MEOWBOT_SESSION:
         else:
             bot = TelegramClient(
                 "BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
-            ).start(bot_token=Config.MEOWBOT_SESSION)
+            ).start(bot_token=Config.ANIEBOTS_SESSION)
     except Exception as e:
         LOGS.warn(f"MEOWBOT_SESSION - {str(e)}")
         sys.exit()
@@ -57,7 +57,7 @@ else:
     session_name = "startup"
     bot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
 
-tbot = TelegramClient("Meowbot", api_id=Config.APP_ID, api_hash=Config.API_HASH).start(
+tbot = TelegramClient("Aniebots", api_id=Config.APP_ID, api_hash=Config.API_HASH).start(
     bot_token=Config.BOT_TOKEN
 )
 
