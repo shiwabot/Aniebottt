@@ -5,7 +5,7 @@ import sys
 import time
 import traceback
 
-from . import *
+from Aniebots. import *
 
 lg_id = Config.LOGGER_ID
 
@@ -28,7 +28,7 @@ async def _(event):
     if mewuser.username:
         curruser = mewuser.username
     else:
-        curruser = "Meowbot"
+        curruser = "Aniebots"
     uid = os.geteuid()
     if uid == 0:
         cresult = f"`{curruser}:~#` `{cmd}`\n`{result}`"
