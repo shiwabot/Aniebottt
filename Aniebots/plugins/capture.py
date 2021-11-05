@@ -4,7 +4,7 @@ import traceback
 
 from selenium import webdriver
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="(webshot|screenshot) (.*)", outgoing=True))
