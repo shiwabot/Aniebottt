@@ -1,7 +1,7 @@
 import asyncio
 import os
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd(pattern=r"unpack", outgoing=True))
