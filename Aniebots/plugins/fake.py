@@ -5,7 +5,7 @@ import requests
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="picgen"))
