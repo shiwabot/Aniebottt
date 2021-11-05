@@ -4,12 +4,12 @@ import re
 from pathlib import Path
 from telethon import events
 
-from .session import H2, H3, H4, H5
-from hellbot import CMD_LIST, LOAD_PLUG, bot
-from hellbot.config import Config
+from .session import mew
+from Aniebots import CMD_LIST, LOAD_PLUG, bot
+from Aniebots.config import Config
 
 
-def hell_cmd(
+def mew_cmd(
     pattern: str = None,
     allow_sudo: bool = True,
     disable_edited: bool = False,
@@ -43,7 +43,7 @@ def hell_cmd(
         else:
             hell_ = "\\" + Config.HANDLER
             sudo_ = "\\" + Config.SUDO_HANDLER
-            hell_reg = re.compile(hell_ + pattern)
+            hell_reg = re.compile(mew_ + pattern)
             sudo_reg = re.compile(sudo_ + pattern)
             if command is not None:
                 cmd1 = hell_ + command
@@ -94,7 +94,7 @@ def hell_cmd(
     return decorator
 
 
-def hell_handler(
+def mew_handler(
     **args,
 ):
     def decorator(func):
