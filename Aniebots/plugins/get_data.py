@@ -6,7 +6,7 @@ from telethon.tl.tlobject import TLObject
 from telethon.tl.types import MessageEntityPre
 from telethon.utils import add_surrogate
 
-from . import *
+from Aniebots. import *
 
 PRINTABLE_SET = set(bytes(string.printable, "ascii"))
 STR_LEN_MAX = 256
