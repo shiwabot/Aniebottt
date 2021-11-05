@@ -3,7 +3,7 @@ import os
 import requests
 from PIL import Image
 
-from . import *
+from Aniebots. import *
 
 TEMP_DIR = os.environ.get("TEMP_DIR", "./temp/")
 
