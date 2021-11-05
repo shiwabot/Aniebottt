@@ -2,7 +2,7 @@ import base64
 from subprocess import PIPE
 from subprocess import run as runapp
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd(pattern="hash (.*)", outgoing=True))
