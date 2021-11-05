@@ -22,7 +22,7 @@ except:
     os.system("pip install pip install youtube-search-python")
     from youtubesearchpython import SearchVideos
 
-from Aniebots. import *
+from Aniebots import *
 
 
 @bot.on(mew_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
