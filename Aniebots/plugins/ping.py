@@ -1,6 +1,6 @@
 import datetime
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="ping$"))
