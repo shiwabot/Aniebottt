@@ -7,7 +7,7 @@ import nekos
 import requests
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from . import *
+from Aniebots. import *
 
 BASE_URL = "https://headp.at/pats/{}"
 PAT_IMAGE = "pat.jpg"
