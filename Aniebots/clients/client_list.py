@@ -1,10 +1,10 @@
 import telethon.utils
 
-from .session import mew, H2, H3, H4, H5
+from .session import H2, H3, H4, H5
 from Aniebots.config import Config
 
 
-async def clients_list(Config, mew,):
+async def clients_list(Config, Aniebots,):
     user_ids = list(Config.SUDO_USERS) or []
     main_id = await Hell.get_me()
     user_ids.append(main_id.id)
