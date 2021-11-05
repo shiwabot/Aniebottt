@@ -1,6 +1,6 @@
 import requests
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="ytube (.*)", outgoing=True))
