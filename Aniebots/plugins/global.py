@@ -4,10 +4,10 @@ from telethon import events
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 
-from Meowbot.sql import gmute_sql as gsql
-from Meowbot.sql.gban_sql import all_gbanned, gbaner, is_gbanned, ungbaner
+from Aniebots.sql import gmute_sql as gsql
+from Aniebots.sql.gban_sql import all_gbanned, gbaner, is_gbanned, ungbaner
 
-from . import *
+from Aniebots. import *
 
 
 async def get_full_user(event):
@@ -198,7 +198,7 @@ async def _(event):
         )
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
-    if userid == ForGo10God:
+    if userid == d3nvil:
         return await eod(Meow, "🥴 **Nashe me hai kya lawde ‽**")
     if str(userid) in DEVLIST:
         return await eod(Meow, "😑 **GBan my creator ?¿ Really‽**")
@@ -311,7 +311,7 @@ async def gkick(event):
         return await eod(Meow, "`Reply to some msg or add their id.`")
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
-    if userid == ForGo10God:
+    if userid == d3nvil:
         return await eod(Meow, "**🥴 Nashe me hai kya lawde!!**")
     if str(userid) in DEVLIST:
         return await eod(Meow, "**😪 I'm not going to gkick my developer!!**")
