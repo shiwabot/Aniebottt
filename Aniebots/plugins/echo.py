@@ -5,9 +5,9 @@ import requests
 from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from Meowbot.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
+from Aniebots.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(admin_cmd(pattern="echo$"))
