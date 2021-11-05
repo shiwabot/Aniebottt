@@ -7,7 +7,7 @@ from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 from Aniebots.sql import gmute_sql as gsql
 from Aniebots.sql.gban_sql import all_gbanned, gbaner, is_gbanned, ungbaner
 
-from Aniebots. import *
+from Aniebots import *
 
 
 async def get_full_user(event):
