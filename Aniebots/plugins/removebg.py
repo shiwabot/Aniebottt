@@ -4,6 +4,7 @@ import requests
 from PIL import Image
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 TEMP_DIR = os.environ.get("TEMP_DIR", "./temp/")
 

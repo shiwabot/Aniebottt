@@ -26,6 +26,7 @@ from telethon.tl.types import (
 from telethon.utils import get_input_location, pack_bot_file_id
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 
 @bot.on(mew_cmd(pattern="recognize ?(.*)", outgoing=True))

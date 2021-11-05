@@ -1,6 +1,7 @@
 import asyncio
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID

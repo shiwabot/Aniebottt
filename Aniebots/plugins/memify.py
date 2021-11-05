@@ -4,6 +4,7 @@ import shutil
 import cv2
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 path = "./mewmify/"
 if not os.path.isdir(path):

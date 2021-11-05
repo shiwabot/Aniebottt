@@ -3,6 +3,7 @@ from subprocess import PIPE
 from subprocess import run as runapp
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 
 @bot.on(mew_cmd(pattern="hash (.*)", outgoing=True))

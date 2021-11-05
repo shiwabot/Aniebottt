@@ -5,6 +5,7 @@ from telethon import functions
 from telethon.tl.functions.channels import LeaveChannelRequest
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 
 @bot.on(mew_cmd("kickme", outgoing=True))

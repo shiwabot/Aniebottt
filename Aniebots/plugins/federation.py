@@ -4,6 +4,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 logs_id = Config.FBAN_LOG_GROUP
 fbot = "@MissRose_bot"

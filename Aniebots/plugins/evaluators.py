@@ -6,6 +6,7 @@ import time
 import traceback
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 lg_id = Config.LOGGER_ID
 

@@ -6,6 +6,7 @@ from telethon.tl.types import ChatBannedRights
 from Aniebots.sql import antiflood_sql as sq
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 CHAT_FLOOD = sq.__load_flood_settings()
 # warn mode for anti flood

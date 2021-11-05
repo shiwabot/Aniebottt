@@ -8,6 +8,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from Aniebots.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 
 @bot.on(admin_cmd(pattern="echo$"))

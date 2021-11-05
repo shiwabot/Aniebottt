@@ -5,6 +5,7 @@ import numpy as np
 from vcam import meshGen, vcam
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 if not os.path.isdir("./Aniebots/"):
     os.makedirs("./Aniebots/")

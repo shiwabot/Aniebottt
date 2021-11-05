@@ -3,6 +3,7 @@ import string
 from telethon.tl.types import Channel
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 global msg_cache
 msg_cache = {}

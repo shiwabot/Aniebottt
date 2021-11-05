@@ -5,6 +5,7 @@ from datetime import datetime
 from github import Github
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 GIT_TEMP_DIR = "./userbot/temp/"
 

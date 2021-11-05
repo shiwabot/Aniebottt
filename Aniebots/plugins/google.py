@@ -11,6 +11,7 @@ from search_engine_parser.core.exceptions import NoResultsOrTrafficError as Gogl
 from telethon.tl import types
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 
 def progress(current, total):

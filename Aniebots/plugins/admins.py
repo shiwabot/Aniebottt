@@ -23,6 +23,7 @@ from telethon.tl.types import (
 from Aniebots.sql.mute_sql import is_muted, mute, unmute
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 lg_id = Config.LOGGER_ID
 PP_TOO_SMOL = "🥴 The image is too small. Just like your crush's feelings"

@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 
 @bot.on(mew_cmd(pattern="fext (.*)"))

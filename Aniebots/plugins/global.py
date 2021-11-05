@@ -8,6 +8,7 @@ from Aniebots.sql import gmute_sql as gsql
 from Aniebots.sql.gban_sql import all_gbanned, gbaner, is_gbanned, ungbaner
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 
 async def get_full_user(event):

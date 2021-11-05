@@ -4,6 +4,7 @@ import re
 import requests
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 
 async def callAPI(search_str):

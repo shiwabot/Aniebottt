@@ -9,6 +9,7 @@ from telethon.tl.functions.photos import DeletePhotosRequest, GetUserPhotosReque
 from telethon.tl.types import Channel, Chat, InputPhoto, User
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 # ====================== CONSTANT ===============================
 INVALID_MEDIA = "⚠️ Targeted Media **Invalid !!**"

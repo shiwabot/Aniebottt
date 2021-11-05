@@ -3,6 +3,7 @@ from asyncio import sleep
 from telethon.errors import rpcbaseerrors
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 lg_id = Config.LOGGER_ID
 

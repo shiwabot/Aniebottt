@@ -5,6 +5,7 @@ from pathlib import Path
 from telethon import events
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots.config import Config
 from Aniebots.helpers import *
 

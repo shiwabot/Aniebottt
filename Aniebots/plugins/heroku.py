@@ -9,6 +9,7 @@ import requests
 import urllib3
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 

@@ -20,6 +20,7 @@ from telethon.tl.types import (
 )
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 KANGING_STR = [
     "Using Witchery to kang this sticker...",

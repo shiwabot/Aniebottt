@@ -10,6 +10,7 @@ from pytz import country_timezones as c_tz
 from pytz import timezone as tz
 
 from Aniebots import *
+from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
