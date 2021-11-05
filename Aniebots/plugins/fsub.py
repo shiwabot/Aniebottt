@@ -1,9 +1,9 @@
 from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 
-from Meowbot.sql.fsub_sql import *
+from Aniebots.sql.fsub_sql import *
 
-from . import *
+from Aniebots. import *
 
 """
 @tgbot.on(InlineQuery)
