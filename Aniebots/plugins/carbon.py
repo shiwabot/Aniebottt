@@ -6,7 +6,7 @@ from urllib.parse import quote_plus
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from . import *
+from Aniebots. import *
 
 CARBONLANG = "auto"
 LANG = "en"
@@ -66,7 +66,7 @@ async def carbon_api(e):
     await e.client.send_file(
         e.chat_id,
         file,
-        caption="Here's your carbon, \n Carbonised by ℳêøաɮøƚ",
+        caption="Here's your carbon, \n Carbonised by 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
