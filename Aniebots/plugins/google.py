@@ -10,7 +10,7 @@ from search_engine_parser import GoogleSearch
 from search_engine_parser.core.exceptions import NoResultsOrTrafficError as GoglError
 from telethon.tl import types
 
-from . import *
+from Aniebots. import *
 
 
 def progress(current, total):
