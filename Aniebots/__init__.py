@@ -6,7 +6,7 @@ import time
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 
-from Aniebots.clients.session import H2, H3, H4, H5, mew, Aniebots 
+from Aniebots.clients.session import H2, H3, H4, H5, Aniebots 
 from Aniebots.config import Config
 
 
