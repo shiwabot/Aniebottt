@@ -3,7 +3,7 @@ import io
 import os
 import time
 
-from . import *
+from Aniebots. import *
 
 if not os.path.isdir("./SAVED"):
     os.makedirs("./SAVED")
