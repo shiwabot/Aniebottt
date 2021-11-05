@@ -12,7 +12,7 @@ from hachoir.parser import createParser
 from pySmartDL import SmartDL
 from telethon.tl.types import DocumentAttributeVideo
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern=r"webup ?(.*)", outgoing=True))
