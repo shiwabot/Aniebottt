@@ -6,9 +6,9 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 from Aniebots.sql import pmpermit_sql as pm_sql
 
-from . import *
+from Aniebots. import *
 
-WARN_PIC = Config.PMPERMIT_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
+WARN_PIC = Config.PMPERMIT_PIC or "https://telegra.ph/file/5d7a1a5d027e6c27d6de5.jpg"
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 PM_ON_OFF = Config.PM_PERMIT
