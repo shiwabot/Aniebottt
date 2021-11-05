@@ -1,6 +1,6 @@
 # crafit @Shinchan7222
 
-from Aniebots. import *
+from Aniebots import *
 
 x = True
 
