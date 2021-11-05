@@ -8,7 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 from humanize import naturalsize
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(outgoing=True, pattern=r"direct(?: |$)([\s\S]*)"))
