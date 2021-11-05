@@ -1,7 +1,7 @@
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 
-from Aniebots. import *
+from Aniebots import *
 
 
 async def get_full_user(event):
