@@ -1,7 +1,7 @@
 import bs4
 import requests
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="app (.*)"))
