@@ -2,7 +2,7 @@ from asyncio import sleep
 
 from telethon.errors import rpcbaseerrors
 
-from Aniebots. import *
+from Aniebots import *
 
 lg_id = Config.LOGGER_ID
 
