@@ -10,7 +10,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
 from telethon.tl.functions.users import GetFullUserRequest
 
-from Aniebots. import *
+from Aniebots import *
 
 mew_row = Config.BUTTONS_IN_HELP
 mew_emoji = Config.EMOJI_IN_HELP
