@@ -5,7 +5,7 @@ import sys
 
 from telethon import events
 
-from Aniebots. import *
+from Aniebots import *
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.WARN
