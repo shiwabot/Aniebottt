@@ -3,7 +3,7 @@ import datetime
 import os
 import time
 
-from . import *
+from Aniebots. import *
 
 FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./trim/Meowbot.media.ffmpeg"
 
