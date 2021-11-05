@@ -23,7 +23,7 @@ def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import Meowbot.utils
+        import Aniebots.utils
 
         path = Path(f"Meowbot/plugins/{shortname}.py")
         name = "Aniehots.plugins.{}".format(shortname)
@@ -35,7 +35,7 @@ def load_module(shortname):
         import Aniebots.utils
 
         path = Path(f"Aniebots/plugins/{shortname}.py")
-        name = "Meowbot.plugins.{}".format(shortname)
+        name = "Aniebots.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
