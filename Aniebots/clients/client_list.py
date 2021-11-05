@@ -1,6 +1,6 @@
 import telethon.utils
 
-from .session import mew
+from .session import mew, H2 H3, H4, H5
 from Aniebots.config import Config
 
 
