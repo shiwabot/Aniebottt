@@ -69,8 +69,8 @@ def progress(current, total):
     )
 
 
-@bot.on(mew_cmd(pattern="ocrlang", outgoing=True))
-@bot.on(sudo_cmd(pattern="ocrlang", allow_sudo=True))
+@bot.on(mew_cmd(pattern="ocrlang ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="ocrlang ?(.*)", allow_sudo=True))
 async def get_ocr_languages(event):
     if event.fwd_from:
         return
