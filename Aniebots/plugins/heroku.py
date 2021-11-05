@@ -8,7 +8,7 @@ import heroku3
 import requests
 import urllib3
 
-from Aniebots. import *
+from Aniebots import *
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
