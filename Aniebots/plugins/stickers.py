@@ -19,7 +19,7 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from . import *
+from Aniebots. import *
 
 KANGING_STR = [
     "Using Witchery to kang this sticker...",
