@@ -7,7 +7,7 @@ from Aniebots.sql.welcome_sql import (
     update_welcome,
 )
 
-from . import *
+from Aniebots. import *
 
 lg_id = Config.LOGGER_ID
 
