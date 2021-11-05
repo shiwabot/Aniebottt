@@ -3,7 +3,7 @@ from pathlib import Path
 
 from telethon.tl.types import InputMessagesFilterDocument
 
-from . import *
+from Aniebots. import *
 
 
 @bot.on(mew_cmd(pattern="extdl$", outgoing=True))
