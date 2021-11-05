@@ -2,7 +2,7 @@ from telethon import events
 
 from Aniebots.sql import snip_sql as sq
 
-from Aniebots. import *
+from Aniebots import *
 
 lg_id = Config.LOGGER_ID
 
