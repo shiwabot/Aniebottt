@@ -6,7 +6,7 @@ from telethon.tl.functions.phone import (
     InviteToGroupCallRequest,
 )
 
-from Aniebots. import *
+from Aniebots import *
 
 
 async def getvc(event):
