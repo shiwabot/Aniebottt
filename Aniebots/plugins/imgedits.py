@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 from vcam import meshGen, vcam
 
-from Aniebots. import *
+from Aniebots import *
 
 if not os.path.isdir("./Aniebots/"):
     os.makedirs("./Aniebots/")
