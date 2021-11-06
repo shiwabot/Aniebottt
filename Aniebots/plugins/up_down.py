@@ -13,7 +13,7 @@ from pySmartDL import SmartDL
 from telethon.tl.types import DocumentAttributeVideo
 
 from Aniebots import *
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 
 
 @bot.on(mew_cmd(pattern=r"webup ?(.*)", outgoing=True))
