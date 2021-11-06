@@ -6,7 +6,7 @@ from telethon.tl import functions
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 
 from Aniebots import *
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 
 DEFAULTUSERBIO = Config.BIO_MSG
 DEL_TIME_OUT = 60
