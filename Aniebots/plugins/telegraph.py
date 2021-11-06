@@ -5,7 +5,6 @@ from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 MEOW_NAME = Config.YOUR_NAME or "🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃"
