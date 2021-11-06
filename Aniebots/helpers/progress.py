@@ -4,7 +4,7 @@ import time
 
 from Aniebots import *
 
-from Aniebots import CmdHelp
+# DoNe :/
 from Aniebots.config import Config
 from Aniebots.helpers import *
 from Aniebots.utils import *
