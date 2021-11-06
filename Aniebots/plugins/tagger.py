@@ -3,7 +3,6 @@ from telethon.tl.types import Channel
 from telethon.utils import get_display_name
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 if Config.TAG_LOGGER:
