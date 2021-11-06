@@ -1,5 +1,5 @@
 from telethon import events
-
+from Aniebots import CmdHelp
 from Aniebots.sql.welcome_sql import (
     add_welcome,
     get_current_welcome,
