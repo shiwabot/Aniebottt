@@ -4,8 +4,7 @@ import os
 from pathlib import Path
 
 from Aniebots import *
-from Aniebots import CmdHelp
-
+from Aniebots.cmdhelp import CmdHelp 
 
 @bot.on(mew_cmd(pattern=r"cmds"))
 @bot.on(sudo_cmd(pattern=r"cmds", allow_sudo=True))
