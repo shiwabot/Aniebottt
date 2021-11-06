@@ -4,7 +4,8 @@ import re
 from bs4 import BeautifulSoup
 from requests import get
 
-from Aniebot. import *
+from Aniebot import *
+from Aniebots import CmdHelp
 
 GITHUB = "https://github.com"
 DEVICES_DATA = (
