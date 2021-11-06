@@ -133,7 +133,7 @@ async def note(event):
     await eor(event, WELCOME_FORMAT)
 
 
-CmdHelp("welcome").add_command(
+CmdHelp("voice_chat").add_command(
     "savewelcome", "<reply>", "Sets the replied message as welcome note of that group"
 ).add_command(
     "cleanwelcome", None, "Cleans the current welcome message of that chat."
