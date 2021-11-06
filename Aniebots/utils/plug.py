@@ -54,6 +54,7 @@ def load_module(shortname):
         mod.eod = delete_mew
         mod.Var = Config
         mod.mew_cmd = mew_cmd
+        mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
         # support for other userbots
         sys.modules["userbot.utils"] = Aniebots.utils
