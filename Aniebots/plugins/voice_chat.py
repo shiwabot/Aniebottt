@@ -7,7 +7,7 @@ from telethon.tl.functions.phone import (
 )
 
 from Aniebots import *
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 
 
 async def getvc(event):
