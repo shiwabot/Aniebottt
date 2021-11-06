@@ -12,7 +12,7 @@ from Aniebots.sql.filter_sql import (
 )
 
 from Aniebots import *
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 
 DELETE_TIMEOUT = 0
 TYPE_TEXT = 0
