@@ -3,11 +3,10 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from Aniebots import *
-<<<<<<< HEAD
+
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
-=======
-# DoNe :/
+
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 from Aniebots.helpers import *

@@ -5,11 +5,10 @@ import sys
 from pathlib import Path
 
 from Aniebots import *
-<<<<<<< HEAD
+
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
-=======
-# DoNe :/
+
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 from Aniebots.config import *

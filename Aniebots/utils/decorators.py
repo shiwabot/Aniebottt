@@ -5,11 +5,10 @@ from pathlib import Path
 from telethon import events
 
 from Aniebots import *
-<<<<<<< HEAD
+
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
-=======
-# DoNE :/
+
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 from Aniebots.config import Config

@@ -3,11 +3,10 @@ import json
 import requests
 
 from Aniebots import *
-<<<<<<< HEAD
+
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
-=======
-# DoNe :/
+
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
