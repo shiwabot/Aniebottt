@@ -1,6 +1,6 @@
 import os
 
-from Meowbot import CMD_HELP, CMD_HELP_BOT
+from Aniebots import CMD_HELP, CMD_HELP_BOT
 
 HANDLER = os.environ.get("HANDLER", r".")
 
