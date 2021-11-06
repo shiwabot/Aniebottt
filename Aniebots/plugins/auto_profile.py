@@ -6,7 +6,6 @@ from telethon.tl import functions
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 DEFAULTUSERBIO = Config.BIO_MSG
