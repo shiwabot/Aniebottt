@@ -7,7 +7,6 @@ from telethon.tl.types import MessageEntityPre
 from telethon.utils import add_surrogate
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 PRINTABLE_SET = set(bytes(string.printable, "ascii"))
