@@ -5,8 +5,12 @@ import sys
 from pathlib import Path
 
 from Aniebots import *
+<<<<<<< HEAD
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
+=======
+# DoNe :/
+>>>>>>> 5aefb2165ddfa373a911cb526802c065821822c9
 from Aniebots.config import *
 from Aniebots.helpers import *
 from Aniebots.utils import *
@@ -27,7 +31,7 @@ def load_module(shortname):
     elif shortname.endswith("_"):
         import Aniebots.utils
 
-        path = Path(f"Meowbot/plugins/{shortname}.py")
+        path = Path(f"Aniebots/plugins/{shortname}.py")
         name = "Aniehots.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)

@@ -3,8 +3,12 @@ import os
 import re
 
 from Aniebots import *
+<<<<<<< HEAD
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
+=======
+# DoNe :/
+>>>>>>> 5aefb2165ddfa373a911cb526802c065821822c9
 from Aniebots.config import Config
 from Aniebots.helpers import *
 
