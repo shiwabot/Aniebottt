@@ -6,7 +6,6 @@ from pathlib import Path
 
 from Aniebots import *
 
-from Aniebots import CmdHelp
 from Aniebots.config import *
 from Aniebots.helpers import *
 from Aniebots.utils import *
