@@ -5,7 +5,8 @@ import requests
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from Aniebots import
+from Aniebots import*
+
 from Aniebots import CmdHelp
 
 
