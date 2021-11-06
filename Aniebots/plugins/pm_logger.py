@@ -17,7 +17,7 @@ NO_PM_LOG_USERS = []
 lg_id = Config.PM_LOG_ID
 
 
-@bot.on(mew_cmd(pattern=r"save(?: |$)([\s\S]*)", outgoing=True))
+@bot.on(mew_cmd(pattern=r"save(?: |$)([\s\S]*)"))
 async def log(log_text):
     if lg_id is not None:
         if log_text.reply_to_msg_id:
