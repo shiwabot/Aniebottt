@@ -4,7 +4,6 @@ import shutil
 import cv2
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 path = "./mewmify/"
