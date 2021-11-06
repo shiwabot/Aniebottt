@@ -1,5 +1,5 @@
 from telethon import events
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 from Aniebots.sql.welcome_sql import (
     add_welcome,
     get_current_welcome,
@@ -8,7 +8,6 @@ from Aniebots.sql.welcome_sql import (
 )
 
 from Aniebots import *
-from Aniebots import CmdHelp
 
 lg_id = Config.LOGGER_ID
 
