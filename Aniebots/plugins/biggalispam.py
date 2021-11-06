@@ -1,7 +1,7 @@
 # crafit @Shinchan7222
 
 from Aniebots import *
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 
 x = True
 
