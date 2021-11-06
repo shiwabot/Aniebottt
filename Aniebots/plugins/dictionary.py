@@ -1,7 +1,7 @@
 import asyncurban
 
 from Aniebots import *
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 
 
 @bot.on(mew_cmd(pattern="ud (.*)"))
