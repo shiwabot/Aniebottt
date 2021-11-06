@@ -4,7 +4,6 @@ import re
 
 from Aniebots import *
 
-from Aniebots import CmdHelp
 from Aniebots.config import Config
 from Aniebots.helpers import *
 
