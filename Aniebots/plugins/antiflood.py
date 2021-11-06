@@ -15,7 +15,7 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-@bot.on(admin_cmd(incoming=True))
+@bot.on(mew_cmd(incoming=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -58,7 +58,7 @@ because he reached the defined flood limit.""".format(
         )
 
 
-@bot.on(admin_cmd(pattern="setflood(?: |$)(.*)"))
+@bot.on(mew_cmd(pattern="setflood(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="setflood(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
