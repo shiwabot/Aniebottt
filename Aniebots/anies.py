@@ -25,13 +25,13 @@ from userbot.helpers.tools import media_type
 
 from var import Var
 
-from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
-from userbot.helpers.exceptions import CancelProcess
-from userbot.Config import Config
+from Aniebots import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
+from Aniebots.helpers.exceptions import CancelProcess
+from Aniebots.Config import Config
 
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from userbot.Config import Config
+    from Aniebots.Config import Config
 else:
     if os.path.exists("config.py"):
         from config import Development as Config
@@ -42,19 +42,19 @@ def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import userbot.utils
+        import Aniebots.utils
 
-        path = Path(f"userbot/plugins/{shortname}.py")
+        path = Path(f"Aniebots/plugins/{shortname}.py")
         name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("MafiaBot - Successfully imported " + shortname)
+        LOGS.info("Aniebots - Successfully imported " + shortname)
     else:
         import userbot.utils
 
-        path = Path(f"userbot/plugins/{shortname}.py")
-        name = "userbot.plugins.{}".format(shortname)
+        path = Path(f"Aniebots/plugins/{shortname}.py")
+        name = "Aniebots.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -66,19 +66,21 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.mafiabot = bot
+        mod.Aniebots = bot
         mod.edit_or_reply = edit_or_reply
         mod.delete_mafia = delete_mafia
+        mod.mew_cmd = mew_cmd
+        mod.sudo_cmd = sudo_cmd
         mod.media_type = media_type
-        # support for mafiabot originals
-        sys.modules["mafiabot.utils"] = userbot.utils
-        sys.modules["mafiabot"] = userbot
+        # support for Aniebots originals
+        sys.modules["Aniebots.utils"] = Aniebots.utils
+        sys.modules["Aniebots"] = userbot 
         # support for paperplaneextended
-        sys.modules["userbot.events"] = userbot.utils
+        sys.modules["userbot.events"] = Aniebots.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("⚡🔥MafiaBot⚡🔥 - Successfully imported " + shortname)
+        sys.modules["Aniebots.plugins." + shortname] = mod
+        LOGS.info("⚡🔥Aniebots⚡🔥 - Successfully imported " + shortname)
 
 
 def remove_plugin(shortname):
@@ -89,7 +91,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except BaseException:
-            name = f"userbot.plugins.{shortname}"
+            name = f"Aniebots.plugins.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -100,7 +102,7 @@ def remove_plugin(shortname):
 
 
 
-def admin_cmd(pattern=None, command=None, **args):
+def mew_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
