@@ -10,7 +10,6 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 from Aniebots.helpers import runner
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 HEROKU_APP_NAME = Config.HEROKU_APP_NAME or None
