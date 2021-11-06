@@ -26,7 +26,7 @@ def load_module(shortname):
     elif shortname.endswith("_"):
         import Aniebots.utils
 
-        path = Path(f"Meowbot/plugins/{shortname}.py")
+        path = Path(f"Aniebots/plugins/{shortname}.py")
         name = "Aniehots.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
