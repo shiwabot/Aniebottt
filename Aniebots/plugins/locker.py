@@ -2,7 +2,7 @@ from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 from telethon.tl.types import ChatBannedRights
 
 from Aniebots import *
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 
 
 @bot.on(mew_cmd(pattern=r"lock ?(.*)", outgoing=True))
