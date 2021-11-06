@@ -9,7 +9,6 @@ from telethon.tl.functions.photos import DeletePhotosRequest, GetUserPhotosReque
 from telethon.tl.types import Channel, Chat, InputPhoto, User
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 # ====================== CONSTANT ===============================
