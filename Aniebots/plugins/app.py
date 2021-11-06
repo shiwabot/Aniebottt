@@ -3,7 +3,7 @@ import requests
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
-
+from Aniebots import CmdHelp
 
 @bot.on(mew_cmd(pattern="app (.*)"))
 @bot.on(sudo_cmd(pattern="app (.*)", allow_sudo=True))
