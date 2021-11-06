@@ -3,6 +3,7 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 msg = f"""
 **⚡  🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥  ⚡**

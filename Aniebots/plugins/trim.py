@@ -5,6 +5,7 @@ import time
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./trim/Meowbot.media.ffmpeg"
 

@@ -5,6 +5,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 
 @bot.on(mew_cmd(pattern="extdl$", outgoing=True))

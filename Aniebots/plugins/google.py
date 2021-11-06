@@ -12,6 +12,7 @@ from telethon.tl import types
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 
 def progress(current, total):

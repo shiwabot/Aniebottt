@@ -6,6 +6,7 @@ from vcam import meshGen, vcam
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 if not os.path.isdir("./Aniebots/"):
     os.makedirs("./Aniebots/")

@@ -9,6 +9,7 @@ from Aniebots.sql.gban_sql import all_gbanned, gbaner, is_gbanned, ungbaner
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 
 async def get_full_user(event):

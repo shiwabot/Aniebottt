@@ -17,6 +17,7 @@ from telethon.tl.types import (
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 BANNED_RIGHTS = ChatBannedRights(
     until_date=None,

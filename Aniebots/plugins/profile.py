@@ -10,6 +10,7 @@ from telethon.tl.types import Channel, Chat, InputPhoto, User
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 # ====================== CONSTANT ===============================
 INVALID_MEDIA = "⚠️ Targeted Media **Invalid !!**"

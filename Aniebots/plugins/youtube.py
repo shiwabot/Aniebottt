@@ -19,6 +19,7 @@ from youtube_search import YoutubeSearch
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 
 @bot.on(mew_cmd(pattern="yt(a|v) (.*)"))

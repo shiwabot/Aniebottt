@@ -5,6 +5,7 @@ import time
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 if not os.path.isdir("./SAVED"):
     os.makedirs("./SAVED")

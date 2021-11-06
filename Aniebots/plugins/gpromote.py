@@ -3,6 +3,7 @@ from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 
 async def get_full_user(event):

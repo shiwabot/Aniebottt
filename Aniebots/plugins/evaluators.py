@@ -7,6 +7,7 @@ import traceback
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 lg_id = Config.LOGGER_ID
 

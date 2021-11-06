@@ -12,6 +12,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 mew_row = Config.BUTTONS_IN_HELP
 mew_emoji = Config.EMOJI_IN_HELP

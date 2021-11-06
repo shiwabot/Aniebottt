@@ -6,6 +6,7 @@ from github import Github
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 GIT_TEMP_DIR = "./userbot/temp/"
 

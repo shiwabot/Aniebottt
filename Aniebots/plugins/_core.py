@@ -5,6 +5,7 @@ from pathlib import Path
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 
 @bot.on(mew_cmd(pattern=r"cmds"))

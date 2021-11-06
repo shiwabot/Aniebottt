@@ -6,6 +6,7 @@ from selenium import webdriver
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 
 @bot.on(mew_cmd(pattern="(webshot|screenshot) (.*)", outgoing=True))

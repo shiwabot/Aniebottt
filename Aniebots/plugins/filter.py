@@ -13,6 +13,7 @@ from Aniebots.sql.filter_sql import (
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 DELETE_TIMEOUT = 0
 TYPE_TEXT = 0

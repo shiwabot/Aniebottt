@@ -6,6 +6,7 @@ from telethon.tl import functions, types
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 global USER_AFK  # pylint:disable=E0602
 global afk_time  # pylint:disable=E0602

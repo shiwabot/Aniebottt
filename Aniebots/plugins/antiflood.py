@@ -7,6 +7,7 @@ from Aniebots.sql import antiflood_sql as sq
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 CHAT_FLOOD = sq.__load_flood_settings()
 # warn mode for anti flood

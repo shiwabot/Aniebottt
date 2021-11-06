@@ -1,5 +1,6 @@
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 # Credits to @ForGo10God developer of MeowBot.
 # This is my first plugin that I made when I released first MeowBot.

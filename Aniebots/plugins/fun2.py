@@ -9,6 +9,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 
 from Aniebots import *
 from Aniebots.utils.decorators import mew_cmd, sudo_cmd
+from Aniebots import CmdHelp
 
 BASE_URL = "https://headp.at/pats/{}"
 PAT_IMAGE = "pat.jpg"
