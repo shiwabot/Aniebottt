@@ -5,7 +5,6 @@ from telethon import events
 from Aniebots.sql import blacklist_sql as sq
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 
