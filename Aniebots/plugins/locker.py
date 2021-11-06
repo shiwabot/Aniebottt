@@ -2,7 +2,6 @@ from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 from telethon.tl.types import ChatBannedRights
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 
