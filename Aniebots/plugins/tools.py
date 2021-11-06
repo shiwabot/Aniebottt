@@ -14,7 +14,6 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 
