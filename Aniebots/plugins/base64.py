@@ -3,7 +3,7 @@ from subprocess import PIPE
 from subprocess import run as runapp
 
 from Aniebots import *
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 
 
 @bot.on(mew_cmd(pattern="hash (.*)", outgoing=True))
