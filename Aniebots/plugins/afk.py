@@ -5,7 +5,7 @@ from telethon import events
 from telethon.tl import functions, types
 
 from Aniebots import *
-from Aniebots import CmdHelp
+from Aniebots.cmdhelp import CmdHelp
 
 global USER_AFK  # pylint:disable=E0602
 global afk_time  # pylint:disable=E0602
