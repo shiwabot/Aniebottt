@@ -4,7 +4,6 @@ import heroku3
 from telethon.tl.functions.users import GetFullUserRequest
 
 from Aniebots import *
-from Aniebots.utils.decorators import mew_cmd, sudo_cmd
 from Aniebots import CmdHelp
 
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
