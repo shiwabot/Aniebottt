@@ -9,7 +9,7 @@ class Development(Config):
 
   # the name to display in your alive message.
   # If not filled anything then default value is Mafia User.
-  ALIVE_NAME = "Mafia User"
+  ALIVE_NAME = "Anie User"
   ABUSE = "OFF"
   BAN_PIC = "https://telegra.ph/"
   # create any PostgreSQL database.
@@ -30,7 +30,7 @@ class Development(Config):
   # and type /id and paste that id here.
   # replace that -100 with that group id.
   PRIVATE_GROUP_BOT_API_ID = -100
-          MAFIABOT_LOGGER = -1001174481876
+          ANIEBOTS_LOGGER = -1001174481876
   # Custom Command Handler. 
   COMMAND_HAND_LER = "."
 
