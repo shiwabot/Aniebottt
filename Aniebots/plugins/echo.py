@@ -35,7 +35,7 @@ async def echo(Meow):
         await delete_mew(Meow, "Reply to a User's message to echo his messages")
 
 
-@bot.on(admin_cmd(pattern="rmecho$"))
+@bot.on(mew_cmd(pattern="rmecho$"))
 @bot.on(sudo_cmd(pattern="rmecho$", allow_sudo=True))
 async def echo(Meow):
     if Meow.fwd_from:
@@ -59,7 +59,7 @@ async def echo(Meow):
         await eod(Meow, "Reply to a User's message to echo his messages")
 
 
-@bot.on(admin_cmd(pattern="listecho$"))
+@bot.on(mew_cmd(pattern="listecho$"))
 @bot.on(sudo_cmd(pattern="listecho$", allow_sudo=True))
 async def echo(Meow):
     if Meow.fwd_from:
