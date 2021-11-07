@@ -58,7 +58,7 @@ def load_module(shortname):
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
         mod.tgbot = bot.tgbot
-        mod.Vars = Vars
+        mod.vars = vars
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
