@@ -275,7 +275,7 @@ if Var.ANIEBOTS_LOGGER is not None:
             # the_message += f"Media: {message_media}"
             try:
                 await event.client.send_message(
-                    entity=Var.MAFIABOT_LOGGER,
+                    entity=Var.ANIEBOTS_LOGGER,
                     message=the_message,
                     # reply_to=,
                     # parse_mode="html",
