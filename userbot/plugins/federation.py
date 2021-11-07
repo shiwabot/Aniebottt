@@ -9,24 +9,24 @@ from telethon.errors import ChatAdminRequiredError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.users import GetFullUserRequest
 
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.Config import Config
 from . import *
 
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 
-mafia = bot.uid
+Anie = bot.uid
 
 
 bots = "@MissRose_bot"
 
-BOTLOG_CHATID = Config.MAFIABOT_LOGGER
+BOTLOG_CHATID = Config.ANIEBOTS_LOGGER
 
-MAFIABOT_LOGGER = os.environ.get("MAFIABOT_LOGGER", None)
-if MAFIABOT_LOGGER:
-    MAFIABOT_LOGGER = int(MAFIABOT_LOGGER)
+ANIEBOTS_LOGGER = os.environ.get("ANIEBOTS_LOGGER", None)
+if ANIEBOTS_LOGGER:
+    ANIEBOTS_LOGGER = int(ANIEBOTS_LOGGER)
 
 
 @bot.on(admin_cmd("fstat ?(.*)"))
