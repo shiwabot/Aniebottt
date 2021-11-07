@@ -1,8 +1,8 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from mafiabot import bot, CmdHelp
-from mafiabot.utils import admin_cmd, edit_or_reply as eor, sudo_cmd
+from Aniebotsimport bot, CmdHelp
+from Aniebot.utils import admin_cmd, edit_or_reply as eor, sudo_cmd
 
 @mafiabot.on(admin_cmd(pattern="history ?(.*)"))
 @mafiabot.on(sudo_cmd(pattern="history ?(.*)", allow_sudo=True))
