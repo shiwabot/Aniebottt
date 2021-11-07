@@ -21,7 +21,7 @@ MEOW_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
 MEOW_FIRST = (
     "**🔥 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**Please Choose Why You Are Here!!**" CSTM_PMP)
+    "{}\n\n**Please Choose Why You Are Here!!**"
 )
 
 
