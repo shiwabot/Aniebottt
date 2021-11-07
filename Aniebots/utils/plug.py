@@ -17,11 +17,11 @@ from pathlib import Path
 from time import gmtime, strftime
 from typing import Tuple
 from telethon import functions, types
-from userbot import LOGS
+from Aniebots import LOGS
 from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
-from userbot.helpers.tools import media_type
+from Aniebots.utils.tools import media_type
 
 from var import Var
 
@@ -45,7 +45,7 @@ def load_module(shortname):
         import Aniebots.utils
 
         path = Path(f"Aniebots/plugins/{shortname}.py")
-        name = "userbot.plugins.{}".format(shortname)
+        name = "Aniebots.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -76,7 +76,7 @@ def load_module(shortname):
         sys.modules["Aniebots.utils"] = Aniebots.utils
         sys.modules["Aniebots"] = userbot 
         # support for paperplaneextended
-        sys.modules["userbot.events"] = Aniebots.utils
+        sys.modules["Aniebots.events"] = Aniebots.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Aniebots.plugins." + shortname] = mod
