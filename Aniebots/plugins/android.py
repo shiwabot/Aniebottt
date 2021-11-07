@@ -4,7 +4,7 @@ import re
 from bs4 import BeautifulSoup
 from requests import get
 
-from Aniebot import *
+from Aniebots import *
 from Aniebots.cmdhelp import CmdHelp
 
 GITHUB = "https://github.com"
