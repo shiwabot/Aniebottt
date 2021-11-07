@@ -10,7 +10,7 @@ from asyncio import sleep
 from telethon.errors import rpcbaseerrors
 
 from userbot import CMD_HELP
-from mafiabot.utils import admin_cmd, errors_handler, sudo_cmd, edit_or_reply
+from Aniebot.utils import admin_cmd, errors_handler, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from . import *
