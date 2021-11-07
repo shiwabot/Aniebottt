@@ -73,7 +73,7 @@ def load_module(shortname):
         mod.media_type = media_type
         # support for Aniebots originals
         sys.modules["Aniebots.utils"] = Aniebots.utils
-        sys.modules["Aniebots"] = userbot 
+        sys.modules["Aniebots"] = Aniebots 
         # support for paperplaneextended
         sys.modules["Aniebots.events"] = Aniebots.utils
         spec.loader.exec_module(mod)
