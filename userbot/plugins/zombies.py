@@ -32,7 +32,7 @@ from telethon.utils import get_input_location
 from userbot.Config import Config
 from . import *
 
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 
