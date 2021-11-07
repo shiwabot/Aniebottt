@@ -10,12 +10,12 @@ from datetime import datetime
 from pySmartDL import SmartDL
 
 from userbot import CMD_HELP
-from mafiabot.utils import admin_cmd, humanbytes, progress, sudo_cmd
+from Aniebot.utils import admin_cmd, humanbytes, progress, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from . import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 
 
 @bot.on(admin_cmd(pattern="download(?: |$)(.*)", outgoing=True))
