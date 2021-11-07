@@ -5,9 +5,9 @@ from pathlib import Path
 from telethon import events
 from telethon import functions, types
 from telethon.tl.types import InputMessagesFilterDocument
-from mafiabot.utils import *
+from Aniebot.utils import *
 from userbot import *
-from userbot import bot as mafiabot
+from userbot import bot as Aniebot
 
 DELETE_TIMEOUT = 5
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
