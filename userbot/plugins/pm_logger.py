@@ -20,8 +20,8 @@ logging.basicConfig(
 
 NO_PM_LOG_USERS = []
 
-MAFIABOT_LOGGER = True
-MAFIABOT_LOGGER = Config.MAFIABOT_LOGGER
+ANIEBOTS_LOGGER = True
+ANIEBOTS_LOGGER = Config.ANIEBOTS_LOGGER
 
 
 @bot.on(admin_cmd(pattern=r"save(?: |$)([\s\S]*)", outgoing=True))
