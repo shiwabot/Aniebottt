@@ -12,7 +12,7 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
 from .. import LOGS
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from . import *
