@@ -21,7 +21,7 @@ from Aniebots import LOGS
 from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
-from Aniebots.utils.tools import media_type
+from Aniebots.utils import media_type
 
 from var import Var
 
