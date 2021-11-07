@@ -62,7 +62,7 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = userbot.utils
+        sys.modules["uniborg.util"] = Aniebots.utils
         mod.Config = Config
         mod.borg = bot
         mod.Aniebots = bot
