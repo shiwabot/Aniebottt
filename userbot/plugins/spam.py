@@ -13,9 +13,9 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from mafiabot.Config import Config
+from Aniebot.Config import Config
 
-LOGGER = Config.MAFIABOT_LOGGER
+LOGGER = Config.ANIEBOTS_LOGGER
 SUDO_WALA = Config.SUDO_USERS
 
 @bot.on(admin_cmd(pattern="spam (.*)"))
