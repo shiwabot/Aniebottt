@@ -41,7 +41,7 @@ USER_BOT_WARN_ZERO = (
 MEOW_FIRST = (
     "**🔥Ⱨҽყ ƚɦιʂ ιʂ  🇦 🇳 🇮 🇪 𝕦𝕤𝕖𝕣𝕓𝕠𝕥  P͆M̾ Sêçürïty 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**Please Choose Why You Are Here!!**".format(mew_mention, mssge)
+    "{}\n\n**Please Choose Why You Are Here!!**"
 )
 
 alive_txt = """
