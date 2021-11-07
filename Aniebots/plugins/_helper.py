@@ -10,7 +10,7 @@ msg = f"""
   •        [📑 Repo 📑](https://github.com/Anieteam/Aniebots)
   •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots&template=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots)
 
-  •  ©️ {mew_channel} ™
+  •  ©️ (Anie userbot)[t.me/Aniebotsupports) ™
 """
 botname = Config.BOT_USERNAME
 
