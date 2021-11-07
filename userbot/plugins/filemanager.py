@@ -10,7 +10,7 @@ import time
 
 from telethon import events
 
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 if not os.path.isdir("./SAVED"):
