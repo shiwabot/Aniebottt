@@ -7,14 +7,14 @@ from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
 from userbot import CMD_HELP, mafiaversion
-from mafiabot.utils import admin_cmd, edit_or_reply
+from Aniebot.utils import admin_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from . import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 
-mafia = bot.uid
+Anie = bot.uid
 
 
 global USER_AFK  # pylint:disable=E0602
@@ -51,7 +51,7 @@ async def set_not_afk(event):
         )
         try:
             await bot.send_message(  # pylint:disable=E0602
-                Config.MAFIABOT_LOGGER,  # pylint:disable=E0602
+                Config.ANIEBOTS_LOGGER,  # pylint:disable=E0602
                 "#AFKFALSE \nSet AFK mode to False\n"
                 + "🔥__Back alive!__\n**No Longer afk.**\n⏱️ `Was afk for:``"
                 + total_afk_time
@@ -59,9 +59,9 @@ async def set_not_afk(event):
         except Exception as e:  # pylint:disable=C0103,W0703
             await bot.send_message(  # pylint:disable=E0602
                 event.chat_id,
-                "Please set `MAFIABOT_LOGGER` "
+                "Please set `ANIEBOTS_LOGGER` "
                 + "for the proper functioning of afk functionality "
-                + "Ask in @MafiaBot_Chit_Chat to get help setting this value\n\n `{}`".format(str(e)),
+                + "Ask in @Aniebotsupports to get help setting this value\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True,
             )
@@ -97,7 +97,7 @@ async def on_afk(event):
         msg = None
         
         message_to_reply = (
-            f"Hey!! My Legend master [{DEFAULTUSER}](tg://user?id={mafia}) is currently offline... Since when?\n**For** `{total_afk_time}`\n"
+            f"Hey!! My Legend master [{DEFAULTUSER}](tg://user?id={Anie}) is currently offline... Since when?\n**For** `{total_afk_time}`\n"
             + f"\n\n👇__The Reason Is__👇 :-\n`{reason}`"
   if reason
             else f"**Heyy!**\n__I am currently unavailable.__\n__Since when, you ask? From__ `{total_afk_time}`\nI'll be back when I feel to come🚶"
