@@ -11,7 +11,7 @@ from Aniebots import *
 from Aniebots.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="echo$"))
+@bot.on(mew_cmd(pattern="echo$"))
 @bot.on(sudo_cmd(pattern="echo$", allow_sudo=True))
 async def echo(Meow):
     if Meow.fwd_from:
