@@ -3,7 +3,7 @@ from telethon.tl.types import ChatBannedRights
 
 from userbot import CMD_HELP
 from userbot.events import errors_handler, register
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from . import *
