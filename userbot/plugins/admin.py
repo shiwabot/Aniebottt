@@ -32,7 +32,7 @@ from telethon.tl.types import (
 from userbot.Config import Config
 from . import *
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
-from mafiabot.utils import *
+from Aniebot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 # =================== CONSTANT ===================
