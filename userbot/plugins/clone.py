@@ -12,7 +12,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
 from userbot import CMD_HELP
-from mafiabot.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from . import *
