@@ -50,7 +50,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         LOGS.info("Aniebots - Successfully imported " + shortname)
     else:
-        import userbot.utils
+        import Aniebots.utils
 
         path = Path(f"Aniebots/plugins/{shortname}.py")
         name = "Aniebots.plugins.{}".format(shortname)
