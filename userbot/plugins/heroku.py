@@ -8,9 +8,9 @@ import requests
 from . import *
 from userbot import CMD_HELP
 from userbot.Config import Config
-from mafiabot.utils import admin_cmd, sudo_cmd
+from Aniebot.utils import admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.helpers.extras import delete_mafia, edit_or_reply as eor
+from userbot.helpers.extras import delete_Anie, edit_or_reply as eor
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -22,9 +22,9 @@ heroku_api = "https://api.heroku.com"
 HEROKU_APP_NAME = Config.HEROKU_APP_NAME
 HEROKU_API_KEY = Config.HEROKU_API_KEY
 
-mafia_logo = "./H1M4N5HU0P/mafiabot_logo.jpg"
+Anie_logo = "./Denvil/Aniebot.jpg"
 
-MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 h1m4n5hu0p = bot.uid
 
 @borg.on(
