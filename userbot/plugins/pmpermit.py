@@ -20,7 +20,7 @@ PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 MAFIAPIC = (
     PMPERMIT_PIC
     if PMPERMIT_PIC
-    else "https://telegra.ph/file/8b086b95491df9f0d4f58.jpg"
+    else "https://telegra.ph/file/28c979a7a36c344da3e07.jpg"
 )
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
@@ -30,16 +30,16 @@ h1m4n5hu0p = (
     if CUSTOM_PMPERMIT
     else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
 )
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's MafiaBot.**\n__Now GTFO, i'm busy__"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
+USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's AnieBot.**\n__Now GTFO, i'm busy__"
 USER_BOT_NO_WARN = (
-    "Hello, This is **MafiaBot Ultra Private Security Protocol⚠️**.\n"
+    "Hello, This is **AnieBot Ultra Private Security Protocol⚠️**.\n"
     f"This is my master {DEFAULTUSER}'s Inbox\n"
     f"\n**{h1m4n5hu0p}**\n\n"
     "To start a valid conversation\n🔱Register Your Request!🔱\nSend `/start` To Register Your Request\nHopefully u will get a reply🔥"
 )
 
-if Var.MAFIABOT_LOGGER is not None:
+if Var.ANIEBOTS_LOGGER is not None:
 
     @bot.on(admin_cmd(pattern="a|.allow|.approve ?(.*)"))
     async def approve_p_m(event):
