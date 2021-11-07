@@ -77,7 +77,7 @@ async def labstack(event):
     )
 
 
-@bot.on(admin_cmd(pattern=r"upld_dir (.*)", outgoing=True))
+@bot.on(mew_cmd(pattern=r"upld_dir (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"upld_dir (.*)", allow_sudo=True))
 async def uploadir(udir_event):
     """For .uploadir command, allows you to upload everything from a folder in the server"""
@@ -165,7 +165,7 @@ async def uploadir(udir_event):
         await udir_event.edit("404: Directory Not Found")
 
 
-@bot.on(admin_cmd(pattern=r"upload (.*)", outgoing=True))
+@bot.on(mew_cmd(pattern=r"upload (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"upload (.*)", allow_sudo=True))
 async def upload(u_event):
     """For .upload command, allows you to upload a file from the userbot's server"""
@@ -244,7 +244,7 @@ def extract_w_h(file):
         return width, height
 
 
-@bot.on(admin_cmd(pattern=r"upld_as(stream|vn|all) (.*)", outgoing=True))
+@bot.on(mew_cmd(pattern=r"upld_as(stream|vn|all) (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"upld_as (stream|vn|all) (.*)", allow_sudo=True))
 async def uploadas(uas_event):
     """For .uploadas command, allows you to specify some arguments for upload."""
