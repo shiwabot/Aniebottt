@@ -1,5 +1,5 @@
 # credits to userge
-# ported to MafiaBot by @H1M4N5HU0P
+# ported to AnieBot by @d3nvil 
 # will be adding more soon
 
 import asyncio
@@ -10,7 +10,7 @@ import requests
 
 from userbot.Config import Config
 from . import *
-from mafiabot.utils import *
+from Aniebot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd("boobs$"))
