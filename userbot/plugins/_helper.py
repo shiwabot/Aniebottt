@@ -5,7 +5,7 @@ import requests
 from telethon import functions
 
 from userbot import CMD_LIST, SUDO_LIST
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.Config import Config
 from . import *
 
