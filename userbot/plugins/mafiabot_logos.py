@@ -7,13 +7,13 @@ import time
 
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterPhotos, InputMessagesFilterDocument
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.Config import Config
 from . import *
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-mafia = borg.uid
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
+Anie = borg.uid
 
 PICS_STR = []
 
@@ -61,12 +61,12 @@ async def _(mafiaevent):
     draw.text(
         (w_, h_), text, font=font, fill="white", stroke_width=strik, stroke_fill="black"
     )
-    file_name = "MafiaBot.png"
+    file_name = "Aniebot.png"
     img.save(file_name, "png")
     await bot.send_file(
         mafiaevent.chat_id,
         file_name,
-        caption=f"**мα∂ε вү  :** 『[{DEFAULTUSER}](tg://user?id={mafia})』\n\n",
+        caption=f"**мα∂ε вү  :** 『[{DEFAULTUSER}](tg://user?id={Anie})』\n\n",
     )
     await event.delete()
     try:
