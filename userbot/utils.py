@@ -49,7 +49,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("MafiaBot - Successfully imported " + shortname)
+        LOGS.info("Aniebot - Successfully imported " + shortname)
     else:
         import userbot.utils
 
@@ -68,17 +68,17 @@ def load_module(shortname):
         mod.borg = bot
         mod.mafiabot = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_mafia = delete_mafia
+        mod.delete_Anie = delete_Anie
         mod.media_type = media_type
-        # support for mafiabot originals
-        sys.modules["mafiabot.utils"] = userbot.utils
-        sys.modules["mafiabot"] = userbot
+        # support for Aniebot originals
+        sys.modules["Aniebot.utils"] = userbot.utils
+        sys.modules["aniebot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("⚡🔥MafiaBot⚡🔥 - Successfully imported " + shortname)
+        LOGS.info("⚡🔥Aniebot⚡🔥 - Successfully imported " + shortname)
 
 
 def remove_plugin(shortname):
