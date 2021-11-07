@@ -1,9 +1,9 @@
 import re
 
-from mafiabot import bot
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from mafiabot.cmdhelp import CmdHelp
-from mafiabot.helpers.functions import deEmojify
+from Aniebot import bot
+from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from Aniebot.cmdhelp import CmdHelp
+from Aniebot.helpers.functions import deEmojify
 from userbot.Config import Config
 from . import *
 
