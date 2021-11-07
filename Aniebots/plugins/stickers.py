@@ -37,7 +37,7 @@ KANGING_STR = [
     "Turn around, Go straight and f*ck off...",
 ]
 
-Meowbot = Config.STICKER_PACKNAME
+Aniebots = Config.STICKER_PACKNAME
 
 
 @bot.on(mew_cmd(outgoing=True, pattern="kang"))
@@ -293,7 +293,7 @@ async def resize_photo(photo):
     return image
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="stkrinfo"))
+@bot.on(mew_cmd(outgoing=True, pattern="stkrinfo"))
 @bot.on(sudo_cmd(pattern="stkrinfo", allow_sudo=True))
 async def get_pack_info(event):
     if not event.is_reply:
