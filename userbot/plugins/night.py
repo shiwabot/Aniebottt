@@ -10,7 +10,7 @@ from telethon.tl import functions, types
 from userbot.Config import Config
 from . import *
 
-from mafiabot.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
 global USER_night  # pylint:disable=E0602
