@@ -6,8 +6,8 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from mafiabot import CmdHelp, bot as mafiabot
+from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from Aniebot import CmdHelp, bot as Aniebot 
 
 
 @mafiabot.on(admin_cmd("gencc$"))
