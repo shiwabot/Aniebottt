@@ -1,6 +1,6 @@
-# Made by @Kraken_The_BadASS for @mafiaBot_Official
+# Made by @Kraken_The_BadASS for @Aniebots
 
-from mafiabot.utils import *
+from Aniebot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 
