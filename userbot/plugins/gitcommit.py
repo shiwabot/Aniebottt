@@ -44,14 +44,14 @@ async def download(event):
         end = datetime.now()
         ms = (end - start).seconds
         await event.delete()
-        await mafiabot.edit(
+        await Aniebot.edit(
             "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
         )
-        await mafiabot.edit("Committing to Github....")
-        await git_commit(downloaded_file_name, mafiabot)
+        await aniebot.edit("Committing to Github....")
+        await git_commit(downloaded_file_name, Aniebot)
 
 
-async def git_commit(file_name, mafiabot):
+async def git_commit(file_name, Aniebot):
     content_list = []
     access_token = Var.GITHUB_ACCESS_TOKEN
     g = Github(access_token)
@@ -67,7 +67,7 @@ async def git_commit(file_name, mafiabot):
     for i in content_list:
         create_file = True
         if i == 'ContentFile(path="' + file_name + '")':
-            return await mafiabot.edit("`File Already Exists`")
+            return await Aniebot.edit("`File Already Exists`")
             create_file = False
     file_name = "userbot/plugins/" + file_name
     if create_file == True:
