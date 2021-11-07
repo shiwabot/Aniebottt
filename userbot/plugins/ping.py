@@ -71,7 +71,7 @@ async def _(event):
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     if MAFIA_IMG:
-        mafia_caption = f"__**〘 ♕ ᑭσɳց! ♕ 〙__**\n\n   ⚘ {ms}\n   ⚘ __**𝙼𝚢**__ __**𝙼𝚊𝚜𝚝𝚎𝚛**__⟿[{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
+        mafia_caption = f"__**〘 ♕ ᑭσɳց! ♕ 〙__**\n\n   ⚘ {ms}\n   ⚘ __**𝙼𝚢**__ __**𝙼𝚊𝚜𝚝𝚎𝚛**__⟿[{DEFAULTUSER}](tg://user?id={d3nvil)"
         await event.client.send_file(
             event.chat_id, MAFIA_IMG, caption=mafia_caption
         )
