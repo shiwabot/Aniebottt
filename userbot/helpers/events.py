@@ -2,7 +2,7 @@
 from telethon.tl.types import MessageEntityMentionName
 
 from userbot.Config import Config
-from userbot.utils import delete_mafia
+from userbot.utils import delete_Anie
 
 
 async def reply_id(event):
