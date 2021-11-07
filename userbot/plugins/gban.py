@@ -3,7 +3,7 @@ import html
 from userbot.cmdhelp import CmdHelp
 from userbot import bot, CMD_HELP, ALIVE_NAME
 from userbot.plugins.sql_helper.gban_sql import is_gbanned
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 from telethon import events
 from telethon.events import ChatAction
