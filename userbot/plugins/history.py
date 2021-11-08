@@ -1,7 +1,7 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from Aniebot import bot, CmdHelp
+from userbot import bot, CmdHelp
 from Aniebot.utils import admin_cmd, edit_or_reply as eor, sudo_cmd
 
 @bot.on(admin_cmd(pattern="history ?(.*)"))
