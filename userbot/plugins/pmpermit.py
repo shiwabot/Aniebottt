@@ -217,7 +217,7 @@ if Var.ANIEBOTS_LOGGER is not None:
         if event.sender_id == bot.uid:
             return
 
-        if Var.MAFIABOT_LOGGER is None:
+        if Var.ANIEBOTS_LOGGER is None:
             return
 
         if not event.is_private:
@@ -287,7 +287,7 @@ if Var.ANIEBOTS_LOGGER is not None:
             except:
                 return
         r = await bot.send_file(
-            event.chat_id, MAFIAPIC, caption=USER_BOT_NO_WARN, force_document=False
+            event.chat_id, ANIEBOT_PIC, caption=USER_BOT_NO_WARN, force_document=False
         )
         PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
