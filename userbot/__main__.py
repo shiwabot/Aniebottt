@@ -60,7 +60,7 @@ async def mafia_is_on():
         if Config.ANIEBOTS_LOGGER != 0:
             await bot.send_file(
                 Config.ANIEBOTS_LOGGER,
-                MAFIA_PIC,
+                ANIEBOT_PIC,
                 caption=f"༆🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃༆\n\n**𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ➪ {mafiaversion}**\n\n𝐓𝐲𝐩𝐞 `.ping` or `.alive` 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤! \n\n𝙹𝙾𝙸𝙽 [🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 𝙲𝙷𝙰𝚃](t.me/Aniebotsupports) 𝚃𝙾 𝚀𝚄𝙴𝚁𝚈 & 𝙹𝙾𝙸𝙽 [🄰🄽🄸🄴 𝚄𝙿𝙳𝙰𝚃𝙴𝚂](t.me/Aniebots) 𝚃𝙾 𝙺𝙽𝙾𝚆 𝚁𝙴𝙶𝚁𝙰𝙳𝙸𝙽𝙶 𝚄𝙿𝙳𝙰𝚃𝙴 𝙰𝙽𝙳 𝙽𝙴𝚆𝚂 𝙰𝙱𝙾𝚄𝚃 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃",
             )
     except Exception as e:
