@@ -14,8 +14,8 @@
 #   If not, see <https://www.gnu.org/licenses/>.
 #
 
-
-echo """
+"""
+echo 
                       © 𝙻𝙴𝙶𝙴𝙽𝙳𝙰𝚁𝚈_𝙰𝙵_Aniebot™
            ╔═╗╔═╦═══╦═══╦══╦═══╦══╗╔═══╦════╗
            ║║╚╝║║╔═╗║╔══╩╣╠╣╔═╗║╔╗║║╔═╗║╔╗╔╗║
@@ -25,6 +25,6 @@ echo """
            ╚╩═══╩═══╝─╚╝
                      © 𝙻𝙴𝙶𝙴𝙽𝙳𝙰𝚁𝚈_𝙰𝙵_🄰🄽🄸🄴™                       
                          @Aniebotsupports 
-"""
 
 python3 string_session.py
+"""
