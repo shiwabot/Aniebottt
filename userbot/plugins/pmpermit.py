@@ -205,7 +205,7 @@ if Var.ANIEBOTS_LOGGER is not None:
                     out_file,
                     force_document=True,
                     allow_cache=False,
-                    caption="[MafiaBot]Current Approved PMs",
+                    caption="[Anieboy]Current Approved PMs",
                     reply_to=event,
                 )
                 await event.delete()
@@ -287,7 +287,7 @@ if Var.ANIEBOTS_LOGGER is not None:
             except:
                 return
         r = await bot.send_file(
-            event.chat_id, ANIEBOT_PIC, caption=USER_BOT_NO_WARN, force_document=False
+            event.chat_id, MAFIAPIC, caption=USER_BOT_NO_WARN, force_document=False
         )
         PM_WARNS[chat_id] += 1
         if chat_id in PREV_REPLY_MESSAGE:
