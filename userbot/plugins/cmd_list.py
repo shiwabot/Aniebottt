@@ -1,7 +1,7 @@
 import asyncio
 import io
 
-from Aniebots.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import bot as Aniebot 
 from userbot.Config import Config
 from . import *
