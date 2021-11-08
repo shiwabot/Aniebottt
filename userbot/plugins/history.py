@@ -1,11 +1,11 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from Aniebotsimport bot, CmdHelp
+from Aniebot import bot, CmdHelp
 from Aniebot.utils import admin_cmd, edit_or_reply as eor, sudo_cmd
 
-@mafiabot.on(admin_cmd(pattern="history ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="history ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="history ?(.*)"))
+@bot.on(sudo_cmd(pattern="history ?(.*)", allow_sudo=True))
 async def _(mafiaevent):
     if mafiaevent.fwd_from:
         return 
@@ -37,8 +37,8 @@ async def _(mafiaevent):
              await mafiaevent.delete()
              await mafiaevent.client.send_message(mafiaevent.chat_id, response2.message)
 
-@mafiabot.on(admin_cmd(pattern="unh ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="unh ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="unh ?(.*)"))
+@bot.on(sudo_cmd(pattern="unh ?(.*)", allow_sudo=True))
 async def _(mafiaevent):
     if mafiaevent.fwd_from:
         return 
