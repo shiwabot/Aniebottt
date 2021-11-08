@@ -158,7 +158,7 @@ if ENV:
         FORCE_SUB = os.environ.get("FORCE_SUB", None)
         FORCE_CHANNEL_UN = os.environ.get("FORCE_CHANNEL_UN", None)
         FORCE_CHANNEL_ID = int(os.environ.get("FORCE_CHANNEL_ID", False))
-        EXTRA_MAFIABOT = os.environ.get("EXTRA_MAFIABOT", -1001221881562)
+        EXTRA_ANIEBOTS = os.environ.get("EXTRA_ANIEBOTS", -1001221881562)
         PM_DATA = os.environ.get("PM_DATA", "ENABLE")
         ANIEBOTS_LOGGER = int(os.environ.get("ANIEBOTS_LOGGER", None))
         BAN_PIC = os.environ.get("BAN_PIC", None)
