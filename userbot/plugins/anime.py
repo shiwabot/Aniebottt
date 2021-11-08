@@ -1,9 +1,9 @@
 import re
 
-from Aniebot import bot
+from userbot import bot
 from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from Aniebot.cmdhelp import CmdHelp
-from Aniebot.helpers.functions import deEmojify
+from userbot.cmdhelp import CmdHelp
+from userbot.helpers.functions import deEmojify
 from userbot.Config import Config
 from . import *
 
