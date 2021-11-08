@@ -17,10 +17,10 @@ from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from . import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 
 DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "LEGENDARY AF MAFIABOT"
-BOTLOG_CHATID = Config.MAFIABOT_LOGGER
+BOTLOG_CHATID = Config.ANIEBOTS_LOGGER
 BOTLOG = True
 
 
