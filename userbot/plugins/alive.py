@@ -45,7 +45,7 @@ pm_caption += " [🔥REPO🔥](https://github.com/Anieteam/Aniebots) 🔹 [📜L
 async def amireallyalive(alive):
     await alive.get_chat()   
     await alive.delete()
-    on = await borg.send_file(alive.chat_id, MAFIA_IMG,caption=pm_caption)
+    on = await borg.send_file(alive.chat_id, ANIE_IMG,caption=pm_caption)
 
     
 CmdHelp("alive").add_command(
