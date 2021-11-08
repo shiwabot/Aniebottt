@@ -15,7 +15,7 @@
 #
 
 """
-echo """
+echo 
 
              ══╦═╦══╗
                ║╠╗╔╝
@@ -24,7 +24,7 @@ echo """
 
                        Denvil bh Aneibot !!
                                           @Aniebots 
-"""
+
 
 python3 -m userbot
 
