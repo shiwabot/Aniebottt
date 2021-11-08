@@ -145,7 +145,7 @@ async def _(event):
 
 import asyncio
 
-from mafiabot.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 
 
 @bot.on(admin_cmd(pattern=f"lovestory", outgoing=True))
