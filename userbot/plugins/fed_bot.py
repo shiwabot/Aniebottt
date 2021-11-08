@@ -12,10 +12,10 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon import functions, types, events
-from Aniebot import CmdHelp, bot 
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
-from mafiabot.Config import Config
-from mafiabot.plugins.sql_helper.fban_sql import (
+from userbot import CmdHelp, bot 
+from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
+from userbot.Config import Config
+from userbot.plugins.sql_helper.fban_sql import (
     add_channel,
     get_all_channels,
     in_channels,
