@@ -6,7 +6,7 @@ from geopy.geocoders import Nominatim
 from telethon.tl import types
 
 from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from Aniebot import CmdHelp
+from userbot import CmdHelp
 
 @bot.on(admin_cmd(pattern="gps ?(.*)"))
 @bot.on(sudo_cmd(pattern="gps ?(.*)", allow_sudo=True))
