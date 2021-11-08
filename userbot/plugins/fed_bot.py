@@ -12,7 +12,7 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon import functions, types, events
-from Aniebot import CmdHelp, bot as Aniebot 
+from Aniebot import CmdHelp, bot 
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
 from mafiabot.Config import Config
 from mafiabot.plugins.sql_helper.fban_sql import (
@@ -24,14 +24,14 @@ from mafiabot.plugins.sql_helper.fban_sql import (
 
 logs_id = Config.FBAN_LOGGER_GROUP
 bot = "@MissRose_bot"
-mafia_logo = "./H1M4N5HU0P/mafiabot_logo.jpg"
+Anie_logo = "./Denvil/Aniebot.jpg"
 # Keep all credits pls
 # madewith great effort by @HeisenbergTheDanger
 # modified by @kraken_the_badass for fbans
 
 
-@Aniebot.on(admin_cmd(pattern="fban ?(.*)"))
-@Aniebot.on(sudo_cmd(pattern="fban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fban ?(.*)"))
+@bot.on(sudo_cmd(pattern="fban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -144,8 +144,8 @@ async def _(event):
                 except BaseException:
                     await mssg.edit("Set up heroku var `FBAN_LOGGER_GROUP` for checking errors.")# Written by @HeisenbergTheDanger
 
-@Aniebot.on(admin_cmd(pattern="unfban ?(.*)"))
-@Aniebot.on(sudo_cmd(pattern="unfban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="unfban ?(.*)"))
+@bot.on(sudo_cmd(pattern="unfban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -259,8 +259,8 @@ async def _(event):
                     await mssg.edit("Set up heroku var `FBAN_LOGGER_GROUP` for checking errors.")
 
 
-@Aniebot.on(admin_cmd(pattern=r"fadd ?(.*)"))
-@Aniebot.on(sudo_cmd(pattern=r"fadd ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"fadd ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"fadd ?(.*)", allow_sudo=True))
 async def add_ch(event):
     if event.fwd_from:
         return
@@ -300,8 +300,8 @@ async def add_ch(event):
         await event.delete()
 
 
-@Aniebot.on(admin_cmd(pattern=r"fremove ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern=r"fremove ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"fremove ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"fremove ?(.*)", allow_sudo=True))
 async def remove_ch(event):
     if event.fwd_from:
         return
@@ -329,8 +329,8 @@ async def remove_ch(event):
         await event.delete()
 
 
-@Aniebot.on(admin_cmd(pattern="fgroups"))
-@Aniebot.on(sudo_cmd(pattern="fgroups", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fgroups"))
+@bot.on(sudo_cmd(pattern="fgroups", allow_sudo=True))
 async def list(event):
     if event.fwd_from:
         return
@@ -356,8 +356,8 @@ async def list(event):
         await eor(event, msg)
 
 
-@Aniebot.on(admin_cmd(pattern="fsearch ?(.*)"))
-@Aniebot.on(sudo_cmd(pattern="fsearch ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fsearch ?(.*)"))
+@bot.on(sudo_cmd(pattern="fsearch ?(.*)", allow_sudo=True))
 async def search(event):
     if event.fwd_from:
         return
@@ -377,8 +377,8 @@ async def search(event):
 
 #----------------------------------------------------------------------------------------------------------------------------------------------
 
-@Aniebot.on(admin_cmd(pattern="newfed ?(.*)", outgoing=True))
-@Aniebot.on(sudo_cmd(pattern="newfed ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="newfed ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="newfed ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -403,8 +403,8 @@ async def _(event):
             await eor(event, f"{response.message.message}")
 
 
-@Aniebot.on(admin_cmd(pattern="renamefed ?(.*)"))
-@Aniebot.on(sudo_cmd(pattern="renamefed ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="renamefed ?(.*)"))
+@bot.on(sudo_cmd(pattern="renamefed ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -424,8 +424,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-@Aniebot.on(admin_cmd(pattern="fstat ?(.*)"))
-@Aniebot.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fstat ?(.*)"))
+@bot.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -454,7 +454,7 @@ async def _(event):
                     await massive.click(0)
                     await asyncio.sleep(2)
                     massive = await conv.get_response()
-                    await mafiabot.send_file(
+                    await bot.send_file(
                         event.chat_id,
                         massive,
                         thumb=thumb,
@@ -467,8 +467,8 @@ async def _(event):
                 await mafia.edit("`Please Unblock` @MissRose_Bot")
 
 
-@Aniebot.on(admin_cmd(pattern="fedinfo ?(.*)"))
-@Aniebot.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fedinfo ?(.*)"))
+@bot.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
