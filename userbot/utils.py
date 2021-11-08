@@ -66,9 +66,9 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.mafiabot = bot
+        mod.Aniebot = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_Anie = delete_Anie
+        mod.delete_mafia = delete_mafia
         mod.media_type = media_type
         # support for Aniebot originals
         sys.modules["Aniebot.utils"] = userbot.utils
