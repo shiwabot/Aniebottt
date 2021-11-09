@@ -67,7 +67,7 @@ elif Var.LOAD_MYBOT == "False":
         )
     )
 
-CUSTOM_HELP_EMOJI = os.environ.get("CUSTOM_HELP_EMOJI", "⚡")
+EMOJI_IN_HELP = os.environ.get("EMOJI_IN_HELP", "⚡")
 HELP_ROWS = int(os.environ.get("HELP_ROWS", 5))
 HELP_COLOUMNS = int(os.environ.get("HELP_COLOUMNS", 3))
 
@@ -82,7 +82,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
-                "© TeleBot Help",
+                "© Aniebot Help",
                 text="{}\nCurrently Loaded Plugins: {}".format(query, len(CMD_LIST)),
                 buttons=buttons,
                 link_preview=False,
@@ -93,11 +93,11 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 text=f"**TeleBot Stats For [{DEFAULTUSER}](tg://user?id={myid})**\n\n__Bot is functioning normally, master!__\n\n(c) @TeleBotSupport",
                 buttons=[
                     [custom.Button.inline("Stats", data="statcheck")],
-                    [Button.url("Repo", "https://github.com/xditya/TeleBot")],
+                    [Button.url("Repo", "https://github.com/Anieteam/Aniebots")],
                     [
                         Button.url(
                             "Deploy Now!",
-                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot&template=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot",
+                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots&template=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots",
                         )
                     ],
                 ],
@@ -119,36 +119,36 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"TeleBot - Telegram Userbot.",
+                text=f"Anie - Telegram Userbot.",
                 buttons=[
                     [
-                        Button.url("Repo", "https://github.com/xditya/TeleBot"),
+                        Button.url("Repo", "https://github.com/Anieteam/Aniebots"),
                         Button.url(
                             "Deploy",
-                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot&template=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot",
+                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots&template=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots",
                         ),
                     ],
-                    [Button.url("Support", "https://t.me/TeleBotSupport")],
+                    [Button.url("Support", "https://t.me/Aniebotsupports")],
                 ],
             )
         else:
             result = builder.article(
                 "Source Code",
-                text="**Welcome to TeleBot**\n\n`Click below buttons for more`",
+                text="**Welcome to Aniebot**\n\n`Click below buttons for more`",
                 buttons=[
-                    [custom.Button.url("Creator👨‍🦱", "https://t.me/its_xditya")],
+                    [custom.Button.url("Creator👨‍🦱", "https://t.me/d3nvil")],
                     [
                         custom.Button.url(
-                            "👨‍💻Source Code‍💻", "https://github.com/xditya/TeleBot"
+                            "👨‍💻Source Code‍💻", "https://github.com/Anieteam/Aniebots"
                         ),
                         custom.Button.url(
                             "Deploy 🌀",
-                            "https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot",
+                            "https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots",
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "Updates and Support Group↗️", "https://t.me/TeleBotSupport"
+                            "Updates and Support Group↗️", "https://t.me/Aniebotsupports"
                         )
                     ],
                 ],
@@ -169,7 +169,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.edit(buttons=buttons)
         else:
             reply_pop_up_alert = (
-                "Please get your own Userbot from @TeleBotHelp , and don't use mine!"
+                "Please get your own Userbot from @Aniebotsupports , and don't use mine!"
             )
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -346,7 +346,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 def paginate_help(page_number, loaded_plugins, prefix):
     number_of_rows = HELP_ROWS
     number_of_cols = HELP_COLOUMNS
-    tele = CUSTOM_HELP_EMOJI
+    tele = EMOJI_IN_HELP
     helpable_plugins = []
     for p in loaded_plugins:
         if not p.startswith("_"):
