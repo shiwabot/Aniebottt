@@ -98,20 +98,20 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         elif event.text=='':
             result = builder.article(
                 "@MafiaBot_Support",
-                text=f"""**Hey![🤗]({mafia_help_pic}) This is [MafiaBot.](https://t.me/MafiaBot_Support)\nYou can know more about me from the links given below 👇**""",
+                text=f"""**Hey![🤗]({Anie_help_pic}) This is [Aniebot.](https://t.me/Aniebots)\nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/MafiaBot_Support"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Aniebots"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/MafiaBot_Chit_Chat"
+                            "⚡ GROUP ⚡", "https://t.me/Aniebotsupports"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/MafiaBotOP/MafiaBot"),
+                            "✨ REPO ✨", "https://github.com/Anieteam/Aniebots"),
                         custom.Button.url
                     (
-                            "🔰 TUTORIAL 🔰", "https://youtu.be/aRFWP4_RCaE"
+                            "🔰 TUTORIAL 🔰", "https://t.me/Aniebotsupports"
                     )
                     ],
                 ],
@@ -123,14 +123,14 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def page(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN MAFIABOT AND USE. © MafiaBot ™",
+                "HELLO THERE. PLEASE MAKE YOUR OWN Aniebots AND USE. © Aniebot ™",
                 cache_time=0,
                 alert=True,
             )
         page = int(event.data_match.group(1).decode("UTF-8"))
         veriler = button(page, CMD_HELP)
         await event.edit(
-            f"**Legenday AF MafiaBot[⚡🔥]({mafia_help_pic})[.](https://t.me/MafiaBot_Support) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
+            f"**Legenday AF Aniebot[⚡🔥]({Anie_help_pic})[.](https://t.me/Aniebotsupports) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
             buttons=veriler[1],
             link_preview=True,
         )
@@ -139,11 +139,11 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
             await delete_mafia(event,
-              f"⚜️MafiaBot Menu Provider Is now Closed[⚜️]({mafia_help_pic})\n\n         **[© MafiaBot ™](t.me/MafiaBot_Support)**[⚡🔥]({mafia_help_pic})", 5, link_preview=True
+              f"⚜️Aniebots Menu Provider Is now Closed[⚜️]({Anie_help_pic})\n\n         **[© Aniebots ™](t.me/Aniebotsupports)**[⚡🔥]({Anie_help_pic})", 5, link_preview=True
             )
         else:
-            mafia_alert = "HELLO THERE. PLEASE MAKE YOUR OWN MAFIABOT AND USE. © MafiaBot ™"
-            await event.answer(mafia_alert, cache_time=0, alert=True)
+            mafia_alert = "HELLO THERE. PLEASE MAKE YOUR OWN Aniebots AND USE. © Aniebots ™"
+            await event.answer(Anie_alert, cache_time=0, alert=True)
           
     @tgbot.on(
         callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)"))
@@ -151,7 +151,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def Information(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN MAFIABOT AND USE. © MafiaBot ™",
+                "HELLO THERE. PLEASE MAKE YOUR OWN Aniebots AND USE. © Aniebots ™",
                 cache_time=0,
                 alert=True,
             )
@@ -184,7 +184,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def commands(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN MAFIABOT AND USE. © MafiaBot ™",
+                "HELLO THERE. PLEASE MAKE YOUR OWN Aniebots AND USE. © Aniebots ™",
                 cache_time=0,
                 alert=True,
             )
