@@ -83,5 +83,5 @@ async def cmd_list(event):
                 await event.delete()
             except BaseException:
                 await event.edit(
-                    f"This bot has inline disabled. Please enable it to use `{CMD_HNDLR}help`.\nGet help from [here](t.me/TeleBotHelpChat)"
+                    f"This bot has inline disabled. Please enable it to use `{COMMAND_HAND_LER}help`.\nGet help from [here](t.me/TeleBotHelpChat)"
                 )
