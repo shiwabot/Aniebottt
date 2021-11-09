@@ -15,7 +15,7 @@
 #    This Inline Helper Code is solely owned by @SupRemE_AnanD
 #    You Should Not Copy This Code Without Proper Permission.
 
-# Help Pic feature added by @H1M4N5HU0P
+# Help Pic feature added by @d3nvil 
 
 from math import ceil
 from re import compile
@@ -27,17 +27,17 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from userbot import *
 from userbot.cmdhelp import *
-from mafiabot.utils import *
+from Aniebot.utils import *
 from userbot.Config import Config
 
-mafia_help_pic = Config.HELP_PIC or "https://telegra.ph/file/f6a46c6251bb8a5bea300.mp4"
-mafia_row = Config.BUTTONS_IN_HELP
-mafia_emoji = Config.EMOJI_IN_HELP
+Anie_help_pic = Config.HELP_PIC or "https://telegra.ph/file/28c979a7a36c344da3e07.jpg"
+Anie_row = Config.BUTTONS_IN_HELP
+Anie_emoji = Config.EMOJI_IN_HELP
 # thats how a lazy guy imports
-# MafiaBot
+# Aniebots 
 
 def button(page, modules):
-    Row = mafia_row
+    Row = Anie_row
     Column = 3
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
@@ -50,7 +50,7 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"{mafia_emoji} " + pair, data=f"Information[{page}]({pair})")
+                custom.Button.inline(f"{Anie_emoji} " + pair, data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
@@ -58,18 +58,18 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"◀️ ᏰᎯᏣᏦ {mafia_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"◀️ ᏰᎯᏣᏦ {Anie_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"•{mafia_emoji} ❌ {mafia_emoji}•", data="close"
+               f"•{Anie_emoji} ❌ {Anie_emoji}•", data="close"
             ),
             custom.Button.inline(
-               f"{mafia_emoji} ᏁᏋﾒᎿ ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"{Anie_emoji} ᏁᏋﾒᎿ ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
     return [max_pages, buttons]
-    # Changing this line may give error in bot as i added some special cmds in MafiaBot channel to get this module work...
+    # Changing this line may give error in bot as i added some special cmds in Aniebots channel to get this module work...
 
     modules = CMD_HELP
 if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
@@ -78,12 +78,12 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "@MafiaBot_Support":
+        if event.query.user_id == bot.uid and query == "@Aniebots":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             result = await builder.article(
                 f"Hey! Only use .help please",
-                text=f"**Running MafiaBot**[⚡🔥]({mafia_help_pic})\n\n__Number of plugins installed__ :`{len(CMD_HELP)}`\n**page:** 1/{veriler[0]}",
+                text=f"**Running Aniebot**[⚡🔥]({mafia_help_pic})\n\n__Number of plugins installed__ :`{len(CMD_HELP)}`\n**page:** 1/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=True,
             )
