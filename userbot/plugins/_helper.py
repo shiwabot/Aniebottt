@@ -5,7 +5,7 @@ import requests
 from telethon import functions
 
 from userbot import CMD_LIST, SUDO_LIST
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.Config import Config
 from . import *
 
@@ -15,8 +15,8 @@ async def _(event):
         return
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     input_str = event.pattern_match.group(1)
-    if tgbotusername is not None or mafia_input == "text":
-        results = await event.client.inline_query(tgbotusername, "@MafiaBot_Support")
+    if tgbotusername is not None or input_str == "text":
+        results = await event.client.inline_query(tgbotusername, "@Aniebots")
         await results[0].click(
             event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
         )
@@ -64,7 +64,7 @@ async def info(event):
                 .get("key")
             )
             url = f"https://nekobin.com/{key}"
-            reply_text = f"All commands of the MafiaBot are [here]({url})"
+            reply_text = f"All commands of the Aniebot are [here]({url})"
             await event.reply(reply_text, link_preview=False)
             return
         await event.reply(
