@@ -21,7 +21,7 @@ from userbot.Config import Config
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 COMMAND_HAND_LER = Config.COMMAND_HAND_LER
-CUSTOM_HELP_EMOJI = os.environ.get("CUSTOM_HELP_EMOJI", "⚡")
+EMOJI_IN_HELP = os.environ.get("EMOJI_IN_HELP", "⚡")
 
 if COMMAND_HAND_LER is None:
     COMMAND_HAND_LER = "."
@@ -35,7 +35,7 @@ async def cmd_list(event):
         if tgbotusername is None or input_str == "text":
             string = ""
             for i in CMD_HELP:
-                string += CUSTOM_HELP_EMOJI + " " + i + " " + CUSTOM_HELP_EMOJI + "\n"
+                string += EMOJI_IN_HELP + " " + i + " " + EMOJI_IN_HELP + "\n"
                 for iter_list in CMD_HELP[i]:
                     string += "    `" + str(iter_list) + "`"
                     string += "\n"
@@ -45,7 +45,7 @@ async def cmd_list(event):
                     out_file.name = "cmd.txt"
                     await tgbot.send_file(
                         event.chat_id,
-                        out_file,
+                        out_file,EMOJI_IN_HELP
                         force_document=True,
                         allow_cache=False,
                         caption="**COMMANDS**",
