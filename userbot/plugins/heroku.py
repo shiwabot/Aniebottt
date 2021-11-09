@@ -182,15 +182,15 @@ async def dyno_usage(dyno):
 @bot.on(admin_cmd(pattern="logs$", outgoing=True))
 async def _(dyno):
     if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):  
-        return await eor(dyno, f"Make Sure Your HEROKU_APP_NAME & HEROKU_API_KEY are filled correct. Visit @MafiaBot_Support for help.", link_preview=False)
+        return await eor(dyno, f"Make Sure Your HEROKU_APP_NAME & HEROKU_API_KEY are filled correct. Visit @Aniebots for help.", link_preview=False)
     try:
         Heroku = heroku3.from_key(HEROKU_API_KEY)
         app = Heroku.app(HEROKU_APP_NAME)        
     except BaseException:
-        return await dyno.reply(f"Make Sure Your Heroku App Name & API Key are filled correct. Visit @MafiaBot_Support for help.", link_preview=False)
+        return await dyno.reply(f"Make Sure Your Heroku App Name & API Key are filled correct. Visit @Aniebotsupports for help.", link_preview=False)
    # event = await eor(dyno, "Downloading Logs...")
     mafia_data = app.get_log()
-    await eor(dyno, mafia_data, deflink=True, linktext=f"**🗒️ Heroku Logs of 💯 lines. 🗒️**\n\n🌟 **Bot Of :** [{MAFIA_NAME}](tg://user?id={h1m4n5hu0p})\n\n🚀** Pasted**  ")
+    await eor(dyno, mafia_data, deflink=True, linktext=f"**🗒️ Heroku Logs of 💯 lines. 🗒️**\n\n🌟 **Bot Of :** [{MAFIA_NAME}](tg://user?id={d3nvil})\n\n🚀** Pasted**  ")
     
    
 
