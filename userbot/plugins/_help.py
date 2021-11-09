@@ -16,15 +16,15 @@
 
 import os
 
-from telebot import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
-from telebot.telebotConfig import Config
+from telebot import ALIVE_NAME, CMD_HELP, COMMAND_HAND_LER, CMD_LIST
+from telebot.Config import Config
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "TeleBot User"
-CMD_HNDLR = Config.CMD_HNDLR
-CUSTOM_HELP_EMOJI = os.environ.get("CUSTOM_HELP_EMOJI", "⚡")
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
+COMMAND_HAND_LER = Config.COMMAND_HAND_LER
+EMOJI_IN_HELP = os.environ.get("EMOJI_IN_HELP", "⚡")
 
-if CMD_HNDLR is None:
-    CMD_HNDLR = "."
+if COMMAND_HAND_LER is None:
+    COMMAND_HAND_LER = "."
 
 
 @telebot.on(admin_cmd(pattern="help ?(.*)"))
@@ -35,7 +35,7 @@ async def cmd_list(event):
         if tgbotusername is None or input_str == "text":
             string = ""
             for i in CMD_HELP:
-                string += CUSTOM_HELP_EMOJI + " " + i + " " + CUSTOM_HELP_EMOJI + "\n"
+                string += EMOJI_IN_HELP + " " + i + " " + EMOJI_IN_HELP + "\n"
                 for iter_list in CMD_HELP[i]:
                     string += "    `" + str(iter_list) + "`"
                     string += "\n"
@@ -66,12 +66,12 @@ async def cmd_list(event):
                     for i in CMD_LIST[input_str]:
                         string += "    " + i
                         string += "\n"
-                    string += "\n**© @TeleBotSupport**"
+                    string += "\n**© @Aniebots**"
                     await event.edit(string)
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = f"""`Userbot Helper for {DEFAULTUSER} to reveal all the commands of `**[TeleBot](https://xditya.gitbook.io/telebot/)**\n\n"""
+            help_string = f"""`Userbot Helper for {DEFAULTUSER} to reveal all the commands of `**[Aniebots](https://Anieteam.gitbook.io/Aniebots/)**\n\n"""
             try:
                 results = await bot.inline_query(  # pylint:disable=E0602
                     tgbotusername, help_string
@@ -82,5 +82,5 @@ async def cmd_list(event):
                 await event.delete()
             except BaseException:
                 await event.edit(
-                    f"This bot has inline disabled. Please enable it to use `{CMD_HNDLR}help`.\nGet help from [here](t.me/TeleBotHelpChat)"
+                    f"This bot has inline disabled. Please enable it to use `{COMMAND_HAND_LER}help`.\nGet help from [here](t.me/Aniebotsupports)"
                 )
