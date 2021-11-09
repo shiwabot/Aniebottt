@@ -20,7 +20,7 @@ from userbot import ALIVE_NAME, CMD_HELP, COMMAND_HAND_LER, CMD_LIST
 from userbot.Config import Config
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
-CMD_HNDLR = Config.CMD_HNDLR
+COMMAND_HAND_LER = Config.COMMAND_HAND_LER
 CUSTOM_HELP_EMOJI = os.environ.get("CUSTOM_HELP_EMOJI", "⚡")
 
 if COMMAND_HAND_LER is None:
