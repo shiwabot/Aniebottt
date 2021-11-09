@@ -16,8 +16,9 @@
 
 import os
 
-from telebot import ALIVE_NAME, CMD_HELP, COMMAND_HAND_LER, CMD_LIST
-from telebot.Config import Config
+from userbot import ALIVE_NAME, CMD_HELP, COMMAND_HAND_LER, CMD_LIST
+from Aniebot.utils import *
+from userbot.Config import Config
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 COMMAND_HAND_LER = Config.COMMAND_HAND_LER
@@ -27,7 +28,7 @@ if COMMAND_HAND_LER is None:
     COMMAND_HAND_LER = "."
 
 
-@telebot.on(admin_cmd(pattern="help ?(.*)"))
+@bot.on(admin_cmd(pattern="help ?(.*)"))
 async def cmd_list(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
