@@ -45,7 +45,7 @@ async def cmd_list(event):
                     out_file.name = "cmd.txt"
                     await tgbot.send_file(
                         event.chat_id,
-                        out_file,EMOJI_IN_HELP
+                        out_file,
                         force_document=True,
                         allow_cache=False,
                         caption="**COMMANDS**",
