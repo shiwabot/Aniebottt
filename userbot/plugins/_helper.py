@@ -16,7 +16,7 @@
 
 import os
 
-from userbot import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
+from userbot import ALIVE_NAME, CMD_HELP, COMMAND_HAND_LER, CMD_LIST
 from userbot.Config import Config
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
