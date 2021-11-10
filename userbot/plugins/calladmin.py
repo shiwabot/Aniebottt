@@ -1,9 +1,9 @@
-""".admin Plugin for @IndianBot"""
+""".admin Plugin for @Aniebots"""
 from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import admin_cmd
+from Aniebots.utils import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="admins"))
+@bot.on(admin_cmd(pattern="admins"))
 async def _(event):
     if event.fwd_from:
         return
