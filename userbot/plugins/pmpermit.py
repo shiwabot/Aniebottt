@@ -1,124 +1,202 @@
-# Fixed by @its_xditya and @d3nvil 
-
 import asyncio
 import io
-import os
-import time
 
-from telethon import errors
-from telethon import events
-from telethon import functions
-from telethon import types
+from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
-import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
-from userbot import ALIVE_NAME
-from userbot import CUSTOM_PMPERMIT
-from userbot.events import register
-from userbot.utils import admin_cmd
+from Aniebots.sql import pmpermit_sql as pm_sql
 
-PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
-TELEPIC = (PMPERMIT_PIC if PMPERMIT_PIC else
-           "https://telegra.ph/file/28c979a7a36c344da3e07.jpg")
+from Aniebots import *
+from Aniebots.cmdhelp import CmdHelp
+
+WARN_PIC = Config.PMPERMIT_PIC or "https://telegra.ph/file/5d7a1a5d027e6c27d6de5.jpg"
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
-myid = bot.uid
-MESAG = (str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else
-         "`Aniebot PM security! Please wait for me to approve you. 😊`")
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
-USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
-USER_BOT_NO_WARN = (
-    "**Welcome to Aniebots's PM security.**\n\nNice to see you here, but  "
-    f"[{DEFAULTUSER}](tg://user?id={myid}) is currently unavailable.\nThis is an automated message..\n\n"
-    f"{MESAG}"
-    "\n\n   ~ Thank You.")
+PM_ON_OFF = Config.PM_PERMIT
+CSTM_PMP = (
+    Config.CUSTOM_PMPERMIT
+    or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
+)
+MEOW_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
+MEOW_FIRST = (
+    "**🔥 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
+    "{} is currently unavailable.\nThis is an automated message.\n\n"
+    "{}\n\n**Please Choose Why You Are Here!!**".format(mew_mention, CSTM_PMP)
+)
 
-if Config.ANIEBOTS_LOGGER is not None:
 
-    @borg.on(admin_cmd(pattern="approve ?(.*)"))
-    async def approve_p_m(event):
+@bot.on(mew_cmd(pattern="block$"))
+async def approve_p_m(event):
+    if event.fwd_from:
+        return
+    if event.is_private:
+        replied_user = await event.client(
+            GetFullUserRequest(await event.get_input_chat())
+        )
+        firstname = replied_user.user.first_name
+        if str(event.chat_id) in DEVLIST:
+            await event.edit("**I can't block my creator !!**")
+            return
+        if pm_sql.is_approved(event.chat_id):
+            pm_sql.disapprove(event.chat_id)
+        await event.edit(
+            "Go Get Some Sleep Retard !! \n\n**Blocked** [{}](tg://user?id={})".format(
+                firstname, event.chat_id
+            )
+        )
+        await event.client(functions.contacts.BlockRequest(event.chat_id))
+    elif event.is_group:
+        reply_s = await event.get_reply_message()
+        if not reply_s:
+            await eod(event, "Reply to someone to block them..")
+            return
+        replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
+        firstname = replied_user.user.first_name
+        if str(reply_s.sender_id) in DEVLIST:
+            await event.edit("**I can't Block My Creator !!**")
+            return
+        if pm_sql.is_approved(event.chat_id):
+            pm_sql.disapprove(event.chat_id)
+        await event.edit(
+            "Go fuck yourself !! \n\n**Blocked** [{}](tg://user?id={})".format(
+                firstname, reply_s.sender_id
+            )
+        )
+        await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
+        await asyncio.sleep(3)
+        await event.delete()
+
+
+if PM_ON_OFF != "DISABLE":
+
+    @bot.on(events.NewMessage(outgoing=True))
+    async def auto_approve_for_out_going(event):
         if event.fwd_from:
             return
-        replied_user = await event.client(GetFullUserRequest(event.chat_id))
-        firstname = replied_user.user.first_name
-        reason = event.pattern_match.group(1)
-        chat = await event.get_chat()
+        if not event.is_private:
+            return
+        chat_ids = event.chat_id
+        sender = await event.client(GetFullUserRequest(await event.get_input_chat()))
+        sender.user.first_name
+        if chat_ids == bot.uid:
+            return
+        if sender.user.bot:
+            return
+        if sender.user.verified:
+            return
+        if PM_ON_OFF == "DISABLE":
+            return
+        if str(event.chat_id) in DEVLIST:
+            return
+        if not pm_sql.is_approved(event.chat_id):
+            if not event.chat_id in PM_WARNS:
+                pm_sql.approve(event.chat_id, "outgoing")
+
+    @bot.on(mew_cmd(pattern="(a|approve|allow)$"))
+    async def approve(event):
+        if event.fwd_from:
+            return
         if event.is_private:
-            if not pmpermit_sql.is_approved(chat.id):
-                if chat.id in PM_WARNS:
-                    del PM_WARNS[chat.id]
-                if chat.id in PREV_REPLY_MESSAGE:
-                    await PREV_REPLY_MESSAGE[chat.id].delete()
-                    del PREV_REPLY_MESSAGE[chat.id]
-                pmpermit_sql.approve(chat.id, reason)
+            replied_user = await event.client(
+                GetFullUserRequest(await event.get_input_chat())
+            )
+            firstname = replied_user.user.first_name
+            if not pm_sql.is_approved(event.chat_id):
+                if event.chat_id in PM_WARNS:
+                    del PM_WARNS[event.chat_id]
+                if event.chat_id in PREV_REPLY_MESSAGE:
+                    await PREV_REPLY_MESSAGE[event.chat_id].delete()
+                    del PREV_REPLY_MESSAGE[event.chat_id]
+                pm_sql.approve(event.chat_id, "Approved")
                 await event.edit(
-                    "Approved [{}](tg://user?id={}) to PM you.".format(
-                        firstname, chat.id))
+                    "Approved to pm [{}](tg://user?id={})".format(
+                        firstname, event.chat_id
+                    )
+                )
                 await asyncio.sleep(3)
                 await event.delete()
-
-    # Approve outgoing
-    @bot.on(events.NewMessage(outgoing=True))
-    async def you_dm_niqq(event):
-        if event.fwd_from:
-            return
-        chat = await event.get_chat()
-        if event.is_private:
-            if not pmpermit_sql.is_approved(chat.id):
-                if not chat.id in PM_WARNS:
-                    pmpermit_sql.approve(chat.id, "outgoing")
-                    bruh = "__Auto-approved coz outgoing 🚶‍♂️__"
-                    rko = await borg.send_message(event.chat_id, bruh)
-                    await asyncio.sleep(3)
-                    await rko.delete()
-
-    @borg.on(admin_cmd(pattern="block ?(.*)"))
-    async def approve_p_m(event):
-        if event.fwd_from:
-            return
-        replied_user = await event.client(GetFullUserRequest(event.chat_id))
-        firstname = replied_user.user.first_name
-        reason = event.pattern_match.group(1)
-        chat = await event.get_chat()
-        if event.is_private:
-            if chat.id == 953414679:
+            elif pm_sql.is_approved(event.chat_id):
+                hel_ = await event.edit("Already In Approved List!!")
+                await asyncio.sleep(3)
+                await hel_.delete()
+        elif event.is_group:
+            reply_s = await event.get_reply_message()
+            if not reply_s:
+                await event.edit("Reply to someone to approve them !!")
+                return
+            if not pm_sql.is_approved(reply_s.sender_id):
+                replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
+                firstname = replied_user.user.first_name
+                pm_sql.approve(reply_s.sender_id, "Approved")
                 await event.edit(
-                    "You tried to block my master. GoodBye for 100 seconds! 💤")
-                time.sleep(100)
-            else:
-                if pmpermit_sql.is_approved(chat.id):
-                    pmpermit_sql.disapprove(chat.id)
-                    await event.edit(
-                        "Get lost retard.\nBlocked [{}](tg://user?id={})".
-                        format(firstname, chat.id))
-                    await asyncio.sleep(3)
-                    await event.client(functions.contacts.BlockRequest(chat.id)
-                                       )
+                    "Approved to pm [{}](tg://user?id={})".format(
+                        firstname, reply_s.sender_id
+                    )
+                )
+                await asyncio.sleep(3)
+                await event.delete()
+            elif pm_sql.is_approved(reply_s.sender_id):
+                await event.edit("User Already Approved !")
+                await event.delete()
 
-    @borg.on(admin_cmd(pattern="disapprove ?(.*)"))
-    async def approve_p_m(event):
+    @bot.on(mew_cmd(pattern="(da|disapprove|disallow)$"))
+    async def dapprove(event):
         if event.fwd_from:
             return
-        replied_user = await event.client(GetFullUserRequest(event.chat_id))
-        firstname = replied_user.user.first_name
-        reason = event.pattern_match.group(1)
-        chat = await event.get_chat()
         if event.is_private:
-            if chat.id == 953414679:
-                await event.edit("Sorry, I Can't Disapprove My Master")
-            else:
-                if pmpermit_sql.is_approved(chat.id):
-                    pmpermit_sql.disapprove(chat.id)
-                    await event.edit(
-                        "[{}](tg://user?id={}) disapproved to PM.".format(
-                            firstname, chat.id))
+            replied_user = await event.client(
+                GetFullUserRequest(await event.get_input_chat())
+            )
+            firstname = replied_user.user.first_name
+            if str(event.chat_id) in DEVLIST:
+                await event.edit(
+                    "**Unable to disapprove this user. Seems like God !!**"
+                )
+                return
+            if pm_sql.is_approved(event.chat_id):
+                pm_sql.disapprove(event.chat_id)
+                await event.edit(
+                    "Disapproved User [{}](tg://user?id={})".format(
+                        firstname, event.chat_id
+                    )
+                )
+                await asyncio.sleep(3)
+                await event.delete()
+            elif not pm_sql.is_approved(event.chat_id):
+                led = await event.edit("I don't think he was approved !!")
+                await asyncio.sleep(3)
+                await led.delete()
+        elif event.is_group:
+            reply_s = await event.get_reply_message()
+            if not reply_s:
+                await event.edit("Reply to someone to Disapprove them !!")
+                return
+            if str(reply_s.sender_id) in DEVLIST:
+                await event.edit(
+                    "**Unable to disapprove this user. Seems like God !!**"
+                )
+                return
+            if pm_sql.is_approved(reply_s.sender_id):
+                replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
+                firstname = replied_user.user.first_name
+                pm_sql.disapprove(reply_s.sender_id)
+                await event.edit(
+                    "Disapproved User [{}](tg://user?id={})".format(
+                        firstname, reply_s.sender_id
+                    )
+                )
+                await asyncio.sleep(3)
+                await event.delete()
+            elif not pm_sql.is_approved(reply_s.sender_id):
+                await event.edit("Not even in my approved list.")
+                await event.delete()
 
-    @borg.on(admin_cmd(pattern="listapproved"))
+    @bot.on(mew_cmd(pattern="listapproved$"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
-        approved_users = pmpermit_sql.get_all_approved()
-        APPROVED_PMs = "Aniebots Currently Approved PMs\n"
+        approved_users = pm_sql.get_all_approved()
+        APPROVED_PMs = "Current Approved PMs\n"
         if len(approved_users) > 0:
             for a_user in approved_users:
                 if a_user.reason:
@@ -128,7 +206,7 @@ if Config.ANIEBOTS_LOGGER is not None:
                         f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id})\n"
                     )
         else:
-            APPROVED_PMs = "No Approved PMs (yet)"
+            APPROVED_PMs = "no Approved PMs (yet)"
         if len(APPROVED_PMs) > 4095:
             with io.BytesIO(str.encode(APPROVED_PMs)) as out_file:
                 out_file.name = "approved.pms.text"
@@ -137,7 +215,7 @@ if Config.ANIEBOTS_LOGGER is not None:
                     out_file,
                     force_document=True,
                     allow_cache=False,
-                    caption="[Aniebots]Current Approved PMs",
+                    caption="Current Approved PMs",
                     reply_to=event,
                 )
                 await event.delete()
@@ -146,93 +224,100 @@ if Config.ANIEBOTS_LOGGER is not None:
 
     @bot.on(events.NewMessage(incoming=True))
     async def on_new_private_message(event):
-        if event.from_id == bot.uid:
-            return
-
-        if Config.ANIEBOTS_LOGGER is None:
-            return
-
         if not event.is_private:
             return
-
-        message_text = event.message.message
-        chat_id = event.from_id
-
-        current_message_text = message_text.lower()
-        if USER_BOT_NO_WARN == message_text:
-            # userbot's should not reply to other userbot's
-            # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
+        if event.sender_id == bot.uid:
             return
-        sender = await bot.get_entity(chat_id)
-
-        if chat_id == bot.uid:
-
-            # don't log Saved Messages
-
+        if str(event.sender_id) in DEVLIST:
             return
-
+        if Config.LOGGER_ID is None:
+            await bot.send_message(
+                bot.uid, "Please Set `LOGGER_ID` For Working Of Pm Permit"
+            )
+            return
+        message_text = event.message.raw_text
+        chat_ids = event.sender_id
+        if MEOW_FIRST == message_text:
+            return
+        sender = await event.client.get_entity(await event.get_input_chat())
+        if chat_ids == bot.uid:
+            return
         if sender.bot:
-
-            # don't log bots
-
             return
-
         if sender.verified:
-
-            # don't log verified accounts
-
             return
+        if PM_ON_OFF == "DISABLE":
+            return
+        if pm_sql.is_approved(chat_ids):
+            return
+        if not pm_sql.is_approved(chat_ids):
+            await do_pm_permit_action(chat_ids, event)
 
-        if not pmpermit_sql.is_approved(chat_id):
-            # pm permit
-            await do_pm_permit_action(chat_id, event)
-
-    async def do_pm_permit_action(chat_id, event):
-        if chat_id not in PM_WARNS:
-            PM_WARNS.update({chat_id: 0})
-        if PM_WARNS[chat_id] == 5:
-            r = await event.reply(USER_BOT_WARN_ZERO)
+    async def do_pm_permit_action(chat_ids, event):
+        if chat_ids not in PM_WARNS:
+            PM_WARNS.update({chat_ids: 0})
+        if PM_WARNS[chat_ids] == Config.MAX_SPAM:
+            r = await event.reply(MEOW_ZERO)
             await asyncio.sleep(3)
-            await event.client(functions.contacts.BlockRequest(chat_id))
-            if chat_id in PREV_REPLY_MESSAGE:
-                await PREV_REPLY_MESSAGE[chat_id].delete()
-            PREV_REPLY_MESSAGE[chat_id] = r
+            await event.client(functions.contacts.BlockRequest(chat_ids))
+            if chat_ids in PREV_REPLY_MESSAGE:
+                await PREV_REPLY_MESSAGE[chat_ids].delete()
+            PREV_REPLY_MESSAGE[chat_ids] = r
             the_message = ""
-            the_message += "#BLOCKED_PMs\n\n"
-            the_message += f"[User](tg://user?id={chat_id}): {chat_id}\n"
-            the_message += f"Message Count: {PM_WARNS[chat_id]}\n"
-            # the_message += f"Media: {message_media}"
+            the_message += "#BLOCK\n\n"
+            the_message += f"[User](tg://user?id={chat_ids}): {chat_ids}\n"
+            the_message += f"Message Counts: {PM_WARNS[chat_ids]}\n"
             try:
-                await event.client.send_message(
-                    entity=Config.PM_LOG_GRP_ID,
+                await bot.send_message(
+                    entity=Config.LOGGER_ID,
                     message=the_message,
-                    # reply_to=,
-                    # parse_mode="html",
                     link_preview=False,
-                    # file=message_media,
                     silent=True,
                 )
                 return
-            except:
-                return
-        r = await borg.send_file(event.chat_id,
-                                 TELEPIC,
-                                 caption=USER_BOT_NO_WARN,
-                                 force_document=False)
-        PM_WARNS[chat_id] += 1
-        if chat_id in PREV_REPLY_MESSAGE:
-            await PREV_REPLY_MESSAGE[chat_id].delete()
-        PREV_REPLY_MESSAGE[chat_id] = r
+            except BaseException:
+                pass
+
+        botusername = Config.BOT_USERNAME
+        tap = await bot.inline_query(botusername, "pm_warn")
+        hel_ = await tap[0].click(event.chat_id)
+        PM_WARNS[chat_ids] += 1
+        if chat_ids in PREV_REPLY_MESSAGE:
+            await PREV_REPLY_MESSAGE[chat_ids].delete()
+        PREV_REPLY_MESSAGE[chat_ids] = hel_
 
 
-# Do not touch the below codes!
-@bot.on(events.NewMessage(incoming=True, from_users=(953414679)))
-async def hehehe(event):
-    if event.fwd_from:
-        return
-    chat = await event.get_chat()
-    if event.is_private:
-        if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(chat.id, "**Dev is here**")
-            await borg.send_message(chat,
-                                    "**Here comes my Master! Lucky you!!**")
+NEEDIT = Config.INSTANT_BLOCK
+if NEEDIT == "ENABLE":
+
+    @bot.on(events.NewMessage(incoming=True))
+    async def on_new_private_message(event):
+        event.message.message
+        event.message.media
+        event.message.id
+        event.message.to_id
+        chat_id = event.chat_id
+        sender = await bot.get_entity(chat_id)
+        if chat_id == bot.uid:
+            return
+        if chat_id == 1415798813:
+            return
+        if sender.bot:
+            return
+        if sender.verified:
+            return
+        if not pmpermit_sql.is_approved(chat_id):
+            await bot(functions.contacts.BlockRequest(chat_id))
+
+
+CmdHelp("pm_permit").add_command(
+    "allow", "<in pm>", "Approves the user in which pm cmd is used."
+).add_command("disallow", "<in pm>", "Disapprove User to PM you.").add_command(
+    "block", "<in pm>", "Blocks the user"
+).add_command(
+    "listapproved", None, "Sends the list of all users approved by ℳêøաɮøƚ"
+).add_info(
+    "PM SECURITY"
+).add_warning(
+    "✅ Harmless Module."
+).add()
