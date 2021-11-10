@@ -1,6 +1,6 @@
 import logging
 
-logging.basicConfig(
+logging.Config(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
 )
 import asyncio
@@ -12,10 +12,10 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon import functions, types, events
-from AuraXBot import CmdHelp, bot as AuraXBot
-from AuraXBot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
-from AuraXBot.Config import Config
-from AuraXBot.plugins.sql_helper.fban_sql import (
+from userbot import CmdHelp, bot
+from Aniebot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
+from userbot.Config import Config
+from userbot.plugins.sql_helper.fban_sql import (
     add_channel,
     get_all_channels,
     in_channels,
@@ -24,14 +24,14 @@ from AuraXBot.plugins.sql_helper.fban_sql import (
 
 logs_id = Config.FBAN_LOGGER_GROUP
 bot = "@MissRose_bot"
-AuraX_logo = "./AURAX/AuraXBot_logo.jpg"
+Anie_logo = "./Denvil/Aniebot.jpg"
 # Keep all credits pls
 # madewith great effort by @HeisenbergTheDanger
 # modified by @Kraken_The_BadAss for fbans
 
 
-@AuraXBot.on(admin_cmd(pattern="fban ?(.*)"))
-@AuraXBot.on(sudo_cmd(pattern="fban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fban ?(.*)"))
+@bot.on(sudo_cmd(pattern="fban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -144,8 +144,8 @@ async def _(event):
                 except BaseException:
                     await mssg.edit("Set up heroku var `FBAN_LOGGER_GROUP` for checking errors.")# Written by @HeisenbergTheDanger
 
-@AuraXBot.on(admin_cmd(pattern="unfban ?(.*)"))
-@AuraXBot.on(sudo_cmd(pattern="unfban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="unfban ?(.*)"))
+@bot.on(sudo_cmd(pattern="unfban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -259,8 +259,8 @@ async def _(event):
                     await mssg.edit("Set up heroku var `FBAN_LOGGER_GROUP` for checking errors.")
 
 
-@AuraXBot.on(admin_cmd(pattern=r"fadd ?(.*)"))
-@AuraXBot.on(sudo_cmd(pattern=r"fadd ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"fadd ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"fadd ?(.*)", allow_sudo=True))
 async def add_ch(event):
     if event.fwd_from:
         return
@@ -300,8 +300,8 @@ async def add_ch(event):
         await event.delete()
 
 
-@AuraXBot.on(admin_cmd(pattern=r"fremove ?(.*)"))
-@AuraXBot.on(sudo_cmd(pattern=r"fremove ?(.*)", allow_sudo=True))
+@boy.on(admin_cmd(pattern=r"fremove ?(.*)"))
+@boy.on(sudo_cmd(pattern=r"fremove ?(.*)", allow_sudo=True))
 async def remove_ch(event):
     if event.fwd_from:
         return
@@ -329,8 +329,8 @@ async def remove_ch(event):
         await event.delete()
 
 
-@AuraXBot.on(admin_cmd(pattern="fgroups"))
-@AuraXBot.on(sudo_cmd(pattern="fgroups", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fgroups"))
+@bot.on(sudo_cmd(pattern="fgroups", allow_sudo=True))
 async def list(event):
     if event.fwd_from:
         return
@@ -356,8 +356,8 @@ async def list(event):
         await eor(event, msg)
 
 
-@AuraXBot.on(admin_cmd(pattern="fsearch ?(.*)"))
-@AuraXBot.on(sudo_cmd(pattern="fsearch ?(.*)", allow_sudo=True))
+@anie.on(admin_cmd(pattern="fsearch ?(.*)"))
+@bot.on(sudo_cmd(pattern="fsearch ?(.*)", allow_sudo=True))
 async def search(event):
     if event.fwd_from:
         return
@@ -377,8 +377,8 @@ async def search(event):
 
 #----------------------------------------------------------------------------------------------------------------------------------------------
 
-@AuraXBot.on(admin_cmd(pattern="newfed ?(.*)", outgoing=True))
-@AuraXBot.on(sudo_cmd(pattern="newfed ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="newfed ?(.*)", outgoing=True))
+on(sudo_cmd(pattern="newfed ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -424,8 +424,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-@AuraXBot.on(admin_cmd(pattern="fstat ?(.*)"))
-@AuraXBot.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fstat ?(.*)"))
+@boy.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -467,8 +467,8 @@ async def _(event):
                 await AuraX.edit("`Please Unblock` @MissRose_Bot")
 
 
-@AuraXBot.on(admin_cmd(pattern="fedinfo ?(.*)"))
-@AuraXBot.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fedinfo ?(.*)"))
+@bot.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
