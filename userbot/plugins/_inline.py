@@ -40,7 +40,7 @@ if mybot.startswith("@"):
     botname = mybot
 else:
     botname = f"@{mybot}"
-LOG_GP = Config.PRIVATE_GROUP_ID
+LOG_GP = Config.PM_LOG_GRP_ID
 MESAG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
