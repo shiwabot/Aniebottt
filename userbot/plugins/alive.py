@@ -7,7 +7,7 @@ from io import BytesIO
 import requests
 from PIL import Image
 
-from userbot import ALIVE_NAME, CMD_HELP, telever
+from userbot import ALIVE_NAME, CMD_HELP, Anieversion
 from userbot.__init__ import StartTime
 from userbot.Config import Config, Var
 
@@ -72,7 +72,7 @@ async def amireallyalive(alive):
         tele += (
             f"{Aniemoji} **Telethon version**: `1.17`\n{Aniemoji} **Python**: `3.8.3`\n"
         )
-        tele += f"{Aniemoji} **Aniebots Version**: `{telever}`\n"
+        tele += f"{Aniemoji} **Aniebots Version**: `{Anieversion}`\n"
         tele += f"{Aniemoji} **More Info**: @Aniebotsupports \n"
         tele += f"{Aniemoji} **Sudo** : `{sudo}`\n"
         tele += f"{Aniemoji} **Anie Uptime**: `{uptime}`\n"
@@ -101,7 +101,7 @@ async def amireallyalive(alive):
             f"**Welcome To Aniebot **\n\n"
             f"`{CUSTOM_ALIVE}`\n\n"
             f"{Aniemoji} **Telethon version**: `1.17`\n{Aniemoji} **Python**: `3.8.3`\n"
-            f"{Aniemoji} **Aniebot Version**: `{telever}`\n"
+            f"{Aniemoji} **Aniebot Version**: `{Anieversion}`\n"
             f"{Aniemoji} **More Info**: @Aniebotsupports \n"
             f"{Aniemoji} **Sudo** : `{sudo}`\n"
             f"{Aniemoji} **Aniebots Uptime**: `{uptime}`\n"
