@@ -1,4 +1,4 @@
-# For @TeleBotHelp
+# For @Aniebotsupports 
 """Check if your userbot is working."""
 import time
 from datetime import datetime
@@ -7,9 +7,9 @@ from io import BytesIO
 import requests
 from PIL import Image
 
-from telebot import ALIVE_NAME, CMD_HELP, telever
-from telebot.__init__ import StartTime
-from telebot.telebotConfig import Config, Var
+from userbot import ALIVE_NAME, CMD_HELP, telever
+from userbot.__init__ import StartTime
+from userbot.Config import Config, Var
 
 # ======CONSTANTS=========#
 CUSTOM_ALIVE = (
@@ -17,8 +17,8 @@ CUSTOM_ALIVE = (
     if Var.CUSTOM_ALIVE
     else "Hey! I'm alive. All systems online and functioning normally!"
 )
-ALV_PIC = Var.ALIVE_PIC if Var.ALIVE_PIC else None
-telemoji = Var.CUSTOM_ALIVE_EMOJI if Var.CUSTOM_ALIVE_EMOJI else "**✵**"
+ALV_PIC = Config.ALIVE_PIC if Var.ALIVE_PIC else None
+telemoji = Config.CUSTOM_ALIVE_EMOJI if Var.CUSTOM_ALIVE_EMOJI else "**✵**"
 if Config.SUDO_USERS:
     sudo = "Enabled"
 else:
@@ -54,11 +54,11 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@TeleBotSupport"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@Aniebotsupports"
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="alive"))
-@telebot.on(sudo_cmd(outgoing=True, pattern="alive", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="alive"))
+@bot.on(sudo_cmd(outgoing=True, pattern="alive", allow_sudo=True))
 async def amireallyalive(alive):
     start = datetime.now()
     myid = bot.uid
@@ -67,20 +67,20 @@ async def amireallyalive(alive):
     (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
     if ALV_PIC:
-        tele = f"**Welcome To TeleBot **\n\n"
+        tele = f"**Welcome To Aniebot **\n\n"
         tele += f"`{CUSTOM_ALIVE}`\n\n"
         tele += (
             f"{telemoji} **Telethon version**: `1.17`\n{telemoji} **Python**: `3.8.3`\n"
         )
-        tele += f"{telemoji} **TeleBot Version**: `{telever}`\n"
-        tele += f"{telemoji} **More Info**: @TeleBotSupport\n"
+        tele += f"{telemoji} **Aniebots Version**: `{telever}`\n"
+        tele += f"{telemoji} **More Info**: @Aniebotsupports \n"
         tele += f"{telemoji} **Sudo** : `{sudo}`\n"
-        tele += f"{telemoji} **TeleBot Uptime**: `{uptime}`\n"
+        tele += f"{telemoji} **Anie Uptime**: `{uptime}`\n"
         tele += f"{telemoji} **Database Status**: `All OK 👌!`\n"
         tele += (
             f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
         )
-        tele += "    [✨ GitHub Repository ✨](https://github.com/xditya/TeleBot)"
+        tele += "    [✨ GitHub Repository ✨](https://github.com/Anieteam/Aniebots)"
         await alive.get_chat()
         await alive.delete()
         """ For .alive command, check if the bot is running.  """
