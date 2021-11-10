@@ -1,12 +1,12 @@
 # by unibot...Thanks @spechide
-# Now will be used in MafiaBot too....
+# Now will be used in AnieBot too....
 import asyncio
 import datetime
 from datetime import datetime
 
 from telethon import events
 from telethon.tl import functions, types
-from userbot import CMD_HELP, mafiaversion
+from userbot import CMD_HELP, Anieversion
 from Aniebot.utils import admin_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
