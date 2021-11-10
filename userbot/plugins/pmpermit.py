@@ -33,7 +33,7 @@ USER_BOT_NO_WARN = (
     f"{MESAG}"
     "\n\n   ~ Thank You.")
 
-if Config.PM_LOG_GRP_ID is not None:
+if Config.ANIEBOTS_LOGGER is not None:
 
     @borg.on(admin_cmd(pattern="approve ?(.*)"))
     async def approve_p_m(event):
@@ -149,7 +149,7 @@ if Config.PM_LOG_GRP_ID is not None:
         if event.from_id == bot.uid:
             return
 
-        if Config.PM_LOG_GRP_ID is None:
+        if Config.ANIEBOTS_LOGGER is None:
             return
 
         if not event.is_private:
