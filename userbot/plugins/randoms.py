@@ -7,10 +7,10 @@ import random
 from asyncio import sleep
 import asyncio
 from userbot import CMD_HELP, ALIVE_NAME
-from AuraXBot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "AuraX User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 
 aura = bot.uid
 
