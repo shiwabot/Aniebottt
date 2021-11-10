@@ -141,6 +141,7 @@ if ENV:
         #alive
         ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
+        CUSTOM_ALIVE_EMOJI = os.environ.get("CUSTOM_ALIVE_EMOJI", None)
         HELP_PIC = os.environ.get("HELP_PIC", None)
         BOT_PIC = os.environ.get("BOT_PIC", None)
         #auto bio
