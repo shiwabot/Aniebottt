@@ -17,8 +17,8 @@ ALIVE_MSG = (
     if Config.ALIVE_MSG
     else "Hey! I'm alive. All systems online and functioning normally!"
 )
-ALV_PIC = Config.ALIVE_PIC if Var.ALIVE_PIC else None
-Aniemoji = Config.CUSTOM_ALIVE_EMOJI if Var.CUSTOM_ALIVE_EMOJI else "**✵**"
+ALV_PIC = Config.ALIVE_PIC if Config.ALIVE_PIC else None
+Aniemoji = Config.CUSTOM_ALIVE_EMOJI if Config.CUSTOM_ALIVE_EMOJI else "**✵**"
 if Config.SUDO_USERS:
     sudo = "Enabled"
 else:
