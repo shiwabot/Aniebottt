@@ -28,12 +28,12 @@ MESAG = (str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
 USER_BOT_NO_WARN = (
-    "**Welcome to IndianBot's PM security.**\n\nNice to see you here, but  "
+    "**Welcome to Aniebots's PM security.**\n\nNice to see you here, but  "
     f"[{DEFAULTUSER}](tg://user?id={myid}) is currently unavailable.\nThis is an automated message..\n\n"
     f"{MESAG}"
     "\n\n   ~ Thank You.")
 
-if Var.PRIVATE_GROUP_ID is not None:
+if Config.PM_LOG_GRP_ID is not None:
 
     @borg.on(admin_cmd(pattern="approve ?(.*)"))
     async def approve_p_m(event):
@@ -118,7 +118,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.fwd_from:
             return
         approved_users = pmpermit_sql.get_all_approved()
-        APPROVED_PMs = "IndianBot Currently Approved PMs\n"
+        APPROVED_PMs = "Aniebots Currently Approved PMs\n"
         if len(approved_users) > 0:
             for a_user in approved_users:
                 if a_user.reason:
@@ -137,7 +137,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     out_file,
                     force_document=True,
                     allow_cache=False,
-                    caption="[TeleBot]Current Approved PMs",
+                    caption="[Aniebots]Current Approved PMs",
                     reply_to=event,
                 )
                 await event.delete()
@@ -149,7 +149,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.from_id == bot.uid:
             return
 
-        if Var.PRIVATE_GROUP_ID is None:
+        if Config.PM_LOG_GRP_ID is None:
             return
 
         if not event.is_private:
@@ -204,7 +204,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             # the_message += f"Media: {message_media}"
             try:
                 await event.client.send_message(
-                    entity=Var.PRIVATE_GROUP_ID,
+                    entity=Config.PM_LOG_GRP_ID,
                     message=the_message,
                     # reply_to=,
                     # parse_mode="html",
