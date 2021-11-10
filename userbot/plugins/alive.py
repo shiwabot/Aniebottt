@@ -18,7 +18,7 @@ CUSTOM_ALIVE = (
     else "Hey! I'm alive. All systems online and functioning normally!"
 )
 ALV_PIC = Config.ALIVE_PIC if Var.ALIVE_PIC else None
-telemoji = Config.CUSTOM_ALIVE_EMOJI if Var.CUSTOM_ALIVE_EMOJI else "**✵**"
+Aniemoji = Config.CUSTOM_ALIVE_EMOJI if Var.CUSTOM_ALIVE_EMOJI else "**✵**"
 if Config.SUDO_USERS:
     sudo = "Enabled"
 else:
@@ -70,15 +70,15 @@ async def amireallyalive(alive):
         tele = f"**Welcome To Aniebot **\n\n"
         tele += f"`{CUSTOM_ALIVE}`\n\n"
         tele += (
-            f"{telemoji} **Telethon version**: `1.17`\n{telemoji} **Python**: `3.8.3`\n"
+            f"{Aniemoji} **Telethon version**: `1.17`\n{Aniemoji} **Python**: `3.8.3`\n"
         )
-        tele += f"{telemoji} **Aniebots Version**: `{telever}`\n"
-        tele += f"{telemoji} **More Info**: @Aniebotsupports \n"
-        tele += f"{telemoji} **Sudo** : `{sudo}`\n"
-        tele += f"{telemoji} **Anie Uptime**: `{uptime}`\n"
-        tele += f"{telemoji} **Database Status**: `All OK 👌!`\n"
+        tele += f"{Aniemoji} **Aniebots Version**: `{telever}`\n"
+        tele += f"{Aniemoji} **More Info**: @Aniebotsupports \n"
+        tele += f"{Aniemoji} **Sudo** : `{sudo}`\n"
+        tele += f"{Aniemoji} **Anie Uptime**: `{uptime}`\n"
+        tele += f"{Aniemoji} **Database Status**: `All OK 👌!`\n"
         tele += (
-            f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
+            f"{Aniemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
         )
         tele += "    [✨ GitHub Repository ✨](https://github.com/Anieteam/Aniebots)"
         await alive.get_chat()
@@ -87,7 +87,7 @@ async def amireallyalive(alive):
         await borg.send_file(alive.chat_id, ALV_PIC, caption=tele, link_preview=False)
         await alive.delete()
         return
-    req = requests.get("https://telegra.ph/file/0670190de8e3bddea6d95.png")
+    req = requests.get("https://telegra.ph/file/28c979a7a36c344da3e07.jpg")
     req.raise_for_status()
     file = BytesIO(req.content)
     file.seek(0)
@@ -98,16 +98,16 @@ async def amireallyalive(alive):
         sticker.seek(0)
         await borg.send_message(
             alive.chat_id,
-            f"**Welcome To TeleBot **\n\n"
+            f"**Welcome To Aniebot **\n\n"
             f"`{CUSTOM_ALIVE}`\n\n"
-            f"{telemoji} **Telethon version**: `1.17`\n{telemoji} **Python**: `3.8.3`\n"
-            f"{telemoji} **TeleBot Version**: `{telever}`\n"
-            f"{telemoji} **More Info**: @TeleBotSupport\n"
-            f"{telemoji} **Sudo** : `{sudo}`\n"
-            f"{telemoji} **TeleBot Uptime**: `{uptime}`\n"
-            f"{telemoji} **Database Status**: `All OK 👌!`\n"
-            f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
-            "    [✨ GitHub Repository ✨](https://github.com/xditya/TeleBot)",
+            f"{Aniemoji} **Telethon version**: `1.17`\n{Aniemoji} **Python**: `3.8.3`\n"
+            f"{Aniemoji} **Aniebot Version**: `{telever}`\n"
+            f"{Aniemoji} **More Info**: @Aniebotsupports \n"
+            f"{Aniemoji} **Sudo** : `{sudo}`\n"
+            f"{Aniemoji} **Aniebots Uptime**: `{uptime}`\n"
+            f"{Aniemoji} **Database Status**: `All OK 👌!`\n"
+            f"{Aniemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
+            "    [✨ GitHub Repository ✨](https://github.com/Anieteam/Aniebots)",
             link_preview=False,
         )
         await borg.send_file(alive.chat_id, file=sticker)
