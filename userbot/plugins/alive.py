@@ -9,7 +9,7 @@ from PIL import Image
 
 from userbot import ALIVE_NAME, CMD_HELP, Anieversion
 from userbot.__init__ import StartTime
-from userbot.Config import Config, Var
+from userbot import Config, Var
 
 # ======CONSTANTS=========#
 CUSTOM_ALIVE = (
