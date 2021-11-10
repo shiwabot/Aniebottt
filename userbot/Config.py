@@ -74,6 +74,7 @@ if ENV:
         MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", 3))
         #pm log
         PM_LOG_GRP_ID = os.environ.get("PM_LOG_GRP_ID", None)
+        PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", None)
         # set to True if you want to log PMs to your PM_LOGGR_BOT_API_ID
         NC_LOG_P_M_S = bool(os.environ.get("NC_LOG_P_M_S", True))
         #heroku 
