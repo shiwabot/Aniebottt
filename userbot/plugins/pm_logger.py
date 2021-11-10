@@ -52,7 +52,7 @@ async def monito_p_m_s(event):
         chat = await event.get_chat()
         if chat.id not in NO_PM_LOG_USERS and chat.id != bot.uid:
             try:
-                e = await bot.get_entity(int(Config.MAFIABOT_LOGGER))
+                e = await bot.get_entity(int(Config.ANIEBOTS_LOGGER))
                 fwd_message = await bot.forward_messages(e, event.message, silent=True)
             except Exception as e:
                 # logger.warn(str(e))
