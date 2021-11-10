@@ -18,7 +18,7 @@ from userbot.helpers.functions import (
     iphonex,
     lolice,
 )
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Aniebots.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
@@ -42,13 +42,13 @@ async def _(mafiabot):
             await mafiabot.client.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await edit_or_reply(mafiabot, "`Please unblock` @hazmat_suit_bot `and try again`")
+            await edit_or_reply(aniebot, "`Please unblock` @hazmat_suit_bot `and try again`")
             return
         if response.text.startswith("Forward"):
-            await edit_or_reply(mafiabot, "```can you kindly disable your forward privacy settings for good?```"
+            await edit_or_reply(aniebot, "```can you kindly disable your forward privacy settings for good?```"
             )
         else:
-            await mafiabot.client.send_file(event.chat_id, response.message.media)
+            await aniebot.client.send_file(event.chat_id, response.message.media)
             await event.delete()
 
 
