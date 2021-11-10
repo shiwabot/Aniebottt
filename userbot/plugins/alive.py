@@ -1,6 +1,5 @@
 # For @Aniebotsupports 
 """Check if your userbot is working."""
-import time
 from datetime import datetime
 from io import BytesIO
 
@@ -10,7 +9,6 @@ from PIL import Image
 from userbot import ALIVE_NAME, CMD_HELP, Anieversion
 from userbot.__init__ import StartTime
 from Aniebot.utils import *
-from datetime import datetime
 from userbot import Config
 
 # ======CONSTANTS=========#
