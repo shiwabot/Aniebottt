@@ -1,6 +1,6 @@
 from telethon import events
 import random, re
-from uniborg.util import admin_cmd
+from Aniebot.utils import admin_cmd
 
 RUNSREACTS = [
     "`Congratulations and BRAVO!`",
@@ -15,7 +15,7 @@ RUNSREACTS = [
     "`Feeling so much joy for you today. What an impressive achievement!`",
 ]
 
-@borg.on(admin_cmd(pattern="congo"))
+@bot.on(admin_cmd(pattern="congo"))
 async def _(event):
     if event.fwd_from:
          return
