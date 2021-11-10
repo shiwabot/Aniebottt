@@ -6,7 +6,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from Aniebot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("gbun"))
+@bot.on(admin_cmd("gbun"))
 async def gbun(event):
     if event.fwd_from:
         return
