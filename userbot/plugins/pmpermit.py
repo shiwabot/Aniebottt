@@ -1,4 +1,4 @@
-# Fixed by @its_xditya and @pureindialover
+# Fixed by @its_xditya and @d3nvil 
 
 import asyncio
 import io
@@ -19,13 +19,13 @@ from userbot.utils import admin_cmd
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (PMPERMIT_PIC if PMPERMIT_PIC else
-           "https://telegra.ph/file/5ef90147615bd6883813b.jpg")
+           "https://telegra.ph/file/28c979a7a36c344da3e07.jpg")
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 myid = bot.uid
 MESAG = (str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else
-         "`IndianBot PM security! Please wait for me to approve you. 😊`")
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "IndianBot User"
+         "`Aniebot PM security! Please wait for me to approve you. 😊`")
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
 USER_BOT_NO_WARN = (
     "**Welcome to IndianBot's PM security.**\n\nNice to see you here, but  "
