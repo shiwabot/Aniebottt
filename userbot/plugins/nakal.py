@@ -11,14 +11,14 @@ Available Commands:
 .emoji -_-"""
 
 from telethon import events
-from userbot.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 import asyncio
 
 
 
 
 
-@borg.on(admin_cmd(pattern=r"nakal"))
+@bot.on(admin_cmd(pattern=r"nakal"))
 
 async def _(event):
 
