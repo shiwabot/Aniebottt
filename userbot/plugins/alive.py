@@ -9,12 +9,12 @@ from PIL import Image
 
 from userbot import ALIVE_NAME, CMD_HELP, Anieversion
 from userbot.__init__ import StartTime
-from userbot import Config, Var
+from userbot import Config
 
 # ======CONSTANTS=========#
-CUSTOM_ALIVE = (
-    Var.CUSTOM_ALIVE
-    if Var.CUSTOM_ALIVE
+ALIVE_MSG = (
+    Config.ALIVE_MSG
+    if Config.ALIVE_MSG
     else "Hey! I'm alive. All systems online and functioning normally!"
 )
 ALV_PIC = Config.ALIVE_PIC if Var.ALIVE_PIC else None
