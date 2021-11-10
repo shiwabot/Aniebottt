@@ -7,12 +7,12 @@ from PIL import Image, ImageDraw, ImageFont
 from pySmartDL import SmartDL
 from telethon.tl import functions
 from userbot.cmdhelp import CmdHelp
-from mafiabot.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 
 FONT_FILE_TO_USE = "Fonts/digital.ttf"
 
 
-@borg.on(admin_cmd(pattern=r"seconddp"))
+@bot.on(admin_cmd(pattern=r"seconddp"))
 async def seconddp(event):
     downloaded_file_name = "userbot/original_pic.png"
     downloader = SmartDL(
