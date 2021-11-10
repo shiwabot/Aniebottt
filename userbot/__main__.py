@@ -54,7 +54,7 @@ for name in files:
 
 import userbot._core
 
-print(f"""ANIEBOT IS ON!!! ANIEBOT VERSION :- {mafiaversion} YOUR 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 IS READY TO USE! FOR CHECK YOUR BOT WORKING OR NOT PLEASE TYPE (.alive/.ping) ENJOY YOUR BOT! JOIN FOR MORE FUTURE UPDATES @Aniebotsupports .""")
+print(f"""ANIEBOT IS ON!!! ANIEBOT VERSION :- {Anieversion} YOUR 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 IS READY TO USE! FOR CHECK YOUR BOT WORKING OR NOT PLEASE TYPE (.alive/.ping) ENJOY YOUR BOT! JOIN FOR MORE FUTURE UPDATES @Aniebotsupports .""")
 async def mafia_is_on():
     try:
         if Config.ANIEBOTS_LOGGER != 0:
