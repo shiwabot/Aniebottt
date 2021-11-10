@@ -29,14 +29,14 @@ from userbot.helpers.functions import (
     trap,
     trash,
 )
-from AuraXBot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from . import *
 
 
 @bot.on(admin_cmd(pattern="threats(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="threats(?: |$)(.*)", allow_sudo=True))
-async def AuraXBot(AuraXmemes):
+async def Aniebot(AuraXmemes):
     replied = await AuraXmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
@@ -89,7 +89,7 @@ async def AuraXBot(AuraXmemes):
 
 @bot.on(admin_cmd(pattern="trash(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="trash(?: |$)(.*)", allow_sudo=True))
-async def AuraXBot(AuraXmemes):
+async def Aniebot(AuraXmemes):
     replied = await AuraXmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
@@ -142,7 +142,7 @@ async def AuraXBot(AuraXmemes):
 
 @bot.on(admin_cmd(pattern="trap(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="trap(?: |$)(.*)", allow_sudo=True))
-async def AuraXBot(AuraXmemes):
+async def Aniebot(AuraXmemes):
     input_str = AuraXmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)
     if "-" in input_str:
@@ -205,7 +205,7 @@ async def AuraXBot(AuraXmemes):
 
 @bot.on(admin_cmd(pattern="phc(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="phc(?: |$)(.*)", allow_sudo=True))
-async def AuraXBot(AuraXmemes):
+async def Aniebot(AuraXmemes):
     input_str = AuraXmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)
     if "-" in input_str:
