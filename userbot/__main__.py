@@ -66,7 +66,7 @@ async def mafia_is_on():
     except Exception as e:
         LOGS.info(str(e))
 
-bot.loop.create_task(Anie_is_on())
+bot.loop.create_task(mafia_is_on())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
