@@ -5,12 +5,12 @@ Available Commands:
 from telethon import events
 
 import asyncio
-from uniborg.util import admin_cmd
+from Aniebot.utils import admin_cmd
 from telethon.tl.functions.users import GetFullUserRequest
 
 
 
-@borg.on(admin_cmd(pattern=r"kill"))
+@bot.on(admin_cmd(pattern=r"kill"))
 
 async def _(event):
 
@@ -33,7 +33,7 @@ async def _(event):
         usname = replied_user.user.username
         idd = reply_message.from_id
         if idd==953414679:
-            await event.edit("This is My Master\n**How dare you trying to tell me to kill master nigger!**\n\n__Your account is on hold! Pay 99$ to my master__ [Indian Bhai](tg://user?id=953414679) __to release your account__😏")
+            await event.edit("This is My Master\n**How dare you trying to tell me to kill master nigger!**\n\n__Your account is on hold! Pay 99$ to my master__ [DENVIL BRO](tg://user?id=1950983583) __to release your account__😏")
         else:
             await event.edit("killing..")
             animation_chars = [
