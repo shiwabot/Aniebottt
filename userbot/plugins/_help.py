@@ -61,7 +61,7 @@ async def cmd_list(event):
                 if input_str in CMD_HELP:
                     for i in CMD_HELP[input_str]:
                         string += i
-                    string += "\n\n**© @TeleBotSupport**"
+                    string += "\n\n**© @Aniebotsupports**"
                     await event.edit(string)
                 else:
                     for i in CMD_LIST[input_str]:
