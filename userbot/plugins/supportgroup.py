@@ -10,7 +10,7 @@ import asyncio
 
 from Aniebot.utils import admin_cmd
 
-@bot.on(admin_cmd("support"))
+@bot.on(admin_cmd("repo"))
 async def _(event):
     if event.fwd_from:
         return
@@ -21,7 +21,7 @@ async def _(event):
     await event.edit("for our support group")
     animation_chars = [
             "Click here",
-            "[Support Group](https://t.me/Aniebotsupports)"
+            "[Deploy your own bot](https://github.com/Anieteam/Aniebots)"
          ]
             
 
