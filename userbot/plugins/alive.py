@@ -57,8 +57,8 @@ def get_readable_time(seconds: int) -> str:
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@Aniebotsupports"
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="alive"))
-@bot.on(sudo_cmd(outgoing=True, pattern="alive", allow_sudo=True))
+@bot.on(admin_cmd(pattern="alive"))
+@bot.on(sudo_cmd(pattern="alive", allow_sudo=True))
 async def amireallyalive(alive):
     start = datetime.now()
     myid = bot.uid
