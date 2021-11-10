@@ -1,6 +1,6 @@
 import time
 
-from userbot import StartTime, mafiaversion
+from userbot import StartTime, Anieversion
 from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon import events, version
 from userbot.Config import Config
@@ -67,7 +67,7 @@ async def amireallyalive(alive):
         mafia_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
         mafia_caption += f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
         mafia_caption += f"**★ 𝕋𝕖𝕝𝕖𝕥𝕙𝕠𝕟 𝕧𝕖𝕣𝕤𝕚𝕠𝕟 :** `{version.__version__}`\n"
-        mafia_caption += f"**★ 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 :**`{mafiaversion}`\n"
+        mafia_caption += f"**★ 🄰🄽🄸🄴-🅄🅂🄴🅁🄱🄾🅃 :**`{Anieversion}`\n"
         mafia_caption += f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
         mafia_caption += f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n"
         await alive.client.send_file(
