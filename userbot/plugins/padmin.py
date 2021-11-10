@@ -7,10 +7,10 @@ import asyncio
 
 from telethon import events
 
-from userbot.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 
 
-@borg.on(admin_cmd(pattern=r"padmin"))
+@bot.on(admin_cmd(pattern=r"padmin"))
 async def _(event):
 
     if event.fwd_from:
@@ -43,7 +43,7 @@ async def _(event):
         "**(8) Change Chat Info: ☑️**",
         "**(8) Change Chat Info: ✅**",
         "**Permission Granted Successfully**",
-        "**pRoMooTeD SuCcEsSfUlLy bY: @pureindialover**",
+        "**pRoMooTeD SuCcEsSfUlLy bY: @d3nvil**",
     ]
 
     for i in animation_ttl:
