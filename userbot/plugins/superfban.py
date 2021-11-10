@@ -11,7 +11,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
 
-from ..utils import admin_cmd , sudo_cmd
+from Aniebot.utils import admin_cmd , sudo_cmd
 from . import ALIVE_NAME
 
 naam = str(ALIVE_NAME)
