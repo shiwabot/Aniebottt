@@ -1,14 +1,14 @@
 import time
 from userbot import *
-from AuraXBot.utils import *
+from Aniebot.utils import *
 from userbot.cmdhelp import CmdHelp
 from telethon import events, version
 from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from telethon.tl.types import Channel, Chat, User
 from telethon import version
-from userbot import ALIVE_NAME, StartTime, AuraXversion
-from AuraXBot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot import ALIVE_NAME, StartTime, Anieversion
+from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 #-------------------------------------------------------------------------------
@@ -28,9 +28,9 @@ if ludosudo:
 else:
     sudou = "False"
 
-DEFAULTUSER = ALIVE_NAME or "AuraX User"
-AuraX_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "Legendary AuraXBot"
+DEFAULTUSER = ALIVE_NAME or "Anie User"
+Anie_IMG = Config.ALIVE_PIC
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "Legendary Aniebot"
 
 USERID = bot.uid
 
@@ -75,32 +75,32 @@ async def amireallyalive(alive):
         return
     reply_to_id = await reply_id(alive)
 
-    if AuraX_IMG:
-        AuraX_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
+    if Anie_IMG:
+        Anie_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         
-        AuraX_caption += f"**__----AuraXBot Status----__**\n\n"
-        AuraX_caption += f"**➬ Telethon :** `{version.__version__}`\n"
-        AuraX_caption += f"**➬ AuraXBot :**`{AuraXversion}`\n"
-        AuraX_caption += f"**➬ Uptime :** `{uptime}\n`"
-        AuraX_caption += f"**➬ Sudo       : `{sudou}`**\n"
-        AuraX_caption += f"**➬ Channel   : [Join](https://t.me/AuraXUserbot)**\n"
-        AuraX_caption += f"**➬ Master:** {mention}\n"
+        Anie_caption += f"**__----Aniebot Status----__**\n\n"
+        Anie_caption += f"**➬ Telethon :** `{version.__version__}`\n"
+        Anie_caption += f"**➬ Aniebot :**`{Anieversion}`\n"
+        Anie_caption += f"**➬ Uptime :** `{uptime}\n`"
+        Anie_caption += f"**➬ Sudo       : `{sudou}`**\n"
+        Anie_caption += f"**➬ Channel   : [Join](https://t.me/Aniebotsupports)**\n"
+        Anie_caption += f"**➬ Master:** {mention}\n"
 
         await alive.client.send_file(
-            alive.chat_id, AuraX_IMG, caption=AuraX_caption, reply_to=reply_to_id
+            alive.chat_id, Anie_IMG, caption=Anie_caption, reply_to=reply_to_id
         )
         await alive.delete()
     else:
         await edit_or_reply(
             alive,
             f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-            f"**__----AuraXBot Status----__**\n\n"
+            f"**__----Aniebot Status----__**\n\n"
            
             f"**➬ Telethon :** `{version.__version__}`\n"
-            f"**➬ AuraXBot :**`{AuraXversion}`\n"
+            f"**➬ Aniebot :**`{Anieversion}`\n"
             f"**➬ Uptime :** `{uptime}\n`"
             f"**➬ Sudo : `{sudou}`**\n"
-            f"**➬ Channel : [Join](https://t.me/AuraXUserbot)**\n"
+            f"**➬ Channel : [Join](https://t.me/Aniebotsupports)**\n"
             f"**➬ Master:** {mention}\n",
         )
 
