@@ -7,6 +7,10 @@ from userbot.helpers import functions as simpdef
 from userbot.Config import Config
 from var import Var
 
+call_py = PyTgCalls(bot)
+except Exception as e: 
+    print(f"STRING_SESSION - {e}") 
+    sys.exit()
 
 StartTime = time.time()
 Anieversion = "2.0.5"
@@ -193,11 +197,6 @@ binaries = {
     "https://raw.githubusercontent.com/yshalsager/cmrudl.py/master/cmrudl.py":
     "bin/cmrudl"
 }
-    call_py = PyTgCalls(bot)
-except Exception as e: 
-    print(f"STRING_SESSION - {e}") 
-    sys.exit()
-
 
 for binary, path in binaries.items():
     downloader = SmartDL(binary, path, progress_bar=False)
