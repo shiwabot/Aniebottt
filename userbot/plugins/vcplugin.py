@@ -210,7 +210,7 @@ async def vc_vplay(event):
         or not replied
         and not title
     ):
-        return await edit_or_reply(event, "**Silahkan Masukan Judul Video**")
+        return await edit_or_reply(event, "**Please enter Video Name**")
     if replied and not replied.video and not replied.document:
         xnxx = await edit_or_reply(event, "`Searching...`")
         query = event.text.split(maxsplit=1)[1]
@@ -219,7 +219,7 @@ async def vc_vplay(event):
         hmmm = HighQualityVideo()
         if search == 0:
             await xnxx.edit(
-                "**Tidak Dapat Menemukan Video** Coba cari dengan Judul yang Lebih Spesifik"
+                "**Cannot Find Video*** Try searching with a more specific title"
             )
         else:
             songname = search[0]
@@ -231,7 +231,7 @@ async def vc_vplay(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(chat_id, songname, ytlink, url, "Video", RESOLUSI)
                 await xnxx.edit(
-                    f"💡 **Video Ditambahkan Ke antrian »** `#{pos}`\n\n**🏷 Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **Atas permintaan:** {from_user}"
+                    f"💡 **Video Added To queue »** `#{pos}`\n\n**🏷 title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **On request:** {from_user}"
                 )
             else:
                 try:
@@ -242,7 +242,7 @@ async def vc_vplay(event):
                     )
                     add_to_queue(chat_id, songname, ytlink, url, "Video", RESOLUSI)
                     await xnxx.edit(
-                        f"**🏷 Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Sedang Memutar Video`\n🎧 **Atas permintaan:** {from_user}",
+                        f"**🏷 title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Sedang Memutar Video`\n🎧 **Atas permintaan:** {from_user}",
                         link_preview=False,
                     )
                 except Exception as ep:
@@ -262,7 +262,7 @@ async def vc_vplay(event):
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Video", RESOLUSI)
             await xnxx.edit(
-                f"💡 **Video Ditambahkan Ke antrian »** `#{pos}`\n\n🏷 **Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **Atas permintaan:** {from_user}"
+                f"💡 **Video Added To queue »** `#{pos}`\n\n🏷 **title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **On request:** {from_user}"
             )
         else:
             if RESOLUSI == 360:
@@ -278,7 +278,7 @@ async def vc_vplay(event):
             )
             add_to_queue(chat_id, songname, dl, link, "Video", RESOLUSI)
             await xnxx.edit(
-                f"🏷 **Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Sedang Memutar Video`\n🎧 **Atas permintaan:** {from_user}",
+                f"🏷 **title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Sedang Memutar Video`\n🎧 **On request:** {from_user}",
                 link_preview=False,
             )
     else:
@@ -299,7 +299,7 @@ async def vc_vplay(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(chat_id, songname, ytlink, url, "Video", RESOLUSI)
                 await xnxx.edit(
-                    f"💡 **Video Ditambahkan Ke antrian »** `#{pos}`\n\n🏷 **Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **Atas permintaan:** {from_user}"
+                    f"💡 **Video Added To queue »** `#{pos}`\n\n🏷 **title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **On request:** {from_user}"
                 )
             else:
                 try:
@@ -310,7 +310,7 @@ async def vc_vplay(event):
                     )
                     add_to_queue(chat_id, songname, ytlink, url, "Video", RESOLUSI)
                     await xnxx.edit(
-                        f"🏷 **Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Sedang Memutar Video`\n🎧 **Atas permintaan:** {from_user}",
+                        f"🏷 **title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Sedang Memutar Video`\n🎧 **On request:** {from_user}",
                         link_preview=False,
                     )
                 except Exception as ep:
