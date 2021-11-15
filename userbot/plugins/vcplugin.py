@@ -23,7 +23,7 @@ from userbot import COMMAND_HAND_LER as cmd
 from userbot import CMD_HELP, bot, call_py
 from userbot.events import admin_cmd
 from userbot.utils import edit_delete, edit_or_reply
-from userbot.utils.queues.queues import (
+from userbot.helpers.queues.queues import (
     QUEUE,
     add_to_queue,
     clear_queue,
@@ -116,7 +116,7 @@ async def skip_current_song(chat_id):
     return [songname, link, type]
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"play(?:\s|$)([\s\S]*)"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"play(?:\s|$)([\s\S]*)"))
 async def vc_play(event):
     title = event.pattern_match.group(1)
     replied = await event.get_reply_message()
@@ -196,7 +196,7 @@ async def vc_play(event):
             )
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"vplay(?:\s|$)([\s\S]*)"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"vplay(?:\s|$)([\s\S]*)"))
 async def vc_vplay(event):
     title = event.pattern_match.group(1)
     replied = await event.get_reply_message()
@@ -317,7 +317,7 @@ async def vc_vplay(event):
                     await xnxx.edit(f"`{ep}`")
 
 
-@bot.on(man_cmd(outgoing=True, pattern="end$"))
+@bot.on(admin_cmd(outgoing=True, pattern="end$"))
 async def vc_end(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
@@ -331,7 +331,7 @@ async def vc_end(event):
         await edit_delete(event, "**Tidak Sedang Memutar Streaming**", 15)
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"skip(?:\s|$)([\s\S]*)"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"skip(?:\s|$)([\s\S]*)"))
 async def vc_skip(event):
     chat_id = event.chat_id
     if len(event.text.split()) < 2:
@@ -360,7 +360,7 @@ async def vc_skip(event):
             await event.edit(DELQUE)
 
 
-@bot.on(man_cmd(outgoing=True, pattern="pause$"))
+@bot.on(admin_cmd(outgoing=True, pattern="pause$"))
 async def vc_pause(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
@@ -373,7 +373,7 @@ async def vc_pause(event):
         await edit_delete(event, "**Tidak Sedang Memutar Streaming**", 15)
 
 
-@bot.on(man_cmd(outgoing=True, pattern="resume$"))
+@bot.on(admin_cmd(outgoing=True, pattern="resume$"))
 async def vc_resume(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
@@ -386,7 +386,7 @@ async def vc_resume(event):
         await edit_delete(event, "**Tidak Sedang Memutar Streaming**", 15)
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"volume(?: |$)(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"volume(?: |$)(.*)"))
 async def vc_volume(event):
     query = event.pattern_match.group(1)
     chat = await event.get_chat()
@@ -409,7 +409,7 @@ async def vc_volume(event):
         await edit_delete(event, "**Tidak Sedang Memutar Streaming**", 15)
 
 
-@bot.on(man_cmd(outgoing=True, pattern="playlist$"))
+@bot.on(admin_cmd(outgoing=True, pattern="playlist$"))
 async def vc_playlist(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
