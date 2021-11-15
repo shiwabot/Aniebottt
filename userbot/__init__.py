@@ -9,9 +9,9 @@ from var import Var
 
 
 StartTime = time.time()
-mafiaversion = "2.0.5"
+Anidversion = "2.0.5"
 botversion = "0.1"
-mafiatelethon = "1.21.1"
+Anidtelethon = "1.21.1"
 
 os.system("pip install aria2p")
 if Var.STRING_SESSION:
@@ -151,7 +151,7 @@ except:
     # Upstream Repo
     UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/MafiaBotOP/MafiaBot.git")
+    "https://github.com/Anieteam/Aniebots.git")
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
