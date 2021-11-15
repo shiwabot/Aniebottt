@@ -149,7 +149,7 @@ async def vc_play(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                 await botman.edit(
-                    f"💡 **Lagu Ditambahkan Ke antrian »** `#{pos}`\n\n**🏷 Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **Atas permintaan:** {from_user}"
+                    f"💡 **Song Added To queue »** `#{pos}`\n\n**🏷 title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **Atas permintaan:** {from_user}"
                 )
             else:
                 try:
@@ -162,7 +162,7 @@ async def vc_play(event):
                     )
                     add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                     await botman.edit(
-                        f"🏷 **Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Sedang Memutar`\n🎧 **Atas permintaan:** {from_user}",
+                        f"🏷 **title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Sedang Memutar`\n🎧 **Atas permintaan:** {from_user}",
                         link_preview=False,
                     )
                 except Exception as ep:
@@ -179,7 +179,7 @@ async def vc_play(event):
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await botman.edit(
-                f"💡 **Lagu Ditambahkan Ke antrian »** `#{pos}`\n\n**🏷 Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **Atas permintaan:** {from_user}"
+                f"💡 **Song Added To queue »** `#{pos}`\n\n**🏷 title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n🎧 **On request:** {from_user}"
             )
         else:
             await call_py.join_group_call(
@@ -191,7 +191,7 @@ async def vc_play(event):
             )
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await botman.edit(
-                f"🏷 **Judul:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Sedang Memutar`\n🎧 **Atas permintaan:** {from_user}",
+                f"🏷 **title:** [{songname}]({url})\n**👥 Chat ID:** `{chat_id}`\n💡 **Status:** `Playing`\n🎧 **On request:** {from_user}",
                 link_preview=False,
             )
 
