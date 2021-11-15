@@ -192,12 +192,12 @@ binaries = {
     "bin/megadown",
     "https://raw.githubusercontent.com/yshalsager/cmrudl.py/master/cmrudl.py":
     "bin/cmrudl"
-
+}
     call_py = PyTgCalls(bot)
 except Exception as e: 
     print(f"STRING_SESSION - {e}") 
     sys.exit()
-}
+
 
 for binary, path in binaries.items():
     downloader = SmartDL(binary, path, progress_bar=False)
