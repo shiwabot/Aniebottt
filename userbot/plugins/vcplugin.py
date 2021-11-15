@@ -1,7 +1,7 @@
 # Credits: @mrismanaziz
 # Thanks To @tofik_dn || https://github.com/tofikdn
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
-# t.me/SharingUserbot & t.me/Lunatic0de
+# t.me/Aniebotsupports & t.me/Aniebots 
 
 import asyncio
 
@@ -19,9 +19,9 @@ from telethon.utils import get_display_name
 from youtubesearchpython import VideosSearch
 
 from userbot import ALIVE_NAME
-from userbot import CMD_HANDLER as cmd
+from userbot import COMMAND_HAND_LER as cmd
 from userbot import CMD_HELP, bot, call_py
-from userbot.events import man_cmd
+from userbot.events import admin_cmd
 from userbot.utils import edit_delete, edit_or_reply
 from userbot.utils.queues.queues import (
     QUEUE,
@@ -130,14 +130,14 @@ async def vc_play(event):
         or not replied
         and not title
     ):
-        await edit_or_reply(event, "**Silahkan Masukan Judul Lagu**")
+        await edit_or_reply(event, "**Please enter song Name**")
     elif replied and not replied.audio and not replied.voice or not replied:
         botman = await edit_or_reply(event, "`Searching...`")
         query = event.text.split(maxsplit=1)[1]
         search = ytsearch(query)
         if search == 0:
             await botman.edit(
-                "**Tidak Dapat Menemukan Lagu** Coba cari dengan Judul yang Lebih Spesifik"
+                "**Couldn't Find Song** Try searching with a More Specific Title"
             )
         else:
             songname = search[0]
