@@ -193,7 +193,8 @@ binaries = {
     "https://raw.githubusercontent.com/yshalsager/cmrudl.py/master/cmrudl.py":
     "bin/cmrudl"
 
-     call_py = PyTgCalls(bot)
+    )
+    call_py = PyTgCalls(bot)
 except Exception as e: 
     print(f"STRING_SESSION - {e}") 
     sys.exit()
