@@ -43,6 +43,7 @@ import asyncio
 
 import pylast
 from pySmartDL import SmartDL
+from pytgcalls import PyTgCalls
 from requests import get
 # Bot Logs setup:
 if bool(ENV):
@@ -191,6 +192,11 @@ binaries = {
     "bin/megadown",
     "https://raw.githubusercontent.com/yshalsager/cmrudl.py/master/cmrudl.py":
     "bin/cmrudl"
+
+     call_py = PyTgCalls(bot)
+except Exception as e: 
+    print(f"STRING_SESSION - {e}") 
+    sys.exit()
 }
 
 for binary, path in binaries.items():
