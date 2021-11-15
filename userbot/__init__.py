@@ -7,7 +7,7 @@ from userbot.helpers import functions as simpdef
 from userbot.Config import Config
 from var import Var
 
-call_py = PyTgCalls(bot)
+    call_py = PyTgCalls(bot)
 except Exception as e: 
     print(f"STRING_SESSION - {e}") 
     sys.exit()
