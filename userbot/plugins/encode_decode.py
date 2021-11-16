@@ -4,10 +4,10 @@
 
 import base64
 
-from . import *
+from Aniebot import *
 
 
-@beast_cmd(pattern=".encode ?(.*)")
+@bot.on(admim_cmd(pattern=".encode ?(.*)")
 async def encod(e):
     match = e.pattern_match.group(1)
     if not match and e.is_reply:
@@ -22,7 +22,7 @@ async def encod(e):
     await eor(e, f"**=>> Encoded Text :** `{match}`\n\n**=>> OUTPUT :**\n`{atc}`")
 
 
-@beast_cmd(pattern=".decode ?(.*)")
+@bot.on(admin_cmd(pattern=".decode ?(.*)")
 async def encod(e):
     match = e.pattern_match.group(1)
     if not match and e.is_reply:
