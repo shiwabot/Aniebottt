@@ -3,7 +3,7 @@ import random
 
 from Aniebot.utils import admin_cmd
 
-from firebot import CMD_HELP
+from userbot import CMD_HELP
 
 
 @bot.on(admin_cmd(pattern=r"lol"))
