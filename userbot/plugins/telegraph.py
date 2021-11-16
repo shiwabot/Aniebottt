@@ -4,8 +4,8 @@ from datetime import datetime
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-from firebot import CMD_HELP
-from firebot.utils import fire_on_cmd
+from Aniebot import CMD_HELP
+from Aniebot.utils import admin_cmd 
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
@@ -18,7 +18,7 @@ else:
     BOTLOG_CHATID = Config.PRIVATE_GROUP_ID
 
 
-@fire.on(fire_on_cmd(pattern="telegraph (media|text) ?(.*)"))
+@bot.on(admin_cmd(pattern="telegraph (media|text) ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
