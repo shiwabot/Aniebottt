@@ -1,12 +1,12 @@
 import asyncio
 import random
 
-from uniborg.util import fire_on_cmd
+from Aniebot.utils import admin_cmd
 
 from firebot import CMD_HELP
 
 
-@fire.on(fire_on_cmd(pattern=r"lol"))
+@bot.on(admin_cmd(pattern=r"lol"))
 async def _(event):
 
     if event.fwd_from:
