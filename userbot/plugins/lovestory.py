@@ -3,7 +3,7 @@ import asyncio
 from ..utils import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="lovestory"))
+@bot.on(admin_cmd(pattern="lovestory"))
 async def _(event):
 
     if event.fwd_from:
