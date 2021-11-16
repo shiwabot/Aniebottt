@@ -10,7 +10,7 @@ from Aniebot import *
 
 
 @bot.on(admin_cmd(pattern=".limited ?(.*)")
-async def _(e):
+    async def _(e):
     match = e.pattern_match.group(1)
     msg = await eor(e, "checking if account is limited or not...")
     if match:
