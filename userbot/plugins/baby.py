@@ -4,9 +4,9 @@ from telethon import events
 import asyncio
 import os
 import sys
-from beastx.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 import random
-from beastx import beast as borg
+from userbot import bot
 from . import *
 img1=("https://telegra.ph/file/2479b98d08eed6308dfba.mp4")
 img2=("https://telegra.ph/file/f81f5ecbcb5ad7c07c093.mp4")
@@ -51,7 +51,7 @@ img39=("https://telegra.ph/file/f7b4f5813f063c5f8b3ed.mp4")
 img40=("https://telegra.ph/file/04cdec4e301a311b21584.mp4")
     
     
-@borg.on(admin_cmd(outgoing=True, pattern="baby"))
+@bot.on(admin_cmd(outgoing=True, pattern="baby"))
 
 async def _(event):
 
