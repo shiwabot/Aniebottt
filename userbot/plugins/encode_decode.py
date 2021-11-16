@@ -8,7 +8,7 @@ from Aniebot import *
 
 
 @bot.on(admim_cmd(pattern=".encode ?(.*)")
-async def encod(e):
+    async def encod(e):
     match = e.pattern_match.group(1)
     if not match and e.is_reply:
         gt = await e.get_reply_message()
