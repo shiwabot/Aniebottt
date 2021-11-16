@@ -2,13 +2,13 @@ from . import *
 
 tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
 
-from beastx import ALIVE_NAME, CMD_LIST, lang
+from userbot import ALIVE_NAME, CMD_LIST, lang
 
-from beastx.utils import beastx_cmd
+from Aniebot.utils import admin_cmd
 
-from beastx import beast
+from userbot import 
 
-@beast_cmd(pattern=".repo ?(.*)")
+@admin_cmd(pattern=".repo ?(.*)")
 
 async def repohand(event):
 
