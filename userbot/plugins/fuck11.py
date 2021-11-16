@@ -13,7 +13,7 @@ import asyncio
 import random
 from asyncio import sleep
 
-from firebot import CMD_HELP, bot
+from Aniebot import CMD_HELP, bot
 
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 
