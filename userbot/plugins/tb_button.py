@@ -2,13 +2,13 @@ import re
 
 from telethon import custom
 
-from firebot.utils import fire_on_cmd
+from Aniebot.utils import admin_cmd
 
 # regex obtained from: https://github.com/PaulSonOfLars/tgbot/blob/master/tg_bot/modules/helper_funcs/string_handling.py#L23
 BTN_URL_REGEX = re.compile(r"(\{([^\[]+?)\}\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 
 
-@fire.on(fire_on_cmd(pattern="cbutton"))  # pylint:disable=E0602
+@boy.on(admin_cmd(pattern="cbutton"))  # pylint:disable=E0602
 async def _(event):
     if Config.TG_BOT_USER_NAME_BF_HER is None or tgbot is None:
         await event.edit("need to set up a @BotFather bot for this module to work")
