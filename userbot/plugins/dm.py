@@ -1,6 +1,6 @@
 from telethon import *
 
-from firebot import CMD_HELP
+from userbot import CMD_HELP
 
 from ..utils import admin_cmd
 
