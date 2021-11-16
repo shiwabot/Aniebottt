@@ -9,9 +9,9 @@ from var import Var
 
 
 StartTime = time.time()
-Anidversion = "2.0.5"
+Anieversion = "2.0.5"
 botversion = "0.1"
-Anidtelethon = "1.21.1"
+Anietelethon = "1.21.1"
 
 os.system("pip install aria2p")
 if Var.STRING_SESSION:
