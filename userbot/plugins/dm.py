@@ -4,7 +4,7 @@ from telethon import *
 from . import *
 
 @bot.on(admin_cmd(pattern="dm ?(.*)"))
-async def _(dc):
+     async def _(dc):
 
     d = dc.pattern_match.group(1)
 
