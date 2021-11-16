@@ -3,7 +3,7 @@ from telethon import *
 
 from . import *
 
-@beast.on(admin_cmd(pattern="dm ?(.*)"))
+@bot.on(admin_cmd(pattern="dm ?(.*)"))
 async def _(dc):
 
     d = dc.pattern_match.group(1)
