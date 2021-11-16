@@ -6,10 +6,10 @@
 
 
 
-from . import *
+from Aniebot import *
 
 
-@beast_cmd(pattern=".limited ?(.*)")
+@bot.on(admin_cmd(pattern=".limited ?(.*)")
 async def _(e):
     match = e.pattern_match.group(1)
     msg = await eor(e, "checking if account is limited or not...")
