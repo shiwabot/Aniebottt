@@ -1,14 +1,14 @@
 import asyncio
 from datetime import datetime
 
-from firebot import CMD_HELP
-from firebot.utils import fire_on_cmd, sudo_cmd
+from userbot import CMD_HELP
+from Aniebot.utils import admin_cmd, sudo_cmd
 
-firethumb = "./resources/IMG_20210719_203716_508.jpg"
+Denvil = "./Denvil/Aniebot.jpg"
 
 
-@fire.on(fire_on_cmd(pattern="send ?(.*)"))
-@fire.on(sudo_cmd(pattern="send ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="send ?(.*)"))
+@bot.on(sudo_cmd(pattern="send ?(.*)", allow_sudo=True))
 async def send(event):
     if event.fwd_from:
         return
