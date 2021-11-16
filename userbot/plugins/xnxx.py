@@ -11,7 +11,7 @@ from ..utils import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern="xnxx?(.*)"))
+@bot.on(admin_cmd(pattern="xnxx?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -37,7 +37,7 @@ async def _(event):
             await event.delete()
             await event.client.send_file(event.chat_id, response.message)
 
-@borg.on(admin_cmd(pattern="picx?(.*)"))
+@bot.on(admin_cmd(pattern="picx?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -63,7 +63,7 @@ async def _(event):
             await event.delete()
             await event.client.send_file(event.chat_id, response.message)
 
-@borg.on(admin_cmd(pattern="les?(.*)"))
+@bot.on(admin_cmd(pattern="les?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
