@@ -277,7 +277,7 @@ async def runstrings(event):
     await edit_or_reply(event, txt)
 
 
-from firebot import CMD_HELP
+from userbot import CMD_HELP
 
 
 @bot.on(admin_cmd("newyear"))
