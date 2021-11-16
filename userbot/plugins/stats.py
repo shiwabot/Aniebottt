@@ -7,7 +7,7 @@ from userbot import CMD_HELP
 from userbot import bot
 
 
-@bot.on(beastx_cmd(pattern=r"stats"))
+@bot.on(admin_cmd(pattern=r"stats"))
 async def _(event):
     if event.fwd_from:
         return
