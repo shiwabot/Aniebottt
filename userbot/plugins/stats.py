@@ -1,13 +1,13 @@
 from datetime import datetime
 
 from telethon.tl.types import Channel, Chat, User
-from uniborg.util import edit_or_reply, beastx_cmd, sudo_cmd
+from Aniebot.utils import edit_or_reply, admin_cmd, sudo_cmd
 
-from beastx import CMD_HELP
-from beastx import beast
+from userbot import CMD_HELP
+from userbot import bot
 
 
-@beast.on(beastx_cmd(pattern=r"stats"))
+@bot.on(beastx_cmd(pattern=r"stats"))
 async def _(event):
     if event.fwd_from:
         return
