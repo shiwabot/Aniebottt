@@ -1,9 +1,9 @@
 from firebot import CMD_HELP
-from firebot.utils import fire_on_cmd, sudo_cmd
+from Aniebot.utils import admin_cmd, sudo_cmd
 
 
-@fire.on(sudo_cmd(pattern="ahelp ?(.*)", allow_sudo=True))
-@fire.on(fire_on_cmd(pattern="ahelp ?(.*)"))
+@boy.on(sudo_cmd(pattern="ahelp ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ahelp ?(.*)"))
 async def _(event):
     args = event.pattern_match.group(1).lower()
     if args:
