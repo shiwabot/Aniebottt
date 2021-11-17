@@ -18,6 +18,7 @@ from time import gmtime, strftime
 from typing import Tuple
 from telethon import functions, types
 from userbot import LOGS
+from userbot import BOTLOG 
 from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
@@ -78,7 +79,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("⚡🔥Aniebot⚡🔥 - Successfully imported " + shortname)
+        BOTLOG.info("⚡🔥Aniebot⚡🔥 - Successfully imported " + shortname)
 
 
 def remove_plugin(shortname):
