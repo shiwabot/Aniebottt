@@ -4,7 +4,7 @@ import os
 import re
 from telethon import *
 from userbot import bot
-from userbot.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 from userbot import CMD_HELP
 #Fixed by @deviluserbot 
 @borg.on(admin_cmd(pattern="dm ?(.*)"))
