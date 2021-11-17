@@ -12,7 +12,7 @@ from userbot import bot as Aniebot
 DELETE_TIMEOUT = 5
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Anie User"
 Anie_logo = "./Denvil/Aniebot.jpg"
-mafia = f"[{DEFAULTUSER}](tg://user?id=%7Bd3nvil%7D)"
+Anie = f"[{DEFAULTUSER}](tg://user?id=%7Bd3nvil%7D)"
 
 @Aniebot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
 @Aniebot.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
