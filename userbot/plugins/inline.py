@@ -12,7 +12,7 @@ from telethon import Button, custom, events, functions
 from youtube_search import YoutubeSearch
 
 from userbot import ALIVE_NAME, CMD_HELP, CMD_LIST, lang
-from userbot.function import _deezer_dl, _ytdl
+from userbot.helpers import _deezer_dl, _ytdl
 from userbot.modules import inlinestats
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
