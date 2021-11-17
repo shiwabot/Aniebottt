@@ -1,4 +1,4 @@
-# credits to @mrconfused 
+# credits to @mr_developer_xd 
 
 import asyncio
 import datetime
