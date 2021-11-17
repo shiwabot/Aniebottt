@@ -79,8 +79,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        BOTLOG.info("⚡🔥Aniebot⚡🔥 - Successfully imported " + shortname)
-
+        LOGS.info("Aniebot - Successfully imported " + shortname)
 
 def remove_plugin(shortname):
     try:
