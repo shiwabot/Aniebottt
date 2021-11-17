@@ -37,7 +37,7 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 
-from firebot.utils import load_module
+from userbot.utils import load_module
 
 SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB"]
 BASE_URL = "https://isubtitles.org"
@@ -46,10 +46,10 @@ import zipfile
 
 import aiohttp
 
-from firebot.Configs import Config
+from userbot.Configs import Config
 
 sedpath = Config.TMP_DOWNLOAD_DIRECTORY
-from firebot import logging
+from userbot import logging
 
 logger = logging.getLogger("[--WARNING--]")
 if not os.path.isdir(sedpath):
@@ -178,7 +178,7 @@ async def get_all_modules(event, borg, channel_id):
     for sed in a_plugins:
         try:
             downloaded_file_name = await borg.download_media(
-                sed, "firebot/modules/"
+                sed, "userbot/modules/"
             )
             if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
