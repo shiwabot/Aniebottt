@@ -1,4 +1,4 @@
-from firebot import CMD_HELP
+from userbot import CMD_HELP
 from Aniebot.utils import admin_cmd, sudo_cmd
 
 
