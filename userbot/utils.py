@@ -68,7 +68,7 @@ def load_module(shortname):
         mod.borg = bot
         mod.Aniebot = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_Aniebot = delete_Aniebot
+        mod.delete_mafia = delete_mafia
         mod.media_type = media_type
         # support for REBELBOT originals
         sys.modules["Aniebot.utils"] = userbot.utils
