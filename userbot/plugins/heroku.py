@@ -190,7 +190,7 @@ async def _(dyno):
         return await dyno.reply(f"Make Sure Your Heroku App Name & API Key are filled correct. Visit @Aniebotsupports for help.", link_preview=False)
    # event = await eor(dyno, "Downloading Logs...")
     mafia_data = app.get_log()
-    await eor(dyno, mafia_data, deflink=True, linktext=f"**🗒️ Heroku Logs of 💯 lines. 🗒️**\n\n🌟 **Bot Of :** [{MAFIA_NAME}](tg://user?id={d3nvil})\n\n🚀** Pasted**  ")
+    await eor(dyno, mafia_data, deflink=True, linktext=f"**🗒️ Heroku Logs of 💯 lines. 🗒️**\n\n🌟 **Bot Of :** [{MAFIA_NAME}](tg://user?id=%7Bd3nvil%7D)\n\n🚀** Pasted**  ")
     
    
 
