@@ -5,7 +5,7 @@ import os
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
-from userbot import ALIVE_NAME, CUSTOM_PMPERMIT, lang
+from userbot import ALIVE_NAME, CUSTOM_PMPERMIT
 from userbot.Configs import Config
 from Aniebot.utils import admin_cmd
 
