@@ -1,6 +1,6 @@
 from telethon import events
 import random, re
-from uniborg.util import admin_cmd
+from Aniebot.utils import admin_cmd
 
 RUNSREACTS = [
     "`Tufaano Mein Chhatri Nahi Kholi Jaati; Bra Se Pehle Panty Nahi Kholi Jaati; ‘Viagra’ Khana Shuru Kar, Mere Dost; Kyunki Zubaan Aur Ungli Se Aurat Nahi Chodi Jaati!`",
