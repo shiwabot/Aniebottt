@@ -37,7 +37,7 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 
-from Aniebot.utils import load_module
+from userbot.utils import load_module
 
 SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB"]
 BASE_URL = "https://isubtitles.org"
