@@ -89,7 +89,9 @@ except:
 
     # Userbot logging feature switch.
     BOTLOG = sb(os.environ.get("BOTLOG", "False"))
+    
     LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
+    LOGS = sb(os.environ.get("LOGS", "False"))
     COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r".")
 
     # Bleep Blop, this is a bot ;)
