@@ -210,28 +210,6 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 link_preview=True,
             )
 
-        else:
-            result = builder.article(
-                "@Aniebotsupports",
-                text="""**Hey! This is [Aniebot](https://t.me/Aniebots) \nYou can know more about me from the links given below 👇**""",
-                buttons=[
-                    [
-                        custom.Button.url("🌺 CHANNEL 🌺", "https://t.me/Aniebots"),
-                        custom.Button.url("⚡ GROUP ⚡", "https://t.me/Aniebotsupports"),
-                    ],
-                    [
-                        custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/Anieteam/Aniebots"
-                        ),
-                        custom.Button.url(
-                            "🖍️ TUTORIAL 🖍️", "https://t.me/Aniebotsupports"
-                        ),
-                    ],
-                ],
-                link_preview=False,
-            )
-        await event.answer([result] if result else None)
-
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
