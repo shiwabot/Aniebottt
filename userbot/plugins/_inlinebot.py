@@ -111,7 +111,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                             "🔰 REPO 🔰", "https://github.com/Anieteam/Aniebots"),
                         custom.Button.url
                     (
-                            "🔰 TUTORIAL 🔰", "https://t.me/Aniebotsupports"),
+                            "🔰 TUTORIAL 🔰", "https://t.me/Aniebotsupports"
                     )
                     ],
                 ],
