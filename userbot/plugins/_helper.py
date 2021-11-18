@@ -4,17 +4,17 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from . import *
 
 msg = f"""
-**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ʍɛօաɮօȶ ⚡**
+**⚡ ʟɛɢɛռɖaʀʏ ᴀғ Anie ⚡**
 
-  •        [📑 Repo 📑](https://github.com/kaal0408/MeowBot)
-  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fkaal0408%2FMeowBot&template=https%3A%2F%2Fgithub.com%2Fkaal0408%2Fmewbot)
+  •        [📑 Repo 📑](https://github.com/Anieteam/Aniebots)
+  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots&template=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots)
 
-  •  ©️ {mew_channel} ™
+  •  ©️ @Aniebotsupports ™
 """
-botname = Config.BOT_USERNAME
+botname = Config.TG_BOT_USER_NAME_BF_HER
 
 
-@bot.on(mew_cmd(pattern="repo$"))
+@bot.on(admin_cmd(pattern="repo$"))
 @bot.on(sudo_cmd(pattern="repo$", allow_sudo=True))
 async def repo(event):
     try:
