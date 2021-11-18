@@ -1,7 +1,11 @@
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
-from . import *
+from userbot import *
+from userbot.cmdhelp import *
+from mafiabot.utils import *
+from userbot.Config import Config
+
 
 msg = f"""
 **⚡ ʟɛɢɛռɖaʀʏ ᴀғ Anie ⚡**
@@ -18,15 +22,15 @@ botname = Config.TG_BOT_USER_NAME_BF_HER
 @bot.on(sudo_cmd(pattern="repo$", allow_sudo=True))
 async def repo(event):
     try:
-        Meow = await bot.inline_query(botname, "repo")
-        await Meow[0].click(event.chat_id)
+        Anie = await bot.inline_query(botname, "repo")
+        await Anie[0].click(event.chat_id)
         if event.sender_id == ForGo10God:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
 
 
-@bot.on(mew_cmd(pattern="help ?(.*)", outgoing=True))
+@bot.on(admin_cmd(pattern="help ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="help ?(.*)", allow_sudo=True))
 async def yardim(event):
     if event.fwd_from:
