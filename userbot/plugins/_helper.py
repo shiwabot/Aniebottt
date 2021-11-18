@@ -2,12 +2,12 @@
 from telethon import functions
 
 from userbot import ALIVE_NAME, CMD_LIST
-from userbot.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "godhacker"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Aniebot"
 
 
-@command(pattern="^.help ?(.*)")
+@admin_cmd(pattern="^.help ?(.*)")
 async def cmd_list(event):
     if not event.text[0].isalpha() and event.text[0] not in (
         "/",
@@ -51,7 +51,7 @@ async def cmd_list(event):
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = f"""Userbot Helper.. Provided by @Godhackerzuserbot For {DEFAULTUSER}\n
+            help_string = f"""Userbot Helper.. Provided by @Aniebots For {DEFAULTUSER}\n
 `Userbot Helper to reveal all the commands`\n__Do .help plugin_name for commands"""
             results = await bot.inline_query(  
                 tgbotusername, help_string
