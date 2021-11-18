@@ -27,7 +27,7 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from userbot import *
 from userbot.cmdhelp import *
-from REBELBOT.utils import *
+from Aniebot.utils import *
 from userbot.Config import Config
 
 REBEL_help_pic = Config.HELP_PIC
