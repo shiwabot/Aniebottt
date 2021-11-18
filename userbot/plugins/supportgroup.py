@@ -10,7 +10,7 @@ import asyncio
 
 from Aniebot.utils import admin_cmd
 
-@bot.on(admin_cmd("repo"))
+@bot.on(admin_cmd("Support"))
 async def _(event):
     if event.fwd_from:
         return
