@@ -423,14 +423,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             result += f"**♻️ Info :**  {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
         command = CMD_HELP_BOT[cmd]["commands"][commands]
         if command["params"] is None:
-            result += f"**❇️ Commands :**  `{HANDLER[:1]}{command['command']}`\n"
+            result += f"**❇️ Commands :**  `{COMMAND_HAND_LER[:1]}{command['command']}`\n"
         else:
-            result += f"**❇️ Commands :**  `{HANDLER[:1]}{command['command']} {command['params']}`\n"
+            result += f"**❇️ Commands :**  `{COMMAND_HAND_LER[:1]}{command['command']} {command['params']}`\n"
         if command["example"] is None:
             result += f"**💟 Explanation :**  `{command['usage']}`\n\n"
         else:
             result += f"**💟 Explanation :**  `{command['usage']}`\n"
-            result += f"**💞 For Example :**  `{HANDLER[:1]}{command['example']}`\n\n"
+            result += f"**💞 For Example :**  `{COMMAND_HAND_LER[:1]}{command['example']}`\n\n"
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             await event.edit(
                 result,
