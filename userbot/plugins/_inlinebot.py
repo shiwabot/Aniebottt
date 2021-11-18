@@ -45,7 +45,7 @@ def button(page, modules):
         ]
     )
     return [max_pages, buttons]
-    # Changing this line may give error in bot as i added some special cmds in devilbot channel to get this module work...
+    # Changing this line may give error in bot as i added some special cmds in Aniebot channel to get this module work...
 
     modules = CMD_HELP
 if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
@@ -54,12 +54,12 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "@DevilUserBot":
+        if event.query.user_id == bot.uid and query == "@Aniebot":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             result = await builder.article(
                 f"Hey! Only use .help please",
-                text=f"**Running DevilUserBot**\n\n__Number of plugins installed__ :`{len(CMD_HELP)}`\n**page:** 1/{veriler[0]}",
+                text=f"**Running AnieUserBot**\n\n__Number of plugins installed__ :`{len(CMD_HELP)}`\n**page:** 1/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False,
             )
