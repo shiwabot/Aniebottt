@@ -3,7 +3,7 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
 from userbot import *
 from userbot.cmdhelp import *
-from mafiabot.utils import *
+from Aniebot.utils import *
 from userbot.Config import Config
 
 
@@ -35,7 +35,7 @@ async def repo(event):
 async def yardim(event):
     if event.fwd_from:
         return
-    tgbotusername = Config.BOT_USERNAME
+    tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     input_str = event.pattern_match.group(1)
     try:
         if not input_str == "":
@@ -44,7 +44,7 @@ async def yardim(event):
     except:
         pass
     if tgbotusername is not None:
-        results = await event.client.inline_query(tgbotusername, "mewbot_help")
+        results = await event.client.inline_query(tgbotusername, "aniebot_help")
         await results[0].click(
             event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
         )
@@ -52,12 +52,12 @@ async def yardim(event):
     else:
         await eor(
             event,
-            "**⚠️ ERROR !!** \nPlease Re-Check BOT_TOKEN & BOT_USERNAME on Heroku.",
+            "**⚠️ ERROR !!** \nPlease Re-Check TG_BOT_TOKEN_BF_HER & TG_BOT_USER_NAME_BF_HER on Heroku.",
         )
 
 
-@bot.on(mew_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="plinfoo(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="plinfoo(?: |$)(.*)", allow_sudo=True))
 async def mewbott(event):
     if event.fwd_from:
         return
