@@ -1,18 +1,18 @@
-from userbot.uniborgConfig import Config
+from userbot.Config import Config
 import asyncio
 
 import requests
 from telethon import functions
 
 from userbot import ALIVE_NAME, CMD_LIST, SUDO_LIST
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Aniebot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 @bot.on(admin_cmd(pattern="help", outgoing=True))
 async def yardim(event):
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     if tgbotusername is not None:
-        results = await event.client.inline_query(tgbotusername, "@DevilUserBot")
+        results = await event.client.inline_query(tgbotusername, "@Aniebot")
         await results[0].click(
             event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
         )
@@ -49,7 +49,7 @@ async def info(event):
                 .get("key")
             )
             url = f"https://nekobin.com/{key}"
-            reply_text = f"All commands of the Dévílẞø† are [here]({url})"
+            reply_text = f"All commands of the Aniebot are [here]({url})"
             await event.reply(reply_text, link_preview=False)
             return
         await event.reply(
