@@ -14,7 +14,7 @@ from . import *
 
 Anie_row = Config.BUTTONS_IN_HELP
 Anie_emoji = Config.EMOJI_IN_HELP
-mew_pic = Config.PMPERMIT_PIC or "https://telegra.ph/file/d9ed9caf60dd8acee435d.jpg"
+Anie_pic = Config.PMPERMIT_PIC or "https://telegra.ph/file/d9ed9caf60dd8acee435d.jpg"
 cstm_pmp = Config.CUSTOM_PMPERMIT
 ALV_PIC = Config.ALIVE_PIC
 
