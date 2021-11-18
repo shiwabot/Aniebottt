@@ -21,12 +21,12 @@ ALV_PIC = Config.ALIVE_PIC
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
-mybot = Config.BOT_USERNAME
+mybot = Config.TG_BOT_USER_NAME_BF_HER
 if mybot.startswith("@"):
     botname = mybot
 else:
     botname = f"@{mybot}"
-LOG_GP = Config.LOGGER_ID
+LOG_GP = Config.PRIVATE_GROUP_ID
 mssge = (
     str(cstm_pmp)
     if cstm_pmp
@@ -40,11 +40,11 @@ USER_BOT_WARN_ZERO = (
 ANIE_FIRST = (
     "**🔥Ⱨҽყ ƚɦιʂ ιʂ Aniebot P͆M̾ Sêçürïty 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**Please Choose Why You Are Here!!**".format(mew_mention, mssge)
+    "{}\n\n**Please Choose Why You Are Here!!**"
 )
 
 alive_txt = """
-**🔥 boy ιѕ σиℓιиє 🔥**
+**🔥 bot ιѕ σиℓιиє 🔥**
 {}
 **⚡ Anie 𝚂𝚝𝚊𝚝𝚞𝚜 ⚡**
 
@@ -95,7 +95,7 @@ def button(page, modules):
     modules = CMD_HELP
 
 
-if Config.BOT_USERNAME is not None and tgbot is not None:
+if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 
     @tgbot.on(InlineQuery)  # pylint:disable=E0602
     async def inline_handler(event):
@@ -111,7 +111,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     apn.append(y)
             result = await builder.article(
                 f"Hey! Only use .help please",
-                text=f"🇮🇳 **{mew_mention}**\n\n💐 __No.of Plugins__ : `{len(CMD_HELP)}` \n🌹 __Commands__ : `{len(apn)}`\n📍 __Page__ : 1/{veriler[0]}",
+                text=f"🇮🇳 **{DEFAULTUSER} **\n\n💐 __No.of Plugins__ : `{len(CMD_HELP)}` \n🌹 __Commands__ : `{len(apn)}`\n📍 __Page__ : 1/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False,
             )
@@ -141,7 +141,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 Config.ALIVE_MSG, tel_ver, mew_ver, uptime, abuse_m, is_sudo
             )
             alv_btn = [
-                [Button.url(f"{MEOW_USER}", f"tg://openmessage?user_id={ForGo10God}")],
+                [Button.url(f"{ANIE_USER}", f"tg://openmessage?user_id={ForGo10God}")],
                 [
                     Button.url("My Channel", f"https://t.me/{my_channel}"),
                     Button.url("My Group", f"https://t.me/{my_group}"),
@@ -171,7 +171,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
 
         elif event.query.user_id == bot.uid and query == "pm_warn":
-            Anie_w = Anie_FIRST.format(mew_mention, mssge)
+            Anie_w = Anie_FIRST.format(DEFAULTUSER, mssge)
             result = builder.photo(
                 file=Anie_pic,
                 text=Anie_w,
@@ -238,7 +238,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"🌹 This is Anie ρɱ Security for {mew_mention} to keep away unwanted retards from spamming PM..."
+                f"🌹 This is Anie ρɱ Security for {DEFAULTUSER}  to keep away unwanted retards from spamming PM..."
             )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
@@ -248,14 +248,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"🌿 **Request Registered** \n\n{mew_mention} will now decide to look for your request or not.\n😐 Till then wait patiently and don't spam!!"
+                f"🌿 **Request Registered** \n\n{DEFAULTUSER}  will now decide to look for your request or not.\n😐 Till then wait patiently and don't spam!!"
             )
             target = await event.client(GetFullUserRequest(event.query.user_id))
             first_name = html.escape(target.user.first_name)
             ok = event.query.user_id
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-            tosend = f"**👀 Hey {mew_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
+            tosend = f"**👀 Hey {DEFAULTUSER}  !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
             await bot.send_message(LOG_GP, tosend)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"chat")))
@@ -266,14 +266,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"Ahh!! You here to do chit-chat!!\n\nPlease wait for {mew_mention} to come. Till then keep patience and don't spam."
+                f"Ahh!! You here to do chit-chat!!\n\nPlease wait for {DEFAULTUSER}  to come. Till then keep patience and don't spam."
             )
             target = await event.client(GetFullUserRequest(event.query.user_id))
             ok = event.query.user_id
             first_name = html.escape(target.user.first_name)
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-            tosend = f"**👀 Hey {mew_mention} !!** \n\n⚜️ You Got A PM from  [{first_name}](tg://user?id={ok})  for random chats!!"
+            tosend = f"**👀 Hey {DEFAULTUSER}  !!** \n\n⚜️ You Got A PM from  [{first_name}](tg://user?id={ok})  for random chats!!"
             await bot.send_message(LOG_GP, tosend)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
@@ -321,7 +321,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 for y in x:
                     apn.append(y)
             await event.edit(
-                f"🇮🇳 **{mew_mention}**\n\n🌹 __No.of Plugins__ : `{len(CMD_HELP)}` \n🌷 __Commands__ : `{len(apn)}`\n📌 __Page__ : 1/{veriler[0]}",
+                f"🇮🇳 **{DEFAULTUSER} **\n\n🌹 __No.of Plugins__ : `{len(CMD_HELP)}` \n🌷 __Commands__ : `{len(apn)}`\n📌 __Page__ : 1/{veriler[0]}",
                 buttons=simp[1],
                 link_preview=False,
             )
@@ -336,7 +336,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 f"{Anie_emoji} Re-Open Menu {Anie_emoji}", data="reopen"
             )
             await event.edit(
-                f"**🌹 Aniebots Mêñû Prõvîdêr ìs ñôw Çlösëd 🌹**\n\n**Bot Of :**  {mew_mention}\n\n        [©️ Aniebots ™️](t.me/Aniebotsupports)",
+                f"**🌹 Aniebots Mêñû Prõvîdêr ìs ñôw Çlösëd 🌹**\n\n**Bot Of :**  {DEFAULTUSER} \n\n        [©️ Aniebots ™️](t.me/Aniebotsupports)",
                 buttons=veriler,
                 link_preview=False,
             )
@@ -354,7 +354,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 apn.append(y)
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             await event.edit(
-                f"🇮🇳 **{mew_mention}**\n\n🌹 __No.of Plugins__ : `{len(CMD_HELP)}`\n✨ __Commands__ : `{len(apn)}`\n📌 __Page__ : {page + 1}/{veriler[0]}",
+                f"🇮🇳 **{DEFAULTUSER} **\n\n🌹 __No.of Plugins__ : `{len(CMD_HELP)}`\n✨ __Commands__ : `{len(apn)}`\n📌 __Page__ : {page + 1}/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False,
             )
