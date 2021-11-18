@@ -17,7 +17,6 @@ from userbot.Config import Config
 
 Anie_row = Config.BUTTONS_IN_HELP
 Anie_emoji = Config.EMOJI_IN_HELP
-cstm_pmp = Config.CUSTOM_PMPERMIT
 ALV_PIC = Config.ALIVE_PIC
 
 PM_WARNS = {}
@@ -30,8 +29,8 @@ else:
     botname = f"@{mybot}"
 LOG_GP = Config.PRIVATE_GROUP_ID
 mssge = (
-    str(cstm_pmp)
-    if cstm_pmp
+    str(CUSTOM_PMPERMIT)
+    if CUSTOM_PMPERMIT
     else "**You Have Trespassed To My Master's PM!\nDo not spam here, else you will be blocked automatically.**"
 )
 
