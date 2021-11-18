@@ -17,7 +17,6 @@ from userbot.Config import Config
 
 Anie_row = Config.BUTTONS_IN_HELP
 Anie_emoji = Config.EMOJI_IN_HELP
-Anie_pic = Config.PMPERMIT_PIC
 cstm_pmp = Config.CUSTOM_PMPERMIT
 ALV_PIC = Config.ALIVE_PIC
 
