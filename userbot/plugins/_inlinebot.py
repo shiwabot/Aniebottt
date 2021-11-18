@@ -7,10 +7,10 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from userbot import *
 from userbot.cmdhelp import *
-from userbot.utils import *
+from Aniebot.utils import *
 
 # thats how a lazy guy imports
-# devilbot
+# Aniebot 
 
 def button(page, modules):
     Row = 7
@@ -73,21 +73,21 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             )
         else:
             result = builder.article(
-                "@DevilUserBot",
-                text="""**Hey! This is [Dévílẞø†.](https://t.me/DevilUserBot) \nYou can know more about me from the links given below 👇**""",
+                "@Aniebot",
+                text="""**Hey! This is [Aniebot.](https://t.me/Aniebots) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/DevilUserBot"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Aniebots"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/DevilUserBot"
+                            "⚡ GROUP ⚡", "https://t.me/Aniebotsupports"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/lucifeermorningstar/Devil-User-Bot"),
+                            "✨ REPO ✨", "https://github.com/Anieteam/Aniebots"),
                         custom.Button.url
                     (
-                            "🔰 TUTORIAL 🔰", "https://t.me/DevilUserBot"
+                            "🔰 TUTORIAL 🔰", "https://t.me/Aniebotsupports"
                     )
                     ],
                 ],
@@ -99,14 +99,14 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def page(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Dèvílẞø† ™",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Aniebots ™",
                 cache_time=0,
                 alert=True,
             )
         page = int(event.data_match.group(1).decode("UTF-8"))
         veriler = button(page, CMD_HELP)
         await event.edit(
-            f"**Legenday AF** [Dèvílẞøt](https://t.me/DevilUserBot) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
+            f"**Legenday AF** [Aniebot](https://t.me/Aniebots) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
             buttons=veriler[1],
             link_preview=False,
         )
@@ -115,7 +115,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
             await event.edit(
-                "⚜️Dèvílẞø† Menu Provider Is now Closed⚜️\n\n      © Dèvílẞø† ™"
+                "⚜️Aniebot Menu Provider Is now Closed⚜️\n\n      © Aniebots ™"
             )
           
     @tgbot.on(
@@ -124,7 +124,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def Information(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Dèvílẞø† ™",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Aniebots ™",
                 cache_time=0,
                 alert=True,
             )
@@ -157,7 +157,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def commands(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Dèvílẞø† ™",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Aniebots ™",
                 cache_time=0,
                 alert=True,
             )
