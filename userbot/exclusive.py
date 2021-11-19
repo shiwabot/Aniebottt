@@ -8,13 +8,13 @@
 
 import os
 
-STICKER_PACK_NAME = os.environ.get("STICKER_PACK_NAME", "Godhackerzuserbot_Stickers_kang")
+STICKER_PACK_NAME = os.environ.get("STICKER_PACK_NAME", "Anieuserbot_Sticker.png")
 
-ANIMATED_STICKER_PNAME = os.environ.get("ANIMATED_STICKER_PNAME", "Godhackerzuserbot_Animated_Stickers")
+ANIMATED_STICKER_PNAME = os.environ.get("ANIMATED_STICKER_PNAME", "Anieuserbot_animated")
 
 AUTONAME = os.environ.get("AUTONAME", None)
 
-CHANNEL_LINK = os.environ.get("CHANNEL_LINK", "https://t.me/Godhackerzuserbot/17")
+CHANNEL_LINK = os.environ.get("CHANNEL_LINK", "https://t.me/Aniebotsupports/17")
 
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 
