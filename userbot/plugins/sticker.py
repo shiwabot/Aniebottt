@@ -34,7 +34,7 @@ from telethon.tl.types import (
 )
 from Aniebot.utils import admin_cmd
 from userbot import ALIVE_NAME
-from userbot.Config import STICKER_PACK_NAME, ANIMATED_STICKER_PNAME
+from userbot.exclusive import STICKER_PACK_NAME, ANIMATED_STICKER_PNAME
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No Name Set Yet, Check @Aniebotsupports"
