@@ -15,7 +15,7 @@ from telethon.tl.types import (
 
 #from userbot import CMD_HELP
 from userbot.Config import Config
-from mafiabot.utils import *
+from Aniebot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 KANGING_STR = [
@@ -137,9 +137,9 @@ async def kang(args):
                     pack += 1
                     packname = f"HB_{user.username}_by_{user.username}_{pack}"
                     packnick = (
-                        f"{mafiabot} Vol.{pack}"
-                        if mafiabot
-                        else f"@{user.username}'s MafiaBot Vol.{pack}"
+                        f"{Aniebot} Vol.{pack}"
+                        if Aniebot
+                        else f"@{user.username}'s Aniebot Vol.{pack}"
                     )
                     await args.edit(
                         "`Switching to Pack "
