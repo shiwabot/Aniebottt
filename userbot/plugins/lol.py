@@ -6,7 +6,7 @@ from Aniebot.utils import admin_cmd
 from userbot import CMD_HELP
 
 
-@bot.on(admin_cmd(pattern=r"lol"))
+@bot.on(admin_cmd(pattern=r"gm"))
 async def _(event):
 
     if event.fwd_from:
@@ -73,7 +73,7 @@ async def _(event):
     if x == 27:
         await event.edit("hola lol")
     if x == 28:
-        await event.edit("llllllllllllllooooooooooollllllllll")
+        await event.edit("Having a sweet morning, a cup of coffee, a day with your loved ones is what sets your “Good Morning” have a nice day!")
 
 
 CMD_HELP.update(
