@@ -6,7 +6,7 @@ from Aniebot.utils import admin_cmd
 from userbot import CMD_HELP
 
 
-@bot.on(admin_cmd(pattern=r"gm"))
+@bot.on(admin_cmd(pattern=r"lol"))
 async def _(event):
 
     if event.fwd_from:
