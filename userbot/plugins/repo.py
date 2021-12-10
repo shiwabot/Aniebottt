@@ -26,7 +26,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
  # updated by madboy482
  # updated by madboy482
  await event.answer([result])
-@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"obhai")))
+@bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"obhai")))
 # updated by madboy482
 # updated by madboy482
 # updated by madboy482
