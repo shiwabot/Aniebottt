@@ -19,7 +19,7 @@ async def amazing (event):
   await inline[0].click(event.chat_id)
   await event.delete()
 
-@xbot.on(events.InlineQuery(pattern='share'))
+@bot.on(events.InlineQuery(pattern='share'))
 async def share_inline(event):
   text = event.text.split("|")
   url = f'http://t.me/share/url?url={text[1]}'
