@@ -17,6 +17,7 @@ from userbot import bot
 PHOTO = "https://telegra.ph/file/fe58623891803d36979f7.jpg"
 @tgbot.on(events.InlineQuery(pattern="alive_x"))
 async def awake(event):
+  builder = event.builder
   aniex = event.sender.first_name
   DENVIL_PRO = "HELLO THIS IS ANIE OFFICIAL \n\n"
   DENVIL_PRO += "ALL SYSTEM WORKING PROPERLY\n\n"
