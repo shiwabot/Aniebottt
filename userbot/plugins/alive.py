@@ -11,7 +11,6 @@
 """
 
 
-from userbot import tgbot
 from telethon import events, Button, custom
 import re, os
 from userbot import bot
