@@ -6,13 +6,13 @@
 
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from ULTRA.utils import admin_cmd
+from Aniebot.utils import admin_cmd
 import asyncio
 
  
 
-@borg.on(admin_cmd(pattern="gaana ?(.*)"))
-async def FindMusicPleaseBot(gaana):
+@borg.on(admin_cmd(pattern="song ?(.*)"))
+async def FindMusicPleaseBot(song):
 
     song = gaana.pattern_match.group(1)
 
@@ -494,7 +494,7 @@ CMD_HELP.update({
             \nUsage:For searching songs from youtube\
             \n\n`.getsong` Song Title\
             \nUsage:Download song from @SongsForYouBot\
-            \n\n`.gaana` Song name\
+            \n\n`.song` Song name\
             \nUsage:Download song from @FindmusicpleaseBot\
             \n\n`.vsong` Song title\
             \nUsage:Downloads video song from youtube\
