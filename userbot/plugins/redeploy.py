@@ -6,10 +6,10 @@ import asyncio
 import os
 import re
 import sys
-from ULTRAX import ID
+from userbot import ID
 import requests
 from telethon import events, Button, custom, functions, errors
-from ULTRA.utils import admin_cmd, sudo_cmd
+from Aniebot.utils import admin_cmd, sudo_cmd
 
 @tgbot.on(events.InlineQuery(pattern=r"redeploy"))
 async def inline_id_handler(event: events.InlineQuery.Event):
@@ -32,5 +32,5 @@ async def restart(event):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit () # MADBOY482
   else:
-    mad = "Eeh, go and get your own UltraX you noob kiddo"
+    mad = "Eeh, go and get your own Anie you noob kiddo"
     await event.answer(mad, alert=True)
