@@ -41,7 +41,7 @@ async def awake(event):
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"DENVIL_PRO")))
 async def callback_query_handler(event):
-# inline by  LEGENDX22 🔥
+# inline by  LEGENDX22 And DENVIL🔥
   PROBOYX = [[Button.url("REPO-ANIE", "https://github.com/ANIETEAM/Aniebots"), Button.url("REPO-GROUP BOT", "https://github.com/Anieteam/AnieRobot")]]
   PROBOYX +=[[Button.url("DEPLOY-ANIE", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots&template=https%3A%2F%2Fgithub.com%2FAnietEAM%2FAniebots%2FLE"), Button.url("DEPLOY-ANIE GROUP BOT", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2ANIETEAM%2FANIEROBOT&template=https%3A%2F%2Fgithub.com%2FANIETEAM%2FANIEROBOT")]]
   PROBOYX +=[[Button.url("TUTORIAL", "https://youtu.be/rGCSSFPsS4Q"), Button.url("STRING-SESSION", "https://repl.it/@legendx22/LEGEND-BOT#main.py")]]
@@ -62,7 +62,7 @@ async def callback_query_handler(event):
   LEGENDX22 += f"MY MASTER {legendx} ☺️\n\n"
   LEGENDX22 += "FULLY UPDATED BOT\n\n"
   LEGENDX22 += "TELETHON : 1.19.5 LATEST\n\n"
-  LEGENDX22 += "THANKS FOR ADD ME HERE"
+  LEGENDX22 += "THANKS FOR USING ME"
   BUTTONS = [[Button.url("MASTER", "https://t.me/DENVIL_PRO"), Button.url("DEVLOPER", "https://t.me/NOOBANON")]]
   BUTTONS += [[custom.Button.inline("REPOSITORYS", data="LEGENDX22")]]
   await event.edit(text=LEGENDX22, buttons=BUTTONS)
