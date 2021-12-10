@@ -97,8 +97,8 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             )
         elif event.text=='':
             result = builder.article(
-                "@MafiaBot_Support",
-                text=f"""**Hey![🤗]({mafia_help_pic}) This is [MafiaBot.](https://t.me/MafiaBot_Support)\nYou can know more about me from the links given below 👇**""",
+                "@Aniebot_Support",
+                text=f"""**Hey![🤗]({mafia_help_pic}) This is [Aniebot.](https://t.me/Aniebot_Support)\nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
                         custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Aniebot_Support"),
@@ -111,7 +111,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                             "✨ REPO ✨", "https://github.com/Anieteam/Aniebots"),
                         custom.Button.url
                     (
-                            "🔰 TUTORIAL 🔰", "https://t.me/Aniebotsupports"
+                            "🔰 TUTORIAL 🔰", "https://youtu.be/T9ojWwGYBtw"
                     )
                     ],
                 ],
