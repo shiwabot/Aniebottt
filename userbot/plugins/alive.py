@@ -44,7 +44,7 @@ async def callback_query_handler(event):
 # inline by  LEGENDX22 And DENVIL🔥
   PROBOYX = [[Button.url("REPO-ANIE", "https://github.com/ANIETEAM/Aniebots"), Button.url("REPO-GROUP BOT", "https://github.com/Anieteam/AnieRobot")]]
   PROBOYX +=[[Button.url("DEPLOY-ANIE", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAnieteam%2FAniebots&template=https%3A%2F%2Fgithub.com%2FAnietEAM%2FAniebots%2FLE"), Button.url("DEPLOY-ANIE GROUP BOT", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2ANIETEAM%2FANIEROBOT&template=https%3A%2F%2Fgithub.com%2FANIETEAM%2FANIEROBOT")]]
-  PROBOYX +=[[Button.url("TUTORIAL", "https://youtu.be/rGCSSFPsS4Q"), Button.url("STRING-SESSION", "https://repl.it/@legendx22/LEGEND-BOT#main.py")]]
+  PROBOYX +=[[Button.url("TUTORIAL", "https://youtu.be/T9ojWwGYBtw"), Button.url("STRING-SESSION", "https://repl.it/@denvilop/Aniebots#main.py")]]
   PROBOYX +=[[Button.url("API_ID & HASH", "https://t.me/usetgxbot"), Button.url("REDIS", "https://redislabs.com")]]
   PROBOYX +=[[Button.url("SUPPORT CHANNEL", "https://t.me/ANIEBOTS"), Button.url("SUPPORT GROUP", "https://t.me/Aniebotsupports")]]
   PROBOYX +=[[custom.Button.inline("ALIVE", data="PROBOY")]]
