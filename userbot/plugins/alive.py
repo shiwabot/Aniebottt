@@ -15,7 +15,7 @@ from telethon import events, Button, custom
 import re, os
 from userbot import bot
 PHOTO = "https://telegra.ph/file/fe58623891803d36979f7.jpg"
-@tgbot.on(events.InlineQuery(pattern="alive_x"))
+@tgbot.on(events.InlineQuery(pattern="Repo"))
 async def awake(event):
   builder = event.builder
   aniex = event.sender.first_name
@@ -25,7 +25,7 @@ async def awake(event):
   DENVIL_PRO += f"MY MASTER {aniex} ☺️\n\n"
   DENVIL_PRO += "FULLY UPDATED\n\n"
   DENVIL_PRO += "TELETHON : 1.19.5 LATEST\n\n"
-  DENVIL_PRO += "THANKS FOR ADD ME HERE"
+  DENVIL_PRO += "THANKS FOR USING ME"
   BUTTON = [[Button.url("MASTER", "https://t.me/denvil_pro"), Button.url("DEVLOPER", "https://t.me/Denvil_pro")]]
   BUTTON += [[custom.Button.inline("REPOSITORYS", data="DENVIL_PRO")]]
   result = builder.photo(
