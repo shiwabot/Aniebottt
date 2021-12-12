@@ -14,6 +14,7 @@
 from telethon import events, Button, custom
 import re, os
 from userbot import bot
+from Aniebot.utils import admin_cmd 
 PHOTO = "https://telegra.ph/file/fe58623891803d36979f7.jpg"
 @tgbot.on(events.InlineQuery(pattern="alive_x"))
 async def awake(event):
