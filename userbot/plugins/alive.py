@@ -14,6 +14,7 @@
 from telethon import events, Button, custom
 import re, os
 from userbot import bot
+from userbot import Anietelethon
 PHOTO = "https://telegra.ph/file/fe58623891803d36979f7.jpg"
 @tgbot.on(events.InlineQuery(pattern="alive_x"))
 async def awake(event):
@@ -21,7 +22,7 @@ async def awake(event):
   aniex = event.sender.first_name
   DENVIL_PRO =  f"**__----Aniebot Status----__**\n"
   DENVIL_PRO += f"**ALL System ok\n\n"
-  DENVIL_PRO += f"**➬ Telethon :**{Anieversion}\n"
+  DENVIL_PRO += f"**➬ Telethon :**{Anietelethon}\n"
   DENVIL_PRO += f"**MY Master :**{aniex} ☺️\n\n"
   DENVIL_PRO += "f"**Full upgrade :**\n\n"
   DENVIL_PRO += f"**Anie :** 1.19.5 LATEST\n\n"
