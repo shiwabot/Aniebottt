@@ -13,7 +13,7 @@
 
 from telethon import events, Button, custom
 import re, os
-from userbot import ALIVE_PIC Anieversion Anietelethon
+from userbot import ALIVE_PIC, Anieversion, Anietelethon
 from userbot import bot as xbot
 ALIVE_PIC = https://telegra.ph/file/fe58623891803d36979f7.jpg
 @xbot.on(events.NewMessage(pattern=(".alive|/start")))
