@@ -16,7 +16,7 @@ import re, os
 from userbot import bot
 from userbot import Anietelethon
 PHOTO = "https://telegra.ph/file/fe58623891803d36979f7.jpg"
-@tgbot.on(events.InlineQuery(pattern="alive_x"))
+@tgbot.on(events.InlineQuery(pattern=".alive"))
 async def awake(event):
   builder = event.builder
   aniex = event.sender.first_name
