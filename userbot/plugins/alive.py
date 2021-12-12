@@ -20,13 +20,13 @@ PHOTO = "https://telegra.ph/file/fe58623891803d36979f7.jpg"
 async def awake(event):
   builder = event.builder
   aniex = event.sender.first_name
-  DENVIL_PRO =  f"**__----Aniebot Status----__**\n"
-  DENVIL_PRO += f"**ALL System ok\n\n"
-  DENVIL_PRO += f"**➬ Telethon:**{Anietelethon}\n"
-  DENVIL_PRO += f"**MY Master:**{aniex} ☺️\n\n"
-  DENVIL_PRO += f"**Full upgrade:**\n\n"
-  DENVIL_PRO += f"**Aniebot:** 1.19.5 LATEST\n\n"
-  DENVIL_PRO += f"**thanks for using me/n"
+  DENVIL_PRO =  "**Aniebot Status**/n/n"
+  DENVIL_PRO += "**ALL System ok**\n/n"
+  DENVIL_PRO += "**➬ Telethon:**{Anietelethon}/n/n"
+  DENVIL_PRO += "**MY Master** {aniex} ☺️/n/n"
+  DENVIL_PRO += "**Full upgrade:**/n/n"
+  DENVIL_PRO += "**Aniebot** {Anieversion}\n\n"
+  DENVIL_PRO += "**thanks for using me**/n/n"
   BUTTON = [[Button.url("MASTER", "https://t.me/denvil_pro"), Button.url("DEVLOPER", "https://t.me/Denvil_pro")]]
   BUTTON += [[custom.Button.inline("REPOSITORYS", data="DENVIL_PRO")]]
   result = builder.photo(
