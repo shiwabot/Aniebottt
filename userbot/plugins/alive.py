@@ -50,29 +50,3 @@ async def callback_query_handler(event):
   PROBOYX +=[[Button.url("SUPPORT CHANNEL", "https://t.me/ANIEBOTS"), Button.url("SUPPORT GROUP", "https://t.me/Aniebotsupports")]]
   PROBOYX +=[[custom.Button.inline("ALIVE", data="PROBOY")]]
   await event.edit(text=f"ALL DETAILS OF REPOS", buttons=PROBOYX)
-
-
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"Repo")))
-async def callback_query_handler(event):
-  global PHOTO
-  legendx = event.sender.first_name
-# inline by LEGENDX22 🔥
-  LEGENDX22 =  f"**__----Aniebot Status----__**\n"
-  LEGENDX22 += f"**ALL System ok:**\n\n"
-  LEGENDX22 += f"**Anie os :** 3.8 LATEST\n\n"
-  LEGENDX22 += f"**My master:**{legendx} ☺️\n\n"
-  LEGENDX22 += f"**fully updated:**\n\n"
-  LEGENDX22 += f"**telethon:** 1.19.5 LATEST\n\n"
-  LEGENDX22 += "THANKS FOR USING ME"
-  BUTTONS = [[Button.url("MASTER", "https://t.me/DENVIL_PRO"), Button.url("DEVLOPER", "https://t.me/NOOBANON")]]
-  BUTTONS += [[custom.Button.inline("REPOSITORYS", data="LEGENDX22")]]
-  await event.edit(text=LEGENDX22, buttons=BUTTONS)
-
-@bot.on(events.NewMessage(pattern=".alive", outgoing=True))
-async def repe(event):
-    if event.fwd_from:
-        return
-    ULTRAX = (await tgbot.get_me()).username
-    response = await bot.inline_query(ULTRAX, "alive_x")
-    await response[0].click(event.chat.id)
-    await event.delete()
