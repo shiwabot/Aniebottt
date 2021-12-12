@@ -25,7 +25,7 @@ async def awake(event):
   DENVIL_PRO += f"MY MASTER {aniex} ☺️\n\n"
   DENVIL_PRO += "FULLY UPDATED\n\n"
   DENVIL_PRO += "TELETHON : 1.19.5 LATEST\n\n"
-  DENVIL_PRO += "THANKS FOR ADD ME HERE"
+  DENVIL_PRO += "THANKS FOR USE ME HERE"
   BUTTON = [[Button.url("MASTER", "https://t.me/denvil_pro"), Button.url("DEVLOPER", "https://t.me/Denvil_pro")]]
   BUTTON += [[custom.Button.inline("REPOSITORYS", data="DENVIL_PRO")]]
   result = builder.photo(
