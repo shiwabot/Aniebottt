@@ -16,7 +16,7 @@ import re, os
 from userbot import Anieversion, Anietelethon
 from userbot import bot as xbot
 PHOTO = "https://telegra.ph/file/fe58623891803d36979f7.jpg"
-@xbot.on(events.NewMessage(pattern=(".alive|/start")))
+@xbot.on(events.NewMessage(pattern=(".alive|#alive")))
 async def awake(event):
   LEGENDX = f"ʜᴇʟʟᴏ ᴛʜɪs ɪs  ANIEUB\n\n"
   LEGENDX += "ᴀʟʟ sʏsᴛᴇᴍ ɪs ᴡᴏʀᴋɪɴɢ ᴘʀᴏᴘᴇʀʟʏ\n\n"
@@ -25,7 +25,7 @@ async def awake(event):
   LEGENDX += "ғᴜʟʟʏ ᴜᴘᴅᴀᴛᴇᴅ ʙᴏᴛ\n\n"
   LEGENDX += "ᴛᴇʟᴇᴛʜᴏɴ : 1.20 LATEST\n\n"
   LEGENDX += "ᴛʜᴀɴᴋs ғᴏʀ ᴄʜᴇᴄᴋɪɴɢ ᴍᴇ"
-  BUTTON = [[Button.url("𝙼𝙰𝚂𝚃𝙴𝚁", f"https://t.me/{bot.me.username}"), Button.url(Anieub 𝚁𝙴𝙿𝙾", "https://github.com/Anieteam/Aniebots")]]
+  BUTTON = [[Button.url("𝙼𝙰𝚂𝚃𝙴𝚁", f"https://t.me/{bot.me.username}"), Button.url("Anieub 𝚁𝙴𝙿𝙾", "https://github.com/Anieteam/Aniebots")]]
   BUTTON += [[custom.Button.inline("𝚁𝙴𝙿𝙾𝚂𝙸𝚃𝙾𝚁𝚈", data="LEGENDX")]]
   await xbot.send_file(event.chat_id, PHOTO, caption=LEGENDX,  buttons=BUTTON)
 
@@ -54,7 +54,7 @@ async def callback_query_handler(event):
   LEGENDX += "ғᴜʟʟʏ ᴜᴘᴅᴀᴛᴇᴅ ʙᴏᴛ\n\n"
   LEGENDX += "ᴛᴇʟᴇᴛʜᴏɴ : 1.20 LATEST\n\n"
   LEGENDX += "ᴛʜᴀɴᴋs ғᴏʀ ᴄʜᴇᴄᴋɪɴɢ ᴍᴇ"
-  BUTTONS = [[Button.url("𝙼𝙰𝚂𝚃𝙴𝚁", f"https://t.me/{bot.me.username}"), Button.url(Anieub 𝚁𝙴𝙿𝙾", "https://github.com/Anieteam/Aniebots")]]
+  BUTTONS = [[Button.url("𝙼𝙰𝚂𝚃𝙴𝚁", f"https://t.me/{bot.me.username}"), Button.url("Anieub 𝚁𝙴𝙿𝙾", "https://github.com/Anieteam/Aniebots")]]
   BUTTONS += [[custom.Button.inline("𝚁𝙴𝙿𝙾𝚂𝙸𝚃𝙾𝚁𝚈", data="LEGENDX")]]
   await event.edit(text=LEGENDX, buttons=BUTTONS)
 
