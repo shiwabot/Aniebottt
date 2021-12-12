@@ -22,10 +22,10 @@ async def awake(event):
   aniex = event.sender.first_name
   DENVIL_PRO =  f"**__----Aniebot Status----__**\n"
   DENVIL_PRO += f"**ALL System ok\n\n"
-  DENVIL_PRO += f"**➬ Telethon :**{Anietelethon}\n"
-  DENVIL_PRO += f"**MY Master :**{aniex} ☺️\n\n"
-  DENVIL_PRO += "f"**Full upgrade :**\n\n"
-  DENVIL_PRO += f"**Anie :** 1.19.5 LATEST\n\n"
+  DENVIL_PRO += f"**➬ Telethon:**{Anietelethon}\n"
+  DENVIL_PRO += f"**MY Master:**{aniex} ☺️\n\n"
+  DENVIL_PRO += "f"**Full upgrade:**\n\n"
+  DENVIL_PRO += f"**Aniebot:** 1.19.5 LATEST\n\n"
   DENVIL_PRO += f"**thanks for using me/n"
   BUTTON = [[Button.url("MASTER", "https://t.me/denvil_pro"), Button.url("DEVLOPER", "https://t.me/Denvil_pro")]]
   BUTTON += [[custom.Button.inline("REPOSITORYS", data="DENVIL_PRO")]]
@@ -61,8 +61,8 @@ async def callback_query_handler(event):
   LEGENDX22 += f"**ALL System ok:**\n\n"
   LEGENDX22 += f"**Anie os :** 3.8 LATEST\n\n"
   LEGENDX22 += f"**My master:**{legendx} ☺️\n\n"
-  LEGENDX22 += f"**fully updated :**\n\n"
-  LEGENDX22 += f"**telethon : 1.19.5 LATEST\n\n"
+  LEGENDX22 += f"**fully updated:**\n\n"
+  LEGENDX22 += f"**telethon:** 1.19.5 LATEST\n\n"
   LEGENDX22 += "THANKS FOR USING ME"
   BUTTONS = [[Button.url("MASTER", "https://t.me/DENVIL_PRO"), Button.url("DEVLOPER", "https://t.me/NOOBANON")]]
   BUTTONS += [[custom.Button.inline("REPOSITORYS", data="LEGENDX22")]]
