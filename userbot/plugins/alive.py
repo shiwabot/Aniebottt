@@ -67,7 +67,8 @@ async def callback_query_handler(event):
   BUTTONS += [[custom.Button.inline("REPOSITORYS", data="LEGENDX22")]]
   await event.edit(text=LEGENDX22, buttons=BUTTONS)
 
-@bot.on(events.NewMessage(pattern=".alive", outgoing=True))
+
+@bot.on(admin_cmd(outgoing=True, pattern="alive$"))
 async def repo(event):
     if event.fwd_from:
         return
