@@ -15,9 +15,10 @@ from telethon import events, Button, custom
 import re, os
 from userbot import ALIVE_PIC Anieversion Anietelethon
 from userbot import bot as xbot
+ALIVE_PIC = https://telegra.ph/file/fe58623891803d36979f7.jpg
 @xbot.on(events.NewMessage(pattern=(".alive|/start")))
 async def awake(event):
-  LEGENDX = f"ʜᴇʟʟᴏ ᴛʜɪs ɪs  {BOT}\n\n"
+  LEGENDX = f"ʜᴇʟʟᴏ ᴛʜɪs ɪs  ANIEUB\n\n"
   LEGENDX += "ᴀʟʟ sʏsᴛᴇᴍ ɪs ᴡᴏʀᴋɪɴɢ ᴘʀᴏᴘᴇʀʟʏ\n\n"
   LEGENDX += f"ANIE VERSION : {Anieversion} ʟᴀsᴛᴇsᴛ\n\n"
   LEGENDX += f"ᴍʏ ᴍᴀsᴛᴇʀ @{bot.me.username} ☺️\n\n"
@@ -26,7 +27,7 @@ async def awake(event):
   LEGENDX += "ᴛʜᴀɴᴋs ғᴏʀ ᴄʜᴇᴄᴋɪɴɢ ᴍᴇ"
   BUTTON = [[Button.url("𝙼𝙰𝚂𝚃𝙴𝚁", f"https://t.me/{bot.me.username}"), Button.url(f"{BOT} 𝚁𝙴𝙿𝙾", "https://github.com/Anieteam/Aniebots")]]
   BUTTON += [[custom.Button.inline("𝚁𝙴𝙿𝙾𝚂𝙸𝚃𝙾𝚁𝚈", data="LEGENDX")]]
-  await xbot.send_file(event.chat_id, PHOTO, caption=LEGENDX,  buttons=BUTTON)
+  await xbot.send_file(event.chat_id, ALIVE_PIC, caption=LEGENDX,  buttons=BUTTON)
 
 
 
@@ -46,7 +47,7 @@ async def callback_query_handler(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"PROBOY")))
 async def callback_query_handler(event):
 # inline by LEGENDX22 and PROBOY22 🔥
-  LEGENDX = f"ʜᴇʟʟᴏ ᴛʜɪs ɪs  {BOT}\n\n"
+  LEGENDX = f"ʜᴇʟʟᴏ ᴛʜɪs ɪs  ANIE\n\n"
   LEGENDX += "ᴀʟʟ sʏsᴛᴇᴍ ɪs ᴡᴏʀᴋɪɴɢ ᴘʀᴏᴘᴇʀʟʏ\n\n"
   LEGENDX += f"Anie OS : {Anieversion} ʟᴀsᴛᴇsᴛ\n\n"
   LEGENDX += f"ᴍʏ ᴍᴀsᴛᴇʀ @{bot.me.username} ☺️\n\n"
@@ -58,6 +59,6 @@ async def callback_query_handler(event):
   await event.edit(text=LEGENDX, buttons=BUTTONS)
 
 
-@xbot.on(events.NewMessage(pattern=("/repo|#repo")))
+@xbot.on(events.NewMessage(pattern=(".repo|#repo")))
 async def repo(event):
-  await xbot.send_message(event.chat, "ʀᴇᴘᴏ ᴏғ ʟᴇɢᴇɴᴅ-ʙᴏᴛ", buttons=[[Button.url("⚜️ ʀᴇᴘᴏ ⚜️", "https://github.com/Anieteam/Aniebots")]])
+  await xbot.send_message(event.chat, "ʀᴇᴘᴏ ᴏғ ANIEUB", buttons=[[Button.url("⚜️ ʀᴇᴘᴏ ⚜️", "https://github.com/Anieteam/Aniebots")]])
