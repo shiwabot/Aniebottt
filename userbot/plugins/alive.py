@@ -15,17 +15,17 @@ from telethon import events, Button, custom
 import re, os
 from userbot import bot
 PHOTO = "https://telegra.ph/file/fe58623891803d36979f7.jpg"
-@tgbot.on(events.InlineQuery(pattern="Repo"))
+@tgbot.on(events.InlineQuery(pattern="alive_x"))
 async def awake(event):
   builder = event.builder
   aniex = event.sender.first_name
-  DENVIL_PRO = "HELLO THIS IS ANIE OFFICIAL \n\n"
-  DENVIL_PRO += "ALL SYSTEM WORKING PROPERLY\n\n"
-  DENVIL_PRO += "ANIE OS : 3.8 LATEST\n\n"
-  DENVIL_PRO += f"MY MASTER {aniex} ☺️\n\n"
-  DENVIL_PRO += "FULLY UPDATED\n\n"
-  DENVIL_PRO += "TELETHON : 1.19.5 LATEST\n\n"
-  DENVIL_PRO += "THANKS FOR USING ME"
+  DENVIL_PRO =  f"**__----Aniebot Status----__**\n"
+  DENVIL_PRO += f"**ALL System ok\n\n"
+  DENVIL_PRO += f"**➬ Telethon :**{Anieversion}\n"
+  DENVIL_PRO += f"**MY Master :**{aniex} ☺️\n\n"
+  DENVIL_PRO += "f"**Full upgrade :**\n\n"
+  DENVIL_PRO += f"**Anie :** 1.19.5 LATEST\n\n"
+  DENVIL_PRO += f"**thanks for using me/n"
   BUTTON = [[Button.url("MASTER", "https://t.me/denvil_pro"), Button.url("DEVLOPER", "https://t.me/Denvil_pro")]]
   BUTTON += [[custom.Button.inline("REPOSITORYS", data="DENVIL_PRO")]]
   result = builder.photo(
@@ -56,12 +56,12 @@ async def callback_query_handler(event):
   global PHOTO
   legendx = event.sender.first_name
 # inline by LEGENDX22 🔥
-  LEGENDX22 = "HELLO THIS IS ANIE OFFICIAL \n\n"
-  LEGENDX22 += "ALL SYSTEM WORKING PROPERLY\n\n"
-  LEGENDX22 += "ANIE OS : 3.8 LATEST\n\n"
-  LEGENDX22 += f"MY MASTER {legendx} ☺️\n\n"
-  LEGENDX22 += "FULLY UPDATED BOT\n\n"
-  LEGENDX22 += "TELETHON : 1.19.5 LATEST\n\n"
+  LEGENDX22 = f"**__----Aniebot Status----__**\n"
+  LEGENDX22 += f"**ALL System ok:**\n\n"
+  LEGENDX22 += f"**Anie os :** 3.8 LATEST\n\n"
+  LEGENDX22 += f"**My master:**{legendx} ☺️\n\n"
+  LEGENDX22 += f"**fully updated :**\n\n"
+  LEGENDX22 += f"**telethon : 1.19.5 LATEST\n\n"
   LEGENDX22 += "THANKS FOR USING ME"
   BUTTONS = [[Button.url("MASTER", "https://t.me/DENVIL_PRO"), Button.url("DEVLOPER", "https://t.me/NOOBANON")]]
   BUTTONS += [[custom.Button.inline("REPOSITORYS", data="LEGENDX22")]]
