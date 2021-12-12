@@ -52,7 +52,7 @@ async def callback_query_handler(event):
   await event.edit(text=f"ALL DETAILS OF REPOS", buttons=PROBOYX)
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"PROBOY")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"Repo")))
 async def callback_query_handler(event):
   global PHOTO
   legendx = event.sender.first_name
@@ -69,10 +69,10 @@ async def callback_query_handler(event):
   await event.edit(text=LEGENDX22, buttons=BUTTONS)
 
 @bot.on(events.NewMessage(pattern=".alive", outgoing=True))
-async def repo(event):
+async def repe(event):
     if event.fwd_from:
         return
     ULTRAX = (await tgbot.get_me()).username
     response = await bot.inline_query(ULTRAX, "alive_x")
-    await response[0].click(event.chat_id)
+    await response[0].click(event.chat.id)
     await event.delete()
