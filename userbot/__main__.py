@@ -72,14 +72,14 @@ if LOAD_ASSISTANT == True:
             except Exception as er:
                 print(er)
 
-print(f"""『🔱🇱 🇪 🇬 🇪 🇳 🇩 B O T 🔱』➙𖤍࿐ IS ON!!! LEGEND VERSION :- {LEGENDversion}
-TYPE :- " .gpromote @Its_LegendBoy " OR .legend OR .ping CHECK IF I'M ON!
-╔════❰LEGENDBOT❱═❍⊱❁۪۪
-║┣⪼ OWNER - LEGEND
+print(f""" B O T 🔱』➙𖤍࿐ IS ON!!! Anie VERSION :- {anieversion}
+TYPE :- " .gpromote @Denvil_pro " OR .Anie OR .ping CHECK IF I'M ON!
+╔════❰ANIEBOT❱═❍⊱❁۪۪
+║┣⪼ OWNER - Anie
 ║┣⪼{LEGEND_PIC}
-║┣⪼ CREATOR -@Its_LegendBoy
+║┣⪼ CREATOR -@Denvil_pro
 ║┣⪼ TELETHON - 1.2.0
-║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+║┣⪼ ✨ 『🔱ANIE 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱""")
 
@@ -89,19 +89,19 @@ async def legend_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 LEGEND_PIC,
-                caption=f"#START \n\nDeployed LEGENDBOT Successfully\n\n**LEGENDBOT- {LEGENDversion}**\n\nType `{l1}op` or `{l1}alive` to check! \n\nJoin [LegendBot Channel](t.me/Its_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
+                caption=f"#START \n\nDeployed ANIEBOT Successfully\n\n**ANIEBOT- {anieversion}**\n\nType `{l1}op` or `{l1}alive` to check! \n\nJoin [AnieBot Channel](t.me/Aniebots) for Updates & [AnieBot Chat](t.me/Aniebotsupports) for any query regarding AnieBot",
             )
     except Exception as e:
         print(str(e))
 
-# Join LegndBot Channel after deploying 🤐😅
+# Join anieBot Channel after deploying 🤐😅
     try:
-        await bot(JoinChannelRequest("@Its_LegendBot"))
+        await bot(JoinChannelRequest("@Aniebots"))
     except BaseException:
         pass
 
     try:
-        await bot(JoinChannelRequest("@Legend_Userbot"))
+        await bot(JoinChannelRequest("@Aniebots"))
     except BaseException:
          pass
 
